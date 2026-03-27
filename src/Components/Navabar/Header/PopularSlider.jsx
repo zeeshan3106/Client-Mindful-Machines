@@ -38,14 +38,25 @@ function PopularSlider({category}) {
       
 
                 <Swiper
-        slidesPerView={5}
-        spaceBetween={1}
+     slidesPerView={2} 
+    spaceBetween={10}
         navigation={true}
         pagination={{
           clickable: true,
         }}
+
+        breakpoints={{
+          1024:{
+            slidesPerView:5,
+            spaceBetween:1
+          },
+          500:{
+               slidesPerView:2,
+            spaceBetween:1
+          }
+        }}
         modules={[Navigation]}
-        className="mySwiper  bg-white w-[1290px] h-[600px]">
+        className="mySwiper  bg-white w-[1290px] h-[600px] mobileSlide">
    console.log(products)
 
           {products.map((item) => (

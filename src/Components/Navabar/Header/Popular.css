@@ -81,9 +81,18 @@ color:rgb(102, 100, 100)
     display: none;
   }
   .Slider{
-    max-width: 400px;
-    background-color: black;
-  }
 
+  }
+  .mobilepopular{
+    height: 200px !important;
+   max-width: 453px !important;
+  }
+  .Pop{
+    width: 453px;
+  }
+  .Slider .swiper {
+    width: 453px !important
+  }
+ 
     
 }

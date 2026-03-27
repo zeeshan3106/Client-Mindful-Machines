@@ -154,26 +154,29 @@ console.log(size)
        <div className='container-head'>
       
         <div className='w-[20%] col1' >
-              <Link to = {"/Home"} >  <img src= {logo}/></Link>
+              <Link to = {"/Home"} className='frontmobileimage' > 
+               <img src= {logo}/>
+               
+               </Link>
 
         </div>
          <div className='w-[60%] Col-2'>
          <Search/>
          
          </div>
-          <div className=' w-[20%] col3 gap-20 items-center '>
+          <div className=' w-[20%] col3 gap-20 items-center mobilefrontlogo '>
           <ul className='Options'>
    
             <li className='login '>
 
-              <div className='pl-10 flex bg-blue gap-3 items-center justify-center cart '>
+              <div className='pl-10 flex bg-blue gap-3 items-center justify-center cart mobilefrontlogo '>
 
               
 <div className=' cart-theme'>
-                  <Link to="/Profile" className='link1 '><CgProfile /></Link>
+                  <Link to="/Profile" className='link1 '><CgProfile className='homelogo'/></Link>
 </div>
               <li className='cart cart-theme'>
-   <Link to="/wishlist" className='link1'><FaRegHeart /></Link>
+   <Link to="/wishlist" className='link1'><FaRegHeart  className='homelogo'/></Link>
    
    
    
@@ -186,7 +189,7 @@ console.log(size)
 
 
    
-   ><FaCartArrowDown /></button>
+   ><FaCartArrowDown  className='homelogo' /></button>
 
              </div>
 

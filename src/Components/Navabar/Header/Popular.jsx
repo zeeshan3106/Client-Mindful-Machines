@@ -45,7 +45,7 @@ function Popular() {
 
    console.log(value)
   return (
-    <div className='all  h-[750px]'>
+    <div className='all  h-[750px] mobilepopular'>
 
 
     <div className='Pop '>

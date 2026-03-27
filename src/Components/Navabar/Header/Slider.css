@@ -57,6 +57,11 @@
 
 
     }
+    .Pic
+    {
+      width: 453px;
+      background-color: black;
+    }
 }
 
 .swiper-button-next{

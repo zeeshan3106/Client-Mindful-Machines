@@ -23,3 +23,67 @@
     
 
 }
+
+
+@media screen and (max-width:600px){
+
+    .Slider{
+        background-color: black;
+       
+             width: 453px;
+        height: 200px;
+        padding-left: -200px;
+        padding: 0px;
+      margin: 0px;
+    } 
+    .mobileSlide{
+        width: 453px;
+        background-color: black;
+        height: 200px;
+    }
+
+    .Slider .swiper {
+        width: 453px;
+        height: 200px;
+    }
+    .Slider .mySwiper {
+        width: 100% !important; 
+        height: 250px !important; 
+        background-color: white;
+    }
+    .Slider {
+        background-color: black;
+        width: 100%; /* Take full phone width */
+      
+        
+    }
+    .Slider {
+     
+        width: 100vw; /* Use the actual viewport width */
+       
+    }
+   .Slider .swiper-slide{
+        width: 200px !important
+    }
+   
+   .Slider .mySwiper {
+        width: 100vw !important; 
+        height: 350px !important; 
+    }
+    .Slider {
+    width: 400px !important; /* Use exactly 100% of the phone width */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .Slider .mySwiper {
+    width: 100% !important;
+    height: 300px !important; /* Adjust based on card height */
+  }
+
+  /* IMPORTANT: Remove any fixed width on .swiper-slide */
+  .Slider .swiper-slide {
+    width: auto !important; 
+    /* Swiper JS will now correctly set this to 50% */
+  }
+}
