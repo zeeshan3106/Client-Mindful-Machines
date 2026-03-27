@@ -116,11 +116,14 @@
     
     }
     .Benefits{
-       
+       width: 369px;
     }
     .beni a{
         font-size: 8px;
      
+    }
+    .all{
+          width: 369px;
     }
    .ben-logo{
       font-size: 25px;
@@ -128,4 +131,5 @@
   .top{
         font-size: 8px;
     }
+
 }

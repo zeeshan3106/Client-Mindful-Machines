@@ -26,3 +26,8 @@
 .Slide .swiper-button-prev,.swiper-button-next{
     display: none;
 }
+@media screen and (max-width:500px){
+    .Slide{
+        width: 369px;
+    }
+}
