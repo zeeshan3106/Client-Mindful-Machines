@@ -96,12 +96,12 @@ margin-left: 100px;
         justify-content: flex-start;
     }
     .cart-side {
-        width: 350px;
+        width: 340px;
     }
     .Total-Responsive{
 
         
-         width: 400px;
+         width: 360px;
     }
     .left{
         
@@ -126,6 +126,9 @@ margin-left: 100px;
      .left{
         margin-left: 0 !important;
         
+    }
+    .right{
+        width: 360px;
     }
    
     
