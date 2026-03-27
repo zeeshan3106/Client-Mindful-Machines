@@ -260,9 +260,15 @@ left: 200px
   .col103{
     max-width: 20px;
     margin-bottom: 13px;
-    margin-left: 50px;
+    margin-left: 20px;
   }
   .container2{
     width: 369px;
+  }
+  .mobile-offer{
+    
+  }
+  .col103{
+    display: block !important;
   }
 }

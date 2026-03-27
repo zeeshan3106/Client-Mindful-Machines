@@ -250,10 +250,10 @@ import { Link } from 'react-router-dom'
 
 
   <div className='col103 flex !w-[20%] justify-center !items-center'>
-    <Link className='flex !items-center gap-2 !w-full'>
-    <div><FaGlobe />  
+    <Link className='flex !items-center gap-2 !w-full '>
+    <div className='mobile-offer'><FaGlobe />  
     </div>
-    
+     
    <div className='Select-Header-Resposnive'>Get Free Delievery</div>
     
     
