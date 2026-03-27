@@ -125,8 +125,8 @@ useEffect( (e)=>{
 
               <div className='flex flex-col justify-start mr-4 Login-Badge'>
 
-              <Link to = "/profile"  className='login2 text-black'>{state.Name} </Link> 
-            <Link to = "profile"  className='signup'>{state.Email} </Link>
+              <Link to = "/profile"  className='login2 text-black'> </Link> 
+            <Link to = "profile"  className='signup'> </Link>
             </div>
             </li>
             </ul>

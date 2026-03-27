@@ -44,15 +44,12 @@ const [totalwish , settotalwish]=useState(0)
 useEffect(()=>{
 
 const token = localStorage.getItem("token")
-  axios.get('http://localhost:8000/api/wish/wishGet',{
-    params:{
-      page : thipage
-    }
-  },{
+  axios.get('http://localhost:8000/api/wish/wishGet',
+   {
     headers:{
       Authorization:`Bearer ${token}`
     }
-  }
+   }
 
   
 

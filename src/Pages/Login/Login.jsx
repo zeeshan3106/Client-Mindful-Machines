@@ -97,7 +97,7 @@ if (login.password === "" ){
  toast.success('Login Successfully!')
 
    localStorage.setItem("token", res.data.token);
-      navigate("/home");
+  
 
       setlogin({
         email:"",

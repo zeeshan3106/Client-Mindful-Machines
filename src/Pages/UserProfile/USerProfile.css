@@ -15,6 +15,39 @@
 
 
 }
+.Image-Profile{
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  border: 1px solid black;
+  border-radius: 50%; /* Makes it a circle */
+  overflow: hidden;    /* CRITICAL: This clips the image to the circle */
+      /* Centers the image */
+  
+
+
+}.Porfile-Image{
+
+    border: 1px solid black;
+    border-radius: 50%;
+    max-width: 200px;
+
+    
+}
+.New-Image{
+    margin-top: 70px;
+    margin-left: 40px;
+    margin-bottom: 0px;
+}
+.Image-Profile img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image fills the circle without stretching */
+}
+ .iamge-round{
+    
+   
+ }
 .col1{
     margin-left: 40px;
 }

@@ -1,0 +1,28 @@
+
+
+
+<html>
+
+
+
+<body>
+    <input type = "file" id = "pic"    class="opacity-0 hidden"               onchange="apple()">
+
+
+    <script>
+
+        const apple = ()=>{
+
+        const image = new FormData()
+        image.append("key",pic.files[0])
+        console.log("Image",image.get("key"))
+        }
+
+
+    </script>
+
+
+
+
+</body>
+</html>

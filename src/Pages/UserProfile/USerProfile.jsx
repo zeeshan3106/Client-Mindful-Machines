@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast'
+import img from '../upload.png'
 
 
 function USerProfile() {
@@ -47,42 +48,10 @@ function USerProfile() {
 
   } 
 
-  const onSubmit=(e)=>{
-    e.preventDefault();
-
-  
-  
-
-
-    axios.post('http://localhost:8000/api/frontend/profile',profile)
  
-    .then( res =>{ 
+console.log()
 
-  
-      {
-
-        
-      }
-        toast.success("Profile Updated Successfu;;y!")
-
-
-
-      })
-    .catch( err => console.log(err))
-
-    
-
-
-
-
-
-
-
-  }
-
-
-
-  useEffect((e) => {
+ /* useEffect((e) => {
 
     const token =  localStorage.getItem("token")
     
@@ -111,16 +80,108 @@ function USerProfile() {
   
    
   }, [])
-  
+  */
 
 
 
      console.log(profile)
 
+const [state,setstate]=useState({
+  Image:""
+ })
+ const onImageChnage = (e)=>{
+
+  const file = e.target.files[0]
+  const pic = new FormData()
+  pic.append("key",file)
+ const a = pic.get("key")
+ console.log(a)
+ setstate(a)
+
+ console.log(state)
+   axios.post("http://localhost:8000/api/Image/imagetoback",pic)
+    .then(res => console.log(res)).catch(err => console.log(err))
+
+
+
+ }
+
+
+  const onSubmit=(e)=>{
+    e.preventDefault();
+
+  const file = picture.files[0]
+
+  console.log(file)
+  const Name = profile.Name
+    const  Email=profile.Email
+    const  Mobile=profile.Mobile
+    const  Whatsapp=profile.Whatsapp
+     const  Country=profile.Country
+     const  City=profile.City
+      const   PostalCode=profile.PostalCode
+      const    State=profile.State
+  
+ 
+  const Age = "23"
+ 
+    const picData = new FormData()
+    picData.append("key",file)
+    picData.append("Name",Name)
+     picData.append("Email",Email)
+      picData.append("Mobile",Mobile)
+ picData.append("Country",Country)
+ picData.append("Whatsapp",Whatsapp)
+ picData.append("City",City)
+ picData.append("PostalCode",PostalCode)
+ picData.append("State",State)
+
+
+
+ console.log(picData)
+  
+  const token = localStorage.getItem("token")
+
+
+    axios.post('http://localhost:8000/api/frontend/profile',picData ,{
+      headers:{
+          Authorization:`Bearer ${token}`
+        }}
+    )
+ 
+    .then( res =>{ 
+console.log(profile)
+     console.log(picData)
+  
+      {
+
+        
+      }
+        toast.success("Profile Updated Successfu;;y!")
+   
+
+
+
+      })
+    .catch( err => console.log(err))
+
+    
 
 
 
 
+
+
+
+  }
+
+
+ 
+
+ const onClickImage = ()=>{
+
+  
+ }
 
 
 
@@ -137,9 +198,39 @@ function USerProfile() {
           <div className='col1 w-[10%]'>
           <div className=' bg-white shadow-md rounded-md  w-[70%]'>
             <div className='w-[90%] flex items-center justify-center flex-col'>
+
+
+             <div></div>
+                   <diV className="New-Image shadow-md rounded-md ">
+
+<img className=' cursor-pointer Porfile-Image  shadow-md rounded-md' 
+src ={newdata.length > 0 ? newdata[0].Image : img}  ></img>
+
+
+
+
+
+
+
+
+</diV>
+                    
+        
            
-                <div className=' Name-section pt-5 Name pl-10 pb-3 justify-center'>Muhammad Zeeshan Ali Zafar</div>
-                <h6 className='text-gray-400 font-bold pb-4'>zeeshanalizafar53@gmail.com</h6>
+<div className='font-bold border-gray-500 pt-2 pb-5 ml-5 flex justify-center items-center'>
+
+    <div> <input type = "file" id= "picture" className='' onChange={(e)=>{onImageChnage(e);}}></input> </div> 
+       
+
+
+
+
+
+
+
+</div>
+                <div className=' Name-section pt-5 Name pl-10 pb-0 justify-center'>{newdata.length > 0 ? newdata[0].Name : "1"}</div>
+                <h6 className='text-gray-400 font-bold pb-4'>{newdata.length>0?newdata[0].Email:""}</h6>
 
                 <div className='Menubar MyaccountTabs'>
 
@@ -254,7 +345,7 @@ function USerProfile() {
 
 
 name="Name"
-value={newdata.length > 0 ? newdata[0].Name : "Loading..."}
+value={profile.Name}
 onChange={onChangeInputProile}
       
       
@@ -272,7 +363,7 @@ onChange={onChangeInputProile}
       
       
 name="Email"
-value={newdata.length > 0 ? newdata[0].Email : "Loading..."}
+value={profile.Email}
 onChange={onChangeInputProile}
       />
       
@@ -293,7 +384,7 @@ onChange={onChangeInputProile}
       
       
 name="Mobile"
-value={newdata.length > 0 ? newdata[0].Mobile : "Loading..."}
+value={profile.Mobile}
 onChange={onChangeInputProile}
       />
       
@@ -307,7 +398,7 @@ onChange={onChangeInputProile}
       <TextField id="outlined-basic" label="WhatsApp" variant="outlined" 
       
 name="Whatsapp"
-value={newdata.length > 0 ? newdata[0].Whatsapp : "Loading..."}
+value={profile.Whatsapp}
 onChange={onChangeInputProile}
       />
       
@@ -325,7 +416,7 @@ onChange={onChangeInputProile}
       <TextField id="outlined-basic" label="Country" variant="outlined" 
       
 name="Country"
-value={newdata.length > 0 ? newdata[0].Country : "Loading..."}
+value={profile.Country}
 onChange={onChangeInputProile}
       />
       
@@ -339,7 +430,7 @@ onChange={onChangeInputProile}
       <TextField id="outlined-basic" label="State" variant="outlined" 
       
 name="State"
-value={newdata.length > 0 ? newdata[0].State: "Loading..."}
+value={profile.State}
 onChange={onChangeInputProile}
       />
       
@@ -356,7 +447,7 @@ onChange={onChangeInputProile}
       <TextField id="outlined-basic" label="City" variant="outlined"
       
 name="City"
-value={newdata.length > 0 ? newdata[0].City: "Loading..."}
+value={profile.City}
 onChange={onChangeInputProile}
        />
       
@@ -370,7 +461,7 @@ onChange={onChangeInputProile}
       <TextField id="outlined-basic" label="Postal Code" variant="outlined"
       
 name="PostalCode"
-value={newdata.length > 0 ? newdata[0].PostalCode: "Loading..."}
+value={profile.PostalCode}
 onChange={onChangeInputProile}
        />
       

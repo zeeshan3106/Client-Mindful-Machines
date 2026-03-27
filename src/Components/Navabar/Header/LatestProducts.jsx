@@ -18,13 +18,23 @@ import LatestSlider from './LatestSlider';
 
 
 function LatestProducts() {
-    const [value, setValue] = React.useState(0);
+
+  const [apple, setapple]=useState([])
+  const [value, setValue] = useState(1);
+
+  const handleChange = (event, value) => {
+    setValue(value);
+  
+      setapple(value)
+     const apple1 =  localStorage.setItem("New Items",value)
+   
+
+
+  };
+  
     
-      const handleChange = (event, newValue) => {
-        setValue(newValue);
-      };
   return (
-    <div className='all'>
+    <div className='all h-[750px]'>
 
 <div className='Latest'>
     <div className='Pop'>
@@ -45,13 +55,12 @@ function LatestProducts() {
         scrollButtons="auto"
         aria-label="scrollable auto tabs example"
       >
-        <Tab label="Health" />
-        <Tab label="Wellness" />
-        <Tab label="Home Devices" />
-        <Tab label="AI Drones" />
-        <Tab label="Robots" />
-        <Tab label="Humaniod Robots" />
-        <Tab label="Industrial Robots" />
+           <Tab label="Health" value="AI Powered Health Devices" />
+       <Tab label="Wellness" value="AI Powered Wellness Devices" />
+        <Tab label="Drones" value="AI Powered Drones" />
+        <Tab label="Home" value="AI Powered Home Devices" />
+       <Tab label="Humanoid" value="AI Powered Humanoid Robots" />
+        <Tab label="Industrial" value="AI Powered Industrial Robots" />
       </Tabs>
     </Box>
 
@@ -77,7 +86,7 @@ function LatestProducts() {
 
 
 
-    <LatestSlider items={5}/>
+    <LatestSlider items={5}  category={apple}    />
 
 
 

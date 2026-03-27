@@ -16,8 +16,10 @@ import { MyContext } from '../../../App';
 import toast, { Toaster } from 'react-hot-toast';
 import Product from './Header1';
 
-function ProductItem() {
-
+function ProductItem({product}) {
+if (!product || Object.keys(product).length === 0) {
+    return null; // Or return a "Loading..." spinner
+  }
   
  const [selected, setSelected] = useState(() => {
   return localStorage.getItem("item") || ""; // fallback empty string
@@ -116,7 +118,7 @@ const token = localStorage.getItem("token")
         
         const token = localStorage.getItem("token")
         const fileritem = localStorage.getItem("item")
-        axios.get('http://localhost:8000/api/products/getbycategory',
+        axios.get('http://localhost:8000/api/products/SearchItemhome',
 
           {
             headers:{
@@ -153,7 +155,7 @@ const token = localStorage.getItem("token")
     
 <div className='w-[] Product-Apple ProductItem '>
 
-    {pro.map((product) => (
+   
 
 
 
@@ -346,7 +348,7 @@ const token = localStorage.getItem("token")
 
     </div>
 
- ))}
+
 
 
 

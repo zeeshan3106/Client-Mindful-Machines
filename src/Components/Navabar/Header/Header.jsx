@@ -81,6 +81,22 @@ const token = localStorage.getItem("token")
 
 })
 
+const [size , setsize]=useState(false)
+
+useEffect(()=>{
+
+  const CheckSize = ()=> setsize(window.innerWidth<=800)
+   
+  CheckSize();
+
+  window.addEventListener('resize',CheckSize)
+
+  return () => window.removeEventListener('resize', CheckSize);
+
+
+
+},[])
+console.log(size)
 
 
 
@@ -97,11 +113,17 @@ const token = localStorage.getItem("token")
        <div className='container'>
    
              <div className='element-1'> 
-                   <p className='deal'>Its your best chance to get 50% off delightful products,Limited offer</p>
-                   </div>
+              <p className='deal'>
+        {size
+          ? "50% Off! Limited offer." 
+          : "Its your best chance to get 50% off delightful products, Limited offer"
+        }
+      </p>
+         
+       </div>
                     <div className='element-2'> 
                           <ul >
-                            <li className='list pb-4'>
+                            <li className='list pb-4 items-center'>
                              <Link to = "/Contact"  className='link'> Help Center</Link>
                              
                             

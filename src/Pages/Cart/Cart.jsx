@@ -123,13 +123,13 @@ const token = localStorage.getItem("token")
 
  useEffect(() => {
   const token = localStorage.getItem("token")
-    axios.get('http://localhost:8000/api/cart/get',
-
-      {
-        headers:{
-           Authorization: `Bearer ${token}`
-        }
+    axios.get('http://localhost:8000/api/cart/get',{
+      headers:{
+        Authorization:`Bearer ${token}`
       }
+    }
+
+    
 
 
 

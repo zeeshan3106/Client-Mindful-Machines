@@ -74,9 +74,11 @@ header .strip{
     font-size: 13px;
     transition: 2s;
     font-weight: bold;
+    align-items: center;
     
    
 }
+
 .link{color: darkgrey}
 .header {
   width: 100%;
@@ -211,7 +213,22 @@ margin-bottom: 0px;}
   }
   .element-2 a{   font-size: 10px;
   align-items: center;}
+
+.strip{
+  width: 453px;
+
+}
+.element-2{
+  font-size: 10px;
+  align-items: center;
+}
   
+  .container-head{
+ 
+}
+.header{
+   width: 453px;
+}
 }
 .link1{
 width: 5px;
