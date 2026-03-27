@@ -240,12 +240,15 @@ transform: scale(1.2);
 .Product-Apple{
     gap: 2px;
 }
-
+.Pitem img{
+    height: 20px;
+    width: 200px;
+}
 .swiper-slide{
     gap: 200px;
 }
 .swiper-wrapper{
-    
+
 }
     
   

@@ -36,7 +36,7 @@ function FeaturedProducts() {
 
 
   return (
-  <div className='all h-[750px]'>
+  <div className='all h-[750px] mobilepopular '>
     <div className='Featured'>
 
     <div className='Pop'>

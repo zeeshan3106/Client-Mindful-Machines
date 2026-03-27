@@ -71,19 +71,19 @@
         height: 350px !important; 
     }
     .Slider {
-    width: 400px !important; /* Use exactly 100% of the phone width */
+    width: 420px !important; 
     margin: 0 !important;
     padding: 0 !important;
   }
 
   .Slider .mySwiper {
     width: 100% !important;
-    height: 300px !important; /* Adjust based on card height */
+    height: 300px !important;
   }
 
-  /* IMPORTANT: Remove any fixed width on .swiper-slide */
+  
   .Slider .swiper-slide {
     width: auto !important; 
-    /* Swiper JS will now correctly set this to 50% */
+
   }
 }

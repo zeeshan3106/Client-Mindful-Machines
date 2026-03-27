@@ -38,7 +38,7 @@ function PopularSlider({category}) {
       
 
                 <Swiper
-     slidesPerView={2} 
+     slidesPerView={3} 
     spaceBetween={10}
         navigation={true}
         pagination={{
@@ -51,7 +51,7 @@ function PopularSlider({category}) {
             spaceBetween:1
           },
           500:{
-               slidesPerView:2,
+               slidesPerView:3,
             spaceBetween:1
           }
         }}

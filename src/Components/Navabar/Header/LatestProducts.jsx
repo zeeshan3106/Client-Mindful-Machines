@@ -34,7 +34,7 @@ function LatestProducts() {
   
     
   return (
-    <div className='all h-[750px]'>
+    <div className='all h-[750px] mobilepopular'>
 
 <div className='Latest'>
     <div className='Pop'>
