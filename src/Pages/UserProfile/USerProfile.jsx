@@ -11,7 +11,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast'
-import img from '../upload.png'
+
 
 
 function USerProfile() {
@@ -204,7 +204,7 @@ console.log(profile)
                    <diV className="New-Image shadow-md rounded-md ">
 
 <img className=' cursor-pointer Porfile-Image  shadow-md rounded-md' 
-src ={newdata.length > 0 ? newdata[0].Image : img}  ></img>
+src ={newdata.length > 0 ? newdata[0].Image : ''} / >
 
 
 
