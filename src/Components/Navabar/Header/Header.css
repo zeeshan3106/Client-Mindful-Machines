@@ -213,14 +213,16 @@ margin-bottom: 0px;}
 
 
 @media screen and (max-width:500px) {
+ 
   .deal{
     font-size: 10px;
   }
   .element-2 a{   font-size: 10px;
+    height: 20px;
   align-items: center;}
 
 .strip{
-  width: 365px;
+  width: 369px;
 
 }
 .mobilefrontlogo{
@@ -231,6 +233,9 @@ margin-bottom: 0px;}
   font-size: 10px;
   align-items: center;
 }
+.Col-2{
+  padding-right: 0px;
+}
   .cart-theme{
  background-color: transparent
 }
@@ -238,18 +243,25 @@ margin-bottom: 0px;}
  
 }
 .header{
-  height: 50px;
+  height: 70px;
 }
 .col1 img{
-  max-width: 50px;
-  padding-top: 15px;
+  max-width: 40px;
+ 
 }
 .col1 {
   max-width: 40px;
 }
+.col1{
+  max-width: 5%;
+  padding-top: 20px;
+}
+.col3{
+  padding-top: 10px;
+}
 .frontmobileimage{
-   max-width: 50px;
-  padding-top: 15px;
+   max-width: 20px !important;
+
 }
 .Col-2{
   padding-top: 30px;
@@ -259,6 +271,11 @@ margin-bottom: 0px;}
 }
 .cart-theme{
   width: 5px;
+}
+.element-2{
+  
+  display: flex;
+  
 }
 .link1{
   width: 10px;
@@ -274,8 +291,11 @@ width: 15px !important;
 }
 
 .header{
-   width: 453px;
+   width: 369px;
 }
+ .list{
+    gap: 0px;
+  }
 }
 .link1{
 width: 5px;
@@ -284,6 +304,10 @@ width: 5px;
   margin-top: 10px;
   
 
+}
+.login{
+  margin-left: 0px;
+  font-weight: bold;
 }
 .col3{
   padding-left: 0px;

@@ -122,17 +122,17 @@ console.log(size)
          
        </div>
                     <div className='element-2'> 
-                          <ul >
-                            <li className='list pb-4 items-center'>
+                          <ul className='flex gap-3 items-center mb-4'>
+                            <li className='list  items-center'>
                              <Link to = "/Contact"  className='link'> Help Center</Link>
-                             
-                            
+                              </li>
+                          
                             <li>
 
                             <Link to ="/Feedback" className='link' link >Order History</Link>
                            
                             </li>
-                            </li>
+                             
                         </ul>
 
 

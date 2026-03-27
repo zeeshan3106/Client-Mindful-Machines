@@ -86,12 +86,14 @@ margin-right: 20px;
     max-height: 50px;
 
     align-items: center;
-    width: 250px;
+    width: 200px;
+  
 }
 .Search{
     max-height: 36px;align-items: center;
    gap: 0px;
 }
+
 
     .Search-icon{
         font-size: 12px;
