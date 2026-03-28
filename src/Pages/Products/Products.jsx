@@ -59,6 +59,8 @@ import { FaRegHeart } from "react-icons/fa";
 import toast, { Toaster } from 'react-hot-toast';
 function Products() {
 
+
+  const apple = localStorage.setItem('item','AI Powered Humanoid Robots')
   
    const [selectedd, setSelected] = useState(() =>{
    return localStorage.getItem('item')
