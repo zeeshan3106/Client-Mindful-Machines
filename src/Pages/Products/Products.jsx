@@ -436,7 +436,7 @@ const OnChangeSort=((e) =>{
 
 
 
-   axios.get(`${import.meta.env.VITE_API_URL}/api/products/getCategory`)
+   axios.get(`${import.meta.env.VITE_API_URL}api/products/getCategory`)
     .then(res => 
   
       setcategoryitems(res.data.data)
