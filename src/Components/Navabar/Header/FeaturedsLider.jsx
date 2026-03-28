@@ -14,7 +14,7 @@ function FeaturedsLider({category}) {
     const token = localStorage.getItem("token");
     const selected = localStorage.getItem("item") || "";
 
-    axios.get('http://localhost:8000/api/products/getbycategory', {
+    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory', {
     
       params: { categoryid: (category.length > 0)? category:"AI Powered Humanoid Robots"
        }
