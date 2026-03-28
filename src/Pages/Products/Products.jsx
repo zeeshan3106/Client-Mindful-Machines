@@ -60,9 +60,7 @@ import toast, { Toaster } from 'react-hot-toast';
 function Products() {
 
   
-   const [selectedd, setSelected] = useState(() => {
-    return localStorage.getItem("item") || "AI Powered Health Devices"; // fallback empty string
-  });
+   const [selectedd, setSelected] = useState({'AI Powered Health Devices'});
   
     const [pro , setpro] = useState([])
     

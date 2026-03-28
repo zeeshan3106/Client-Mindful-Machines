@@ -57,7 +57,7 @@ useEffect( (e)=>{
 
   try{
 const token = localStorage.getItem("token")
-    axios.get('http://localhost:8000/api/frontend/getprofiles',
+    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/frontend/getprofiles',
       {
         headers:{
           Authorization:`Bearer ${token}`
