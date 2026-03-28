@@ -44,7 +44,7 @@ const [totalwish , settotalwish]=useState(0)
 useEffect(()=>{
 
 const token = localStorage.getItem("token")
-  axios.get('http://localhost:8000/api/wish/wishGet',
+  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/wish/wishGet',
    {
     headers:{
       Authorization:`Bearer ${token}`

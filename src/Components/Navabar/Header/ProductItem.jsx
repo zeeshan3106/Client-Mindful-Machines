@@ -33,7 +33,7 @@ if (!product || Object.keys(product).length === 0) {
     const AddtoWishlist = (_id) =>{
 const token = localStorage.getItem("token")
 
-      axios.post('http://localhost:8000/api/wish/addWish',
+      axios.post('https://backend-mindful-machines-44vc.vercel.app/api/wish/addWish',
          {
           "_id":_id
         }
@@ -74,7 +74,7 @@ const token = localStorage.getItem("token")
     const onClick = (_id) =>{
 const token = localStorage.getItem("token")
 
-      axios.get('http://localhost:8000/api/cart/cartget',{
+      axios.get('https://backend-mindful-machines-44vc.vercel.app/api/cart/cartget',{
 
         headers:{
 
@@ -118,7 +118,7 @@ const token = localStorage.getItem("token")
         
         const token = localStorage.getItem("token")
         const fileritem = localStorage.getItem("item")
-        axios.get('http://localhost:8000/api/products/SearchItemhome',
+        axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/SearchItemhome',
 
           {
             headers:{

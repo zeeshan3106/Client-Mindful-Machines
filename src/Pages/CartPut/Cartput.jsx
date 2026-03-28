@@ -37,7 +37,7 @@ function Cartput() {
     e.preventDefault();
 
 
-    axios.post('http://localhost:8000/api/cart/cart',state)
+    axios.post('https://backend-mindful-machines-44vc.vercel.app/api/cart/cart',state)
     .then(res => console.log(res.data))
     .catch(err => console.log(err))
 

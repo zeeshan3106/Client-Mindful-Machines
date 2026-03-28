@@ -63,7 +63,7 @@ const [form, setForm] = useState({
       return false,
       alert("Plase add information in Name section")
     }
-    axios.post('http://localhost:8000/api/users/signup',form)
+    axios.post('https://backend-mindful-machines-44vc.vercel.app/api/users/signup',form)
   
     .then(res => {
       console.log(res.data);
@@ -124,7 +124,7 @@ const [form, setForm] = useState({
 
           <form className="signup-form">
 
-            <TextField label="Full Name" variant="standard"    label="Full Name"
+            <TextField label="Full Name"  
   name="name"
   value={form.name}
   variant="standard"

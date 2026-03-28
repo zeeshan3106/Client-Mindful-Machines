@@ -61,7 +61,7 @@ function Products() {
 
   
    const [selectedd, setSelected] = useState(() =>{
-   return localStorage.getItem('items')
+   return localStorage.getItem('item')
    });
   
     const [pro , setpro] = useState([])

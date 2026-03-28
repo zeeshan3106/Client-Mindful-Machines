@@ -55,7 +55,7 @@ console.log()
 
     const token =  localStorage.getItem("token")
     
-    axios.get('http://localhost:8000/api/frontend/getprofiles',
+    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/frontend/getprofiles',
       {
         headers:{
           Authorization:`Bearer ${token}`
@@ -99,7 +99,7 @@ const [state,setstate]=useState({
  setstate(a)
 
  console.log(state)
-   axios.post("http://localhost:8000/api/Image/imagetoback",pic)
+   axios.post("https://backend-mindful-machines-44vc.vercel.app/api/Image/imagetoback",pic)
     .then(res => console.log(res)).catch(err => console.log(err))
 
 
@@ -143,7 +143,7 @@ const [state,setstate]=useState({
   const token = localStorage.getItem("token")
 
 
-    axios.post('http://localhost:8000/api/frontend/profile',picData ,{
+    axios.post('https://backend-mindful-machines-44vc.vercel.app/api/frontend/profile',picData ,{
       headers:{
           Authorization:`Bearer ${token}`
         }}

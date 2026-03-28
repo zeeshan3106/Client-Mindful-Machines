@@ -44,7 +44,7 @@ const [categoryitems , setcategoryitems]=useState([])
 
 useEffect( (e)=>{
 
-  axios.get("http://localhost:8000/api/products/getCategory")
+  axios.get("https://backend-mindful-machines-44vc.vercel.app/api/products/getCategory")
   .then(res => 
 
     setcategoryitems(res.data.data)
@@ -61,7 +61,7 @@ useEffect( (e)=>{
 useEffect(()=>{
   if (selected.length === 0) return; // optional: prevent empty request
 
-  axios.get('http://localhost:8000/api/products/getbycategory', {
+  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory', {
     params: {
       categoryid: selected
     }

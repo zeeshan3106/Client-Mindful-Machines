@@ -40,7 +40,7 @@ Message:""
   const onsubmit =( (e) =>{
      e.preventDefault();
 
-    axios.post('http://localhost:8000/api/frontend/feedback',state)
+    axios.post('https://backend-mindful-machines-44vc.vercel.app/api/frontend/feedback',state)
  
     .then(res => {
       console.log(res.data)

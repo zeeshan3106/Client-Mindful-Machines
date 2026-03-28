@@ -20,7 +20,7 @@ function SearchProduct() {
       [name]:value
     }))
 
-    axios.get('http://localhost:8000/api/products/SearchItem',
+    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/SearchItem',
       {
         params:{
           searchId:value

@@ -46,7 +46,7 @@ const [click,setclick]=useState([])
 const onClick = async(e)=>{
 
 const token = localStorage.getItem("token")
- await  axios.get('http://localhost:8000/api/cart/cartget',{
+ await  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/cart/cartget',{
 
     headers:{
       Authorization:`Bearer ${token}`
@@ -74,7 +74,7 @@ const token = localStorage.getItem("token")
   )
 
 
-   await axios.get('http://localhost:8000/api/cart/get',{
+   await axios.get('https://backend-mindful-machines-44vc.vercel.app/api/cart/get',{
 
     params:{
       page: thispage
@@ -123,7 +123,7 @@ const token = localStorage.getItem("token")
 
  useEffect(() => {
   const token = localStorage.getItem("token")
-    axios.get('http://localhost:8000/api/cart/get',{
+    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/cart/get',{
       headers:{
         Authorization:`Bearer ${token}`
       }

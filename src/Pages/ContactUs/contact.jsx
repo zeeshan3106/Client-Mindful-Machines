@@ -40,7 +40,7 @@ function ContactUs() {
     e.preventDefault()
 
 
-    axios.post('http://localhost:8000/api/frontend/contact',state)
+    axios.post('https://backend-mindful-machines-44vc.vercel.app/api/frontend/contact',state)
     .then(res => {console.log(res.data)
   toast.success("Query Successfully Submitted!")
 

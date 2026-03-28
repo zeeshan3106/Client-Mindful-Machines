@@ -56,7 +56,7 @@ function Billing() {
 
   useEffect ( (e) =>{
 
-    axios.get('http://localhost:8000/api/orders/getorders').then(res => console.log(res.data)).catch(err => err)
+    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/orders/getorders').then(res => console.log(res.data)).catch(err => err)
 
 
 
@@ -65,7 +65,7 @@ function Billing() {
   const onSubmit = ((e)=>{
 const token = localStorage.getItem("token")
 
-    axios.post('http://localhost:8000/api/orders/putorders',items,{
+    axios.post('https://backend-mindful-machines-44vc.vercel.app/api/orders/putorders',items,{
 
       headers:{
         Authorization:`Bearer ${token}`
