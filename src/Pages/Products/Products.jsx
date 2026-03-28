@@ -285,7 +285,7 @@ function Products() {
 
           const token = localStorage.getItem("token")
           const fileritem = localStorage.getItem("item")
-          axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`,
+          axios.get(`${import.meta.env.VITE_API_URL}api/products/getbycategory`,
   
         {    /*  
               headers:{
