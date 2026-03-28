@@ -61,7 +61,7 @@ function Products() {
 
   
    const [selectedd, setSelected] = useState(() => {
-    return localStorage.getItem("item") || ""; // fallback empty string
+    return localStorage.getItem("item") || "AI Powered Health Devices"; // fallback empty string
   });
   
     const [pro , setpro] = useState([])
