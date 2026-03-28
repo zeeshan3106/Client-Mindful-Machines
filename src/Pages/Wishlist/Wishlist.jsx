@@ -27,27 +27,25 @@ function Wishlist() {
 
   const [thipage , setthispage]=useState()
 
+  const [page , setpage]=useState()
+
   const onChnagePage = (event , value)=>{
 
     setthispage(value)
     console.log(value)
-  }
+    localStorage.setItem('page',value)
+    
 
-
-
-
-  
-const [wishget, setwishget]=useState([])
-
-const [totalwish , settotalwish]=useState(0)
-
-useEffect(()=>{
-
-const token = localStorage.getItem("token")
-  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/wish/wishGet',
+    const token = localStorage.getItem("token")
+ const currentPage = localStorage.getItem('page')
+  axios.get('http://localhost:8000/api/wish/wishGet',
    {
     headers:{
       Authorization:`Bearer ${token}`
+    },
+    params:{
+      page:currentPage
+
     }
    }
 
@@ -61,6 +59,48 @@ const token = localStorage.getItem("token")
 
     setwishget(res.data.data)
      settotalwish(res.data.totalwish)
+     setpage(res.data.totalpages)
+
+
+
+  }).catch(err => err)
+
+  }
+
+
+const [currentpage , setcurrentpage] =useState()
+
+  
+const [wishget, setwishget]=useState([])
+
+const [totalwish , settotalwish]=useState(0)
+
+useEffect(()=>{
+
+const token = localStorage.getItem("token")
+ const currentPage = localStorage.getItem('page')
+  axios.get('http://localhost:8000/api/wish/wishGet',
+   {
+    headers:{
+      Authorization:`Bearer ${token}`
+    },
+    params:{
+      page:currentPage
+
+    }
+   }
+
+  
+
+
+
+
+  ).then(res =>{
+
+
+    setwishget(res.data.data)
+     settotalwish(res.data.totalwish)
+     setpage(res.data.totalpages)
 
 
 
@@ -105,7 +145,7 @@ console.log(wishget)
 
   {wishget.map((product, index) => (
         
-<div className='cart-side   shadow-md rounded-md p-5 bg-white '>
+<div className='cart-side   shadow-md rounded-md p-0 bg-white '>
   <div className='Title-cart  border-[rgba(0,0,0,0.1)] p-20' >
  
          
@@ -204,7 +244,7 @@ console.log(wishget)
 
   color='primary'
   
-  count={10}/>
+  count={page}/>
  </div>
 </div>
         

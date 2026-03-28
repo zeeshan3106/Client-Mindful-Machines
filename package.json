@@ -16,6 +16,7 @@
     "@mui/material": "^7.0.0-rc.0",
     "@tailwindcss/vite": "^4.1.17",
     "axios": "^1.13.5",
+    "dotenv": "^17.3.1",
     "inner-image-zoom": "^1.0.1",
     "morgan": "^1.10.1",
     "nodemailer": "^7.0.12",

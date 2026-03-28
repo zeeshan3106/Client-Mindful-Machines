@@ -60,13 +60,12 @@ import toast, { Toaster } from 'react-hot-toast';
 function Products() {
 
 
-  const apple = localStorage.setItem('item','AI Powered Humanoid Robots')
-  
+ 
    const [selectedd, setSelected] = useState(() =>{
    return localStorage.getItem('item')
    });
   
-    const [pro , setpro] = useState([])
+    const [pro , setpro] = useState([ ])
     
     const [count , setcount] = useState([0])
   
@@ -74,7 +73,7 @@ function Products() {
       const AddtoWishlist = (_id) =>{
   const token = localStorage.getItem("token")
   
-        axios.post('https://backend-mindful-machines-44vc.vercel.app/api/wish/addWish',
+        axios.post(`${import.meta.env.VITE_API_URL}/api/wish/addWish`,
            {
             "_id":_id
           }
@@ -115,7 +114,7 @@ function Products() {
       const onClick = (_id) =>{
   const token = localStorage.getItem("token")
   
-        axios.get('https://backend-mindful-machines-44vc.vercel.app/api/cart/cartget',{
+        axios.get(`${import.meta.env.VITE_API_URL}/api/cart/cartget`,{
   
           headers:{
   
@@ -151,7 +150,7 @@ function Products() {
   
   
   
-  
+  console.log("API URL Check:", import.meta.env.VITE_API_URL);
   
   
   
@@ -159,7 +158,7 @@ function Products() {
           
           const token = localStorage.getItem("token")
           const fileritem = localStorage.getItem("item")
-          axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
+          axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`,
   
         {    /*  
               headers:{
@@ -178,9 +177,10 @@ function Products() {
   
   
           )
-          .then( res =>
-             setpro(res.data.data)  ,
-           
+          .then( res => {
+             setpro(res.data.data)  
+              setpages(res.data.totalPages)
+          }
                   
           )
           .catch(err => err)   
@@ -232,7 +232,7 @@ function Products() {
   
   useEffect( (e)=>{
   
-    axios.get("https://backend-mindful-machines-44vc.vercel.app/api/products/getCategory")
+    axios.get(`${import.meta.env.VITE_API_URL}/api/products/getCategory`)
     .then(res => 
   
       setcategoryitems(res.data.data)
@@ -241,7 +241,7 @@ function Products() {
     ).catch(err => err)
   
   
-  })
+  },[])
   
   
   
@@ -249,18 +249,21 @@ function Products() {
   useEffect(()=>{
     if (selected.length === 0) return; // optional: prevent empty request
   
-    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory', {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`, {
       params: {
         categoryid: selected
+
       }
     })
-    .then(res => console.log(res.data))
+    .then(res => {console.log(res.data)
+       setpages(res.data.totalPages)
+    })
     .catch(err => err)
   
   
   
   
-  }
+  },[]
   
   
   )
@@ -274,13 +277,15 @@ function Products() {
   
     const handleChange = (e) => {
       const v = e.target.name
+
        setselected(v)
-       const local = localStorage.setItem("item",v)
+       sethispage(1)
+        localStorage.setItem("item",v)
 
 
           const token = localStorage.getItem("token")
           const fileritem = localStorage.getItem("item")
-          axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
+          axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`,
   
         {    /*  
               headers:{
@@ -288,7 +293,9 @@ function Products() {
               }   */
   
               params:{
-                categoryid:v
+                categoryid:v,
+                page:1
+           
               }
             }
   
@@ -301,7 +308,8 @@ function Products() {
           )
           .then( res =>{
              setpro(res.data.data)  ,
-             console.log("Thissssssssssssssssssssssssssssssss is the data ", pro)
+             console.log("Thissssssssssssssssssssssssssssssss is the data ", pro),
+              setpages(res.data.totalPages)
          
           }
                   
@@ -354,17 +362,49 @@ function Products() {
 
 
 
-  const [thispage , sethispage]=useState()
+  const [thispage , sethispage]=useState(1)
+
+  localStorage.setItem('initialpage',thispage)
 
   const onPageChange = (event , value)=>{
 
     sethispage(value)
     console.log(value)
 
-const pagenumber = localStorage.setItem("PageNumber",value)
 
-
-alert("pagenumber")
+          const token = localStorage.getItem("token")
+          const fileritem = localStorage.getItem("item")
+          axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`,
+  
+        {    /*  
+              headers:{
+                Authorization:`Bearer ${token}`
+              }   */
+  
+              params:{
+                categoryid:fileritem,
+                page:value
+           
+              }
+            }
+  
+  
+  
+            
+  
+  
+  
+          )
+          .then( res =>{
+             setpro(res.data.data)  ,
+             console.log("Thissssssssssssssssssssssssssssssss is the data ", pro),
+              setpages(res.data.totalPages)
+         
+          }
+                  
+          )
+          .catch(err => err)   
+    
 
   }
 
@@ -379,7 +419,7 @@ const OnChangeSort=((e) =>{
   const sorting = e.target.value
   setsort(sorting)
   console.log(sorting)
- axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory', {
+ axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`, {
     params: {
       categoryid: localStorage.getItem("token"),
       sortingId: sorting
@@ -396,7 +436,7 @@ const OnChangeSort=((e) =>{
 
 
 
-   axios.get("https://backend-mindful-machines-44vc.vercel.app/api/products/getCategory")
+   axios.get(`${import.meta.env.VITE_API_URL}/api/products/getCategory`)
     .then(res => 
   
       setcategoryitems(res.data.data)
@@ -418,7 +458,7 @@ useEffect(()=>{
   const token = localStorage.getItem("token")
   
   const filteritem = localStorage.getItem("item")
-  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
+  axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`,
     {
       params:{
            categoryid:filteritem,
@@ -503,7 +543,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
             
 {
       
-      categoryitems.map((product,index)=>(
+      categoryitems?.map((product,index)=>(
 
             <FormControlLabel control={<Checkbox />}
             checked={selected === product.category}
@@ -682,7 +722,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
                 <div className='w-[] Product-Apple ProductItem '>
                 
-                    {pro.map((product) => (
+                    {pro?.map((product) => (
                 
                 
                 
@@ -904,8 +944,9 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 <div className='bg-white w-[50%] Products-Pagination  rounded-md shadow-md p-2 flex justify-center'>
   <Pagination
   color='primary'
-  count={10}
+  count={pages}
   onChange={onPageChange}
+  page={thispage}
   
   />
 </div>
