@@ -157,7 +157,7 @@ function Products() {
           
           const token = localStorage.getItem("token")
           const fileritem = localStorage.getItem("item")
-          axios.get('http://localhost:8000/api/products/getbycategory',
+          axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
   
         {    /*  
               headers:{
