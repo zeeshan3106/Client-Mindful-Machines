@@ -72,7 +72,7 @@ function Products() {
       const AddtoWishlist = (_id) =>{
   const token = localStorage.getItem("token")
   
-        axios.post('http://localhost:8000/api/wish/addWish',
+        axios.post('https://backend-mindful-machines-44vc.vercel.app/api/wish/addWish',
            {
             "_id":_id
           }
@@ -113,7 +113,7 @@ function Products() {
       const onClick = (_id) =>{
   const token = localStorage.getItem("token")
   
-        axios.get('http://localhost:8000/api/cart/cartget',{
+        axios.get('https://backend-mindful-machines-44vc.vercel.app/api/cart/cartget',{
   
           headers:{
   
@@ -230,7 +230,7 @@ function Products() {
   
   useEffect( (e)=>{
   
-    axios.get("http://localhost:8000/api/products/getCategory")
+    axios.get("https://backend-mindful-machines-44vc.vercel.app/api/products/getCategory")
     .then(res => 
   
       setcategoryitems(res.data.data)
@@ -247,7 +247,7 @@ function Products() {
   useEffect(()=>{
     if (selected.length === 0) return; // optional: prevent empty request
   
-    axios.get('http://localhost:8000/api/products/getbycategory', {
+    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory', {
       params: {
         categoryid: selected
       }
@@ -278,7 +278,7 @@ function Products() {
 
           const token = localStorage.getItem("token")
           const fileritem = localStorage.getItem("item")
-          axios.get('http://localhost:8000/api/products/getbycategory',
+          axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
   
         {    /*  
               headers:{
@@ -377,7 +377,7 @@ const OnChangeSort=((e) =>{
   const sorting = e.target.value
   setsort(sorting)
   console.log(sorting)
- axios.get('http://localhost:8000/api/products/getbycategory', {
+ axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory', {
     params: {
       categoryid: localStorage.getItem("token"),
       sortingId: sorting
@@ -394,7 +394,7 @@ const OnChangeSort=((e) =>{
 
 
 
-   axios.get("http://localhost:8000/api/products/getCategory")
+   axios.get("https://backend-mindful-machines-44vc.vercel.app/api/products/getCategory")
     .then(res => 
   
       setcategoryitems(res.data.data)
@@ -416,7 +416,7 @@ useEffect(()=>{
   const token = localStorage.getItem("token")
   
   const filteritem = localStorage.getItem("item")
-  axios.get('http://localhost:8000/api/products/getbycategory',
+  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
     {
       params:{
            categoryid:filteritem,
