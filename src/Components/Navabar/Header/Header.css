@@ -290,7 +290,8 @@ width: 15px !important;
   gap: 3px;
 }
 .mobilefrontlogo {
-  margin-left: 30px;
+  margin-left: 35px;
+  padding-bottom: 10px;
 }
 .header{
    max-width: 369px;
