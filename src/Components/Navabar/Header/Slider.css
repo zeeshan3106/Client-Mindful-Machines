@@ -59,7 +59,7 @@
     }
     .Pic
     {
-      width: 369px;
+      max-width: 369px;
       background-color: black;
     }
 }
