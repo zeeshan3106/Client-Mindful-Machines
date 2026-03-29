@@ -204,7 +204,7 @@ import { Link } from 'react-router-dom'
    
    
    </li>
-   <li className='links'>  <Link to ='Product' className="Home">Contact</Link> 
+   <li className='links'>  <Link to ='/contact' className="Home">Contact</Link> 
    
       <div className="nav1">
 

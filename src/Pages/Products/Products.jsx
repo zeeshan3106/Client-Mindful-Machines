@@ -940,8 +940,8 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
 
 
-            <div className=' flex justify-center pt-4 '>
-<div className='bg-white w-[50%] Products-Pagination  rounded-md shadow-md p-2 flex justify-center'>
+            <div className=' flex justify-center pt-4 mobilePageProduct '>
+<div className='bg-white w-[50%] Products-Pagination  rounded-md shadow-md p-2 flex justify-center pagenomobile'>
   <Pagination
   color='primary'
   count={pages}

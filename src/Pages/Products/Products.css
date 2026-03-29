@@ -303,6 +303,13 @@ width: 200px;
     font-weight: bold;
     
 }
+.mobilePageProduct{
+    max-width: 369px;
+}
+.pagenomobile{
+    max-width: 100%;
+}
+
 
 .f-col3{
     padding-left: 20px;
