@@ -263,7 +263,7 @@ left: 200px
     margin-left: 20px;
   }
   .container2{
-    width: 369px;
+    max-width: 369px;
   }
   .mobile-offer{
     

@@ -222,7 +222,7 @@ margin-bottom: 0px;}
   align-items: center;}
 
 .strip{
-  width: 369px;
+  max-width: 369px;
 
 }
 .mobilefrontlogo{
@@ -291,7 +291,7 @@ width: 15px !important;
 }
 
 .header{
-   width: 369px;
+   max-width: 369px;
 }
  .list{
     gap: 0px;
