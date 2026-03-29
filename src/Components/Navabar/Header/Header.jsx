@@ -165,7 +165,7 @@ console.log(size)
          
          </div>
           <div className=' w-[20%] col3 gap-20 items-center mobilefrontlogo '>
-          <ul className='Options'>
+        
    
             <li className='login '>
 
@@ -197,7 +197,7 @@ console.log(size)
               
             
             </li>
-            </ul>
+          
         
 
          
