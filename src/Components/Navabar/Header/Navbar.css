@@ -238,10 +238,17 @@ left: 200px
     display: none;
  
   }
+  .mobilelanguage{
+    padding-left: -10px;
+    justify-content: flex-start;
+  }
   .col102{
     gap:12px;
     margin-left: 70px;
     margin-bottom: 20px;
+    margin-right: 0px;
+    padding-right: 0px;
+    max-width: 60%;
   }
   .col102 a{
     font-size: 12px;
@@ -249,13 +256,14 @@ left: 200px
       padding:0px
 
   }
+  .container2{}
   .col101{
     max-width: 40px;
   }
   .container2{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0px;
   }
   .col103{
     max-width: 20px;
@@ -264,6 +272,10 @@ left: 200px
   }
   .container2{
     max-width: 369px;
+  }
+  .mobileNAvbar{
+    width: 70% ;
+    padding-left: -40px;
   }
   .mobile-offer{
     

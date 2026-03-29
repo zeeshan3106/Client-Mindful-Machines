@@ -106,51 +106,55 @@ useEffect( (e)=>{
 
        </div>
 
-    <div className='header'>
+      <div className='header w-full'>
        <div className='container-head'>
       
-        <div className='col1' >
-              <Link to = {"/Home"} >  <img src= {logo}/></Link>
+        <div className='w-[20%] col1' >
+              <Link to = {"/Home"} className='frontmobileimage' > 
+               <img src= {logo}/>
+               
+               </Link>
 
         </div>
-         <div className='col2'>
+         <div className='w-[60%] Col-2'>
          <Search/>
          
          </div>
-          <div className='col3'>
+          <div className=' w-[20%] col3 gap-20 items-center mobilefrontlogo '>
           <ul className='Options'>
    
-            <li className='login'>
+            <li className='login '>
 
+              <div className='pl-10 flex bg-blue gap-3 items-center justify-center cart mobilefrontlogo '>
 
-              <div className='flex flex-col justify-start mr-4 Login-Badge'>
-
-              <Link to = "/profile"  className='login2 text-black'> </Link> 
-            <Link to = "profile"  className='signup'> </Link>
-            </div>
-            </li>
-            </ul>
-             </div>
-  <div> 
-
-
-<ul className='carts'>
-
-<li className='cart'>
-   <Link to="/Wishlist" className='link1'><FaRegHeart /></Link>
+              
+<div className=' cart-theme'>
+                  <Link to="/Profile" className='link1 '><CgProfile className='homelogo'/></Link>
+</div>
+              <li className='cart cart-theme'>
+   <Link to="/wishlist" className='link1'><FaRegHeart  className='homelogo'/></Link>
+   
+   
+   
 </li>
-<li className='cart'>
+
+ <div className=' cart-theme'>
    
    <button className='link1'   
    onClick={()=>context.setOpenDrawer(true)}  
+
+
    
-   ><FaCartArrowDown /></button>
-</li>
+   ><FaCartArrowDown  className='homelogo' /></button>
 
-</ul>
+             </div>
 
-
-
+</div>
+              
+            
+            </li>
+            </ul>
+        
 
          
             </div>  

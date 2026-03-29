@@ -30,24 +30,24 @@
     .Slider{
         background-color: black;
        
-             width: 453px;
+             max-width: 453px;
         height: 200px;
         padding-left: -200px;
         padding: 0px;
       margin: 0px;
     } 
     .mobileSlide{
-        width: 453px;
+        max-width: 453px;
         background-color: black;
         height: 200px;
     }
 
     .Slider .swiper {
-        width: 369px;
+       max-width: 369px;
         height: 200px;
     }
     .Slider .mySwiper {
-        width: 100% !important; 
+        max-width: 100% !important; 
         height: 250px !important; 
         background-color: white;
     }
@@ -79,7 +79,7 @@
         height: 350px !important; 
     }
     .Slider {
-    width: 369px !important; 
+    max-width: 369px !important; 
     margin: 0 !important;
     padding: 0 !important;
   }

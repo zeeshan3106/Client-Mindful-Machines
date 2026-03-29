@@ -31,7 +31,7 @@ import { Link } from 'react-router-dom'
   </div>
 
   
-  <div className='col102 w-[50%]'>
+  <div className='col102 w-[50%] mobileNAvbar'>
        
     <li className='links'>
     <Link to ='/Home'  className="Home1">Home
@@ -249,7 +249,7 @@ import { Link } from 'react-router-dom'
 
 
 
-  <div className='col103 flex !w-[20%] justify-center !items-center'>
+  <div className='col103 flex !w-[20%] justify-start mobilelanguage'>
     <Link className='flex !items-center gap-2 !w-full '>
     <div className='mobile-offer'><FaGlobe />  
     </div>
