@@ -71,40 +71,7 @@ useEffect( (e)=>{
   return (
 <header>
 
-     <div className='strip'>
-       <div className='container'>
-   
-             <div className='element-1'> 
-                   <p className='deal'>Its your best chance to get 50% off delightful products,Limited offer</p>
-                   </div>
-                    <div className='element-2 '> 
-                          <ul className='flex items-center gap-4'>
-                            <li className='list'>
-                             <Link to = "help-center"  className='link'> Help Center</Link>
-                               </li> 
-                            
-                            <li className='list'>
-
-                            <Link to ="order-his" className='link' link >Order History</Link>
-                           
-                         
-                            </li>
-                        </ul>
-
-
-
-
-
-
-  
-    
-     </div>
-
-    </div>
-
-
-
-       </div>
+ 
 
       <div className='header w-full'>
        <div className='container-head'>
