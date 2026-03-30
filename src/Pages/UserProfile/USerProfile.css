@@ -141,3 +141,33 @@ text-align: center !important;
     margin-left: 8px;
   
 }
+
+
+@media screen and (max-width:500px){
+.Profile {
+    flex-direction: column;
+    width: 100%; /* Changed from 369px to be responsive */
+  
+  }
+.Profile-Left-Mobile {
+    /* This forces the 10% to become 100% */
+    width: 369px !important; 
+    margin-left: 0px;
+ 
+  }
+  
+  .col1 {
+    width: 100% !important;
+    
+  }
+  .Profile-Molile-text{
+    flex-direction: column;
+  }
+  .Profile-Molile-textbox{
+    width: 100%;
+  }
+  .Mobile-Card-Resosive-Profile{
+    margin-left: -20px;
+  }
+ 
+}

@@ -195,7 +195,7 @@ console.log(profile)
       <Product/>
       <div className='p-10 w-full'>
         <div className=' Profile flex gap-1  '>
-          <div className='col1 w-[10%]'>
+          <div className='col1 Profile-Left-Mobile '>
           <div className=' bg-white shadow-md rounded-md  w-[70%]'>
             <div className='w-[90%] flex items-center justify-center flex-col'>
 
@@ -328,14 +328,14 @@ src ={newdata.length > 0 ? newdata[0].Image : ''} / >
           </div>
        
        
-       <div className='right-col w-[60%] items-center !justify-center'>
+       <div className='right-col w-[60%] items-center !justify-center Profile-Left-Mobile '>
 
         <div className='bg-white w-full rounded-md shadow-md p-5 '>
 
           <h3 className='my-profile pb-3'>My Profile</h3>
 
-          <div className=' Box1w-[100%] flex gap-3 ' >
-            <div className='w-[50%]'><Box
+          <div className=' Box1w-[100%] flex gap-3 Profile-Molile-text  Mobile-Card-Resosive-Profile' >
+            <div className='w-[50%] Profile-Molile-textbox '><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
       noValidate
@@ -353,7 +353,7 @@ onChange={onChangeInputProile}
       />
       
     </Box></div>
-      <div className='w-[50%]'><Box
+      <div className='w-[50%] Profile-Molile-textbox'><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
       noValidate
@@ -373,8 +373,8 @@ onChange={onChangeInputProile}
 
 
           </div>
-          <div className='flex gap-3'>
-                <div className='w-[50%]'><Box
+          <div className='flex gap-3 Profile-Molile-text Mobile-Card-Resosive-Profile'>
+                <div className='w-[50%] Profile-Molile-textbox'><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
       noValidate
@@ -389,7 +389,7 @@ onChange={onChangeInputProile}
       />
       
     </Box></div>
-      <div className='w-[50%]'><Box
+      <div className='w-[50%] Profile-Molile-textbox'><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
       noValidate
@@ -406,8 +406,8 @@ onChange={onChangeInputProile}
 
 </div>
 
-     <div className='flex gap-3 w-full'>
-                <div className='w-[50%]'><Box
+     <div className='flex gap-3 w-full Profile-Molile-text Mobile-Card-Resosive-Profile'>
+                <div className='w-[50%] Profile-Molile-textbox'><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
       noValidate
@@ -421,7 +421,7 @@ onChange={onChangeInputProile}
       />
       
     </Box></div>
-      <div className='w-[50%]'><Box
+      <div className='w-[50%] Profile-Molile-textbox'><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
       noValidate
@@ -437,8 +437,8 @@ onChange={onChangeInputProile}
     </Box></div>
 
 </div>
-     <div className='flex gap-3'>
-                <div className='w-[50%]'><Box
+     <div className='flex gap-3 Profile-Molile-text Mobile-Card-Resosive-Profile'>
+                <div className='w-[50%] Profile-Molile-textbox'><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
       noValidate
@@ -452,7 +452,7 @@ onChange={onChangeInputProile}
        />
       
     </Box></div>
-      <div className='w-[50%]'><Box
+      <div className='w-[50%] Profile-Molile-textbox'><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
       noValidate
