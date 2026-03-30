@@ -104,13 +104,13 @@ console.log(items)
 
          <div className=' billing py-10  '> 
     <div className='flex gap-5 p-10 Card w-[95%]  Billing-Responsiveneess  '>
-       <div className='left-part w-[70%]  '>
+       <div className='left-part w-[70%]  Mobile-Billing-REsponsive'>
 
         <div className='card bg-white shadow-md p-5 rounded-md w-full Left-Responsiveness '>
-            <h1 className='title'>BILLING INFORMATION</h1>
+            <h1 className='title LEft-Side-move-billing'>BILLING INFORMATION</h1>
             <form className='w-full '>
                 <h5 className="text-gray-400">User Details</h5>
-                <div className='flex items-center gap-3 '>
+                <div className='flex items-center gap-3 Mobile-form-Billing-textboxes '>
                     
                     <div className='col w-[50%]'>
 
