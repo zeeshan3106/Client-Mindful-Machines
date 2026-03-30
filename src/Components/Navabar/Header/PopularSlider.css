@@ -31,7 +31,7 @@
         background-color: black;
        
              max-width: 453px;
-        height: 200px;
+        height: 300px;
         padding-left: -200px;
         padding: 0px;
       margin: 0px;
@@ -61,13 +61,13 @@
     }
     .Slider {
         background-color: black;
-        width: 100%; /* Take full phone width */
+        width: 100%; 
       
         
     }
     .Slider {
      
-        width: 100vw; /* Use the actual viewport width */
+        width: 100vw; 
        
     }
    .Slider .swiper-slide{
@@ -93,5 +93,22 @@
   .Slider .swiper-slide {
     width: auto !important; 
 
+  }
+  .Slider .mySwiper {
+    width: 100% !important;
+    height: 520px !important; 
+    background-color: white;
+  }
+
+  .Slider .swiper-slide {
+    width: auto !important; 
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ProductItem {
+      height: 100%;
+      width: 100%;
   }
 }

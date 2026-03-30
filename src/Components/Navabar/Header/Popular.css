@@ -55,8 +55,8 @@ color:rgb(102, 100, 100)
     .Pop, .Blog1, .Slider, .right-sec {
   width: 100% !important;
   max-width: 100%;
-  box-sizing: border-box; /* include padding */
-  padding: 0 10px; /* optional small padding */
+  box-sizing: border-box;
+  padding: 0 10px; 
 }
 
     
@@ -84,16 +84,19 @@ color:rgb(102, 100, 100)
 
   }
   .mobilepopular{
-    height: 200px !important;
+    height: 520px !important;
    width: 100% !important;
   }
   .Pop{
     width: 369px;
   }
   .Slider .swiper {
-    width: 369px !important
+    width: 369px !important;
+    height: 400px;
   }
-  
+
  
-    
+    .mobileSlide{
+      height: 200px;
+    }
 }

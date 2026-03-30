@@ -194,7 +194,7 @@ const token = localStorage.getItem("token")
                  <div className='Rating-Responsivesness '>
 
                   <div>
-                  <Stack spacing={1} className=''>
+                  <Stack spacing={1} className='Rating-Responsivesness'>
       
       <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
 

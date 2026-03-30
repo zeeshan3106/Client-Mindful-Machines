@@ -214,14 +214,28 @@ transform: scale(1.2);
         font-size: 12px;
         
     }
-   .imgwrap{
+    .Pitem .imgwrap{
    max-width: 150px;
-    max-height: 20px;
+    max-height: 10px;
   
    
     
 }
 
+
+    .Pitem .imgwrap img {
+    width: 500px;
+    height: 100px;
+    object-fit: cover; 
+}
+
+.Pitem .imgwrap{
+       width: 600px;
+}
+.Pitem{
+    padding-top: 40px;
+    height: 300px;
+}
 
 .Mobile-btn-product{
     font-size: 10px;
@@ -251,13 +265,69 @@ transform: scale(1.2);
 
 }
     
+.Pitem .swiper-slide{
+    height: 200px;
+}
+.Pitem{
   
+    height: 400px;
+    margin-top: 20px;
+}
+    .Pitem .imgwrap{
+   max-width: 150px;
+    max-height: 120px;
+  
+   .Pitem{
+    padding: 0px;
+    margin: 0px;
+   }
+    
+}
+img {
+}
+ .Pitem {
+        width: 100% !important;
+        height: auto !important; 
+        padding: 15px !important;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+  
+    .Pitem .imgwrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 200px !important; 
+        max-height: none !important; 
+        display: block;
+    }
+
+   
+    .Pitem .imgwrap img { height: 90% !important;
+        width: 100% !important;
+       
+     
+    }
+
+  
+    .Mobile-btn-product {
+        font-size: 12px !important;
+        padding: 5px;
+    }
+.info1{
+    font-size: 12px;padding: 0px;margin: 0px
+}
+   .info{
+    padding: 0px;
+    font-size: 12px;padding: 0px;margin: 0px
+}
+  .Rating-Responsivesness{
+    max-width: 8px;
+  }
 }
 .ADDCARTMOBILE {
     font-size: 10px;
 }
-   
-
-
-
-
+ 
