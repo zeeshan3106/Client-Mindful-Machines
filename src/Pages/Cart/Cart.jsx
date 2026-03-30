@@ -261,7 +261,7 @@ const token = localStorage.getItem("token")
 
 <div className='flex justify-center Cart-Pagination '>
 
-   <Pagination count={10}
+   <Pagination count={2}
 
    onChange={OnchangePage}
    

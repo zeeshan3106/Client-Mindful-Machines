@@ -132,7 +132,7 @@ console.log(wishget)
         <div className='left w-[100%] '>
           <div className='bg-white rounded-md shadow-md Top'>
 
-           <h2 className='heading'>Your Wishlist</h2>
+           <h2 className=''>Your Wishlist</h2>
            <div className='flex items-center justify-center'>
             <div className='font-bold'>
           <span className='text-gray-700'>Total Items: <span>{totalwish}</span><span> </span></span>
