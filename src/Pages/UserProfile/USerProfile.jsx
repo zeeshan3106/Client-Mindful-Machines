@@ -473,7 +473,7 @@ onChange={onChangeInputProile}
 </div>
 <div className='flex   Buttons  '>
   <div className='flex gap-2'>
-<Button className='btn-blue  btn-lg 
+<Button className='btn-blue  
 
 
 
@@ -501,7 +501,7 @@ onChange={onChangeInputProile}
   
   
   Save</Button>
-<Button className='btn-blue  btn-border btn-lg '>Cancel</Button>
+<Button className='btn-blue  btn-border  '>Cancel</Button>
 </div>
 </div>
         </div>
