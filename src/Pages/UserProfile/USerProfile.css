@@ -152,8 +152,8 @@ text-align: center !important;
   
   }
 .Profile-Left-Mobile {
-    /* This forces the 10% to become 100% */
-    width: 369px !important; 
+   
+    max-width: 369px ; 
     margin-left: 0px;
  
   }
