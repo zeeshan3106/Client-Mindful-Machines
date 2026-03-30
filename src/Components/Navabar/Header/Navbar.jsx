@@ -165,7 +165,7 @@ import { Link } from 'react-router-dom'
     
     
     </li>
-   <li className='links'>  <Link to ='Product'  className="Home">Offers</Link>  
+   <li className='links'>  <Link to ='/login'  className="Home">Offers</Link>  
    
    
    
@@ -175,7 +175,7 @@ import { Link } from 'react-router-dom'
       <ul className='submenu'>
         
           <li className='list-btn'>
-          <Link to ="/Product" >Home Essentials Sale</Link>
+          <Link to ="/signup" >Home Essentials Sale</Link>
 
         </li>
           <li className='list-btn'>
