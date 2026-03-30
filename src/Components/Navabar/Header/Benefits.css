@@ -117,6 +117,7 @@
     }
     .Benefits{
        width: 100%;
+   
     }
     .beni a{
         font-size: 8px;
@@ -130,6 +131,16 @@
     }
   .top{
         font-size: 8px;
+    }
+    .all{
+        height: 550px;
+    }
+    .Blog .info1{
+        margin-top: 20px;
+    }
+    .Blog .learn{
+        display: flex;
+        max-width: 100%;
     }
 
 }

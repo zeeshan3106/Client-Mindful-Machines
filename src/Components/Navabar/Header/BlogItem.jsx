@@ -50,7 +50,14 @@ function BlogItem() {
    
 
        <div className='price'>
-      <span className='learn'><Link>Learn More <FaAngleRight /></Link></span>
+      <span className='learn'>
+        <Link>
+        <div className='flex items-center'>
+        <div>Learn More</div>
+        <div><FaAngleRight /></div></div>
+        </Link>
+      
+       </span> 
       
       </div>
     </Stack>

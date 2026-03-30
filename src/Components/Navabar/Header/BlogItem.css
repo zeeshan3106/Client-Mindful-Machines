@@ -10,5 +10,23 @@
 
 
 @media screen and (max-width:500px){
-  
+.Blog1{
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+}
+.Blog1.Pop {padding: 0px;
+  margin: 0px;
+
+}
+.Blog1.Pop.pop1 { padding: 0px !important;
+  margin: 0px !important;
+
+}
+.Blog-Title{
+  padding: 0px;
+  margin: 0px;
+}
+
+
 }
