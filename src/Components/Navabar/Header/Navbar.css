@@ -271,7 +271,7 @@ left: 200px
     margin-left: 20px;
   }
   .container2{
-    max-width: 369px;
+    max-width: 100%;
   }
   .mobileNAvbar{
     width: 70% ;

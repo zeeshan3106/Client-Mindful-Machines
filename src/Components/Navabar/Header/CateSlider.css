@@ -143,7 +143,7 @@ font-weight: bold;
    }
 
     .CateSlider {
-      max-width: 369px;
+      max-width: 100%;
     }
  .CateSlider.container{
   max-width: 100%;

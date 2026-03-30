@@ -222,11 +222,14 @@ margin-bottom: 0px;}
   align-items: center;}
 
 .strip{
-  max-width: 369px;
+  max-width: 100%;
 
 }
 .mobilefrontlogo{
   gap: 0px !important;
+}
+.header{
+  width: 100%;
 }
 
 .element-2{
@@ -240,6 +243,7 @@ margin-bottom: 0px;}
  background-color: transparent
 }
   .container-head{
+    width: 100%;
  
 }
 .header{
