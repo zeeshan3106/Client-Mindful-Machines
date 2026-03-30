@@ -148,12 +148,13 @@ text-align: center !important;
 @media screen and (max-width:500px){
 .Profile {
     flex-direction: column;
-    width: 369px 
+    width: 369px;
+    margin-left: 0px;
   
   }
 .Profile-Left-Mobile {
    
-    max-width: 369px ; 
+    width: 369px ; 
     margin-left: 0px;
  
   }

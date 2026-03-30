@@ -406,7 +406,7 @@ onChange={onChangeInputProile}
 
 </div>
 
-     <div className='flex gap-3 w-full Profile-Molile-text Mobile-Card-Resosive-Profile'>
+     <div className='flex gap-3 Profile-Molile-text Mobile-Card-Resosive-Profile'>
                 <div className='w-[50%] Profile-Molile-textbox'><Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch' } }}
