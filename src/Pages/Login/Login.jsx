@@ -159,7 +159,7 @@ const[isshow, setisshow]=useState(false)
   
 <div className='container-login'>
   <div className='Login flex  '>
-    <div className='w-[30%] Mobile-login-width Login-Inner-Container rounded-md shadow-md'>
+    <div className='w-[30%] Mobile-login-width Login-Inner-Container '>
   <diV>Login To Your Account</diV>
 
 
