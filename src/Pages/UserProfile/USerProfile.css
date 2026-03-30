@@ -158,6 +158,9 @@ text-align: center !important;
     margin-left: 0px;
  
   }
+  .mobile-profile-responsive{
+  width: 369px;
+  }
   .Mobile-REsponsve-Profile-User{
     max-width: 369px;
   }
