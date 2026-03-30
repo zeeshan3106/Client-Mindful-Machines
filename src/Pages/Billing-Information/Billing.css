@@ -96,13 +96,17 @@
         margin-left: -25px;
     }
     .Left-Responsiveness {
-     width: 400px;
+     width: 369px;
      margin-left: 0px;
     }
     .Right-Responsiveness{
-  width: 400px;
+  width: 369px;
     }
     .billing {
         max-width: 369px;
+    }
+    .Billing-Responsiveneess{
+        padding-left: 0px;
+        margin-left: 2gpx;
     }
 }
