@@ -138,7 +138,9 @@ text-align: center !important;
 }
 .Buttons{
     margin-top: 20px;
-    margin-left: 8px;
+   justify-content: flex-end;
+   margin-right: 40px;
+   
   
 }
 
@@ -146,7 +148,7 @@ text-align: center !important;
 @media screen and (max-width:500px){
 .Profile {
     flex-direction: column;
-    width: 100%; /* Changed from 369px to be responsive */
+    width: 369px 
   
   }
 .Profile-Left-Mobile {
@@ -155,7 +157,9 @@ text-align: center !important;
     margin-left: 0px;
  
   }
-  
+  .Mobile-REsponsve-Profile-User{
+    max-width: 369px;
+  }
   .col1 {
     width: 100% !important;
     
@@ -169,5 +173,7 @@ text-align: center !important;
   .Mobile-Card-Resosive-Profile{
     margin-left: -20px;
   }
- 
+ .Buttons{
+    margin-right: 0px;
+ }
 }

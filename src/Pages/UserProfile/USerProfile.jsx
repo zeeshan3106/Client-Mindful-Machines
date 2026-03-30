@@ -193,7 +193,7 @@ console.log(profile)
   return (
     <section>
       <Product/>
-      <div className='p-10 w-full'>
+      <div className='p-10 w-full Mobile-REsponsve-Profile-User'>
         <div className=' Profile flex gap-1  '>
           <div className='col1 Profile-Left-Mobile '>
           <div className=' bg-white shadow-md rounded-md  w-[70%]'>
@@ -471,8 +471,9 @@ onChange={onChangeInputProile}
 
 
 </div>
-<div className='flex center gap-2  Buttons'>
-<Button className='btn-blue  btn-lg w-[100%]
+<div className='flex   Buttons  '>
+  <div className='flex gap-2'>
+<Button className='btn-blue  btn-lg 
 
 
 
@@ -486,6 +487,7 @@ onChange={onChangeInputProile}
         borderRadius:"20px",
         fontSize:"14px",
         fontFamily:"Roboto",
+       
 
       }
 
@@ -499,7 +501,8 @@ onChange={onChangeInputProile}
   
   
   Save</Button>
-<Button className='btn-blue  btn-border btn-lg w-[100%]'>Cancel</Button>
+<Button className='btn-blue  btn-border btn-lg '>Cancel</Button>
+</div>
 </div>
         </div>
 <div className='bg-white w-[50px] mt-5'>
