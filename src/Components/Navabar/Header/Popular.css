@@ -85,7 +85,7 @@ color:rgb(102, 100, 100)
   }
   .mobilepopular{
     height: 200px !important;
-   max-width: 369px !important;
+   width: 100% !important;
   }
   .Pop{
     width: 369px;
@@ -93,6 +93,7 @@ color:rgb(102, 100, 100)
   .Slider .swiper {
     width: 369px !important
   }
+  
  
     
 }

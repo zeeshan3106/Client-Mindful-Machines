@@ -103,7 +103,21 @@ transform: none;
     .Pop{
     
     }
- 
+ .all{
+    width: 100%;
+
+ }
+ .Blog1{
+    width: 100%;
+ }
+ .Blog1.Slider{
+
+    max-width: 100%;
+
+ }
+ .Blog1 .swiper {
+    width: 100%;
+ }
     .desc{
         font-size: 10px;
     }

@@ -112,11 +112,11 @@
 
     .beni{
         background-color: white;
-        max-width: 350px;
+        max-width: 100%;
     
     }
     .Benefits{
-       width: 369px;
+       width: 100%;
     }
     .beni a{
         font-size: 8px;

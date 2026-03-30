@@ -43,7 +43,7 @@
     }
 
     .Slider .swiper {
-       max-width: 369px;
+       max-width: 100%;
         height: 200px;
     }
     .Slider .mySwiper {
@@ -53,11 +53,11 @@
     }
     .container3{
    
-        width: 369px;
+        width: 100%;
     }
     .box{
     
-        width: 369px;
+        width: 100%;
     }
     .Slider {
         background-color: black;
@@ -79,7 +79,7 @@
         height: 350px !important; 
     }
     .Slider {
-    max-width: 369px !important; 
+    max-width: 100% !important; 
     margin: 0 !important;
     padding: 0 !important;
   }
