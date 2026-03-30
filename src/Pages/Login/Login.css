@@ -87,7 +87,7 @@
 
 .Login {
     background-color: white;
-    max-width: 500px;
+    width: 100%;
     padding: 50px;
   
     border: 1px solid #f8f8f8;
@@ -114,9 +114,22 @@ font-size: large;
 .Food{
     display: flex;
     justify-content: start;
-    padding-left: 13px;
+   
+    
+  
 
 }
+.ButtonAreaLoin{
+  display: flex;
+  justify-content: center;
+
+}
+.Btnloginflex{
+    width: 29%;
+
+}
+
+
 .Link2{
     justify-content: center;
     max-width: 100%;
@@ -200,8 +213,21 @@ color: rgb(109, 107, 107);
     margin-top: 20px;
 
 }
+.Login{
+    justify-content: center;
+}.Login-Inner-Container{
+   
+}
 
 @media screen and (max-width:480px) {
-    
+
+.Btnloginflex{
+    width: 70%;
+
+}
+.Mobile-login-width{
+    width: 100%;
+}
+
     
 }

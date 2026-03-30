@@ -158,8 +158,10 @@ const[isshow, setisshow]=useState(false)
      <Product/>
   
 <div className='container-login'>
-  <div className='Login'>
+  <div className='Login flex  '>
+    <div className='w-[30%] Mobile-login-width Login-Inner-Container rounded-md shadow-md'>
   <diV>Login To Your Account</diV>
+
 
 
   <form className='form'>
@@ -255,13 +257,14 @@ const[isshow, setisshow]=useState(false)
 
 
 </div>
+
 <div className='Food'>
 
 <Link to = "/ForgetPassword"className="Link    justify-start  cursor-pointer text-[15px] font-[600]" >Forget Password?</Link>
 </div>
 
 
-<div className='flex items-center w-full text-white'>
+<div className='flex items-center  text-white'>
 <Button
 
 onClick={onSub}
@@ -326,6 +329,8 @@ isloading===true ?  <CircularProgress color="inherit" /> : ""
 
 </div>
 
+
+
 <div className='Log-sign'>
 <div className='register-signup '><Link className='  justify-start  cursor-pointer text-[15px] font-[600] to="" '>Not Registered yet?</Link></div>
 <div className='Signup-login w-full .bg '>
@@ -365,7 +370,10 @@ isloading===true ?  <CircularProgress color="inherit" /> : ""
   
   Login with Google</div></Button>
 </div>
+
 </form>
+
+</div>
 </div>
 
 
