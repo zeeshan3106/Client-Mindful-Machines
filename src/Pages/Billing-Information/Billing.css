@@ -102,4 +102,7 @@
     .Right-Responsiveness{
   width: 400px;
     }
+    .billing {
+        max-width: 369px;
+    }
 }

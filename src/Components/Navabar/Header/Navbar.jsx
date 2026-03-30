@@ -19,7 +19,10 @@ import { Link } from 'react-router-dom'
             <button className='btn '>
           <div className='flex items-center'>
             <div>
+              <Link to="/Billing">
               <FaListCheck />
+              
+            </Link>
               </div>
            <div className='Select-Header-Resposnive'>  &nbsp;  Select Item By Category &nbsp;</div>
              
