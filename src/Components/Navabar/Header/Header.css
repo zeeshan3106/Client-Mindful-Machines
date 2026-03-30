@@ -298,7 +298,7 @@ width: 15px !important;
  
 }
 .header{
-   max-width: 369px;
+  width: 100%;
 }
  .list{
     gap: 0px;

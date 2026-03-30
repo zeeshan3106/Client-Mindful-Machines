@@ -5,6 +5,7 @@
     background-color: rgb(45, 45, 245);
     padding: 10px;
     color: white;
+    width: 100%;
 }
 .ProductPage{
 
@@ -304,7 +305,7 @@ width: 200px;
     
 }
 .mobilePageProduct{
-    max-width: 369px;
+    max-width: 100%;
 }
 .pagenomobile{
     max-width: 100%;
@@ -317,7 +318,7 @@ width: 200px;
 }
 .filter-bar{
     padding: 5px;
-    max-width: 369px;
+    max-width: 100%;
 }
 
 .rightway{
@@ -336,6 +337,14 @@ margin-left: 1px;
  
 
 }
-
+.wellness{
+    width: 100%;
+}
+.Products-Counts{
+    width: 100%;
+}
+.ProductPage  {
+    width: 100%;
+}
     
 }
