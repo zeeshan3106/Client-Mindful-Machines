@@ -48,7 +48,7 @@
 }
 
 .zoom{
-    z-index: 110000;
+    z-index: 110;
     position: absolute;
     top: 5px;
     right: 10px;
@@ -162,7 +162,7 @@ span{
     color: white;
     padding:10px;
     position:absolute;
-    z-index: 10000;
+   
     align-items: center;
     justify-content: center;
     top: 5px;

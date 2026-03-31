@@ -103,3 +103,10 @@ margin-left: 100px;
     border-radius: 40px;
     padding: 10px;
 }
+
+@media screen and (max-width:500px){
+    .cart-side {
+        width: 100%;
+        height: 100%;
+    }
+}

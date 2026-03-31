@@ -303,7 +303,7 @@ isloading===true ?  <CircularProgress color="inherit" /> : ""
     
     
     />
-  <Link to="" className='text-white '> <div className='text-white '>
+  <Link to="/Home" className='text-white '> <div className='text-white '>
     <div className='flex items-center gap-2'>
      <div>
     

@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom'
 
  
   function Navbar(){
+
+  
     
 
     return(
@@ -20,7 +22,7 @@ import { Link } from 'react-router-dom'
           <div className='flex items-center'>
             <div>
               <Link to="/Billing">
-              <FaListCheck />
+              <FaListCheck   onClick={(()=>{setop})} />
               
             </Link>
               </div>

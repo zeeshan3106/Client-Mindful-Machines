@@ -7,7 +7,7 @@ import Productbar from './Productbar'
 import ProductItem from '../../Components/Navabar/Header/ProductItem'
 import {Link} from 'react-router-dom'
 
-
+import './apple.css'
 import { BsFillMenuButtonWideFill } from "react-icons/bs";
 import { IoGridSharp } from "react-icons/io5";
 import { GoRows } from "react-icons/go";
@@ -478,6 +478,8 @@ useEffect(()=>{
 
 },[sort])
 
+const [open,setopen]=useState(false)
+
 
 
 const pagenumbers = []
@@ -503,7 +505,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
 
 
-            <div className='side'>
+            <div className='side flex'>
 
  <aside className='Sidebar'>
      
@@ -674,6 +676,188 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
     </Collapse>
 
     </aside>
+
+    {
+      open===true?
+ <aside className='Sidebar1 absolute pt-4 z-40 bg-white'>
+     
+      <h4  className='filters'>
+        
+        <div><button onClick={() => setisOpenCategoryFilter(!isOpenCAtegoryFilter)}>
+
+        
+        <div>  <div className='flex gap-10  !items-center'><div className="flex w-[70%] items-center gap-2"> <div > <TbFilterCheck /></div> <div>Filters</div></div><div><FaAngleDown />
+        </div>
+          <div className='text-blue-600'>
+        <button  onClick={(()=>{setopen(open?false:true)})}>
+          <IoGridSharp />
+        </button>
+        </div>
+</div> 
+      </div> 
+        </button>
+
+        
+</div>
+      </h4>
+
+      <Collapse isOpened={isOpenCAtegoryFilter} Style={{ overflow: 'hidden' }}>
+
+
+
+      <h5 className='cate'>CATEGORIES</h5>
+
+      
+    <div className="category">
+
+
+      
+        <div className="scrol">
+
+
+
+
+          
+
+
+          <FormGroup className='text-f'>
+
+            
+{
+      
+      categoryitems?.map((product,index)=>(
+
+            <FormControlLabel control={<Checkbox />}
+            checked={selected === product.category}
+            name={product.category} onChange={handleChange}  
+               label={product.category}    />
+   
+            
+))}
+           
+          </FormGroup>
+
+
+
+
+     
+
+
+
+
+
+
+
+        </div>
+      
+
+
+
+  <div>
+             <h5>Availability</h5>
+                <FormGroup className='text-f'>
+            <FormControlLabel control={<Checkbox />} label="Available"  name="Available" onChange={handleChange} />
+            <FormControlLabel control={<Checkbox />} label="Out of Stock"name="Out of Stock" onChange={handleChange} 
+            
+            />
+ 
+          
+           
+          </FormGroup>
+</div>
+
+
+        <h5>Filter By Price</h5>
+        
+
+
+            <div> <Box sx={{ width: 300 }}>
+      <Slider
+
+
+
+
+
+
+
+        getAriaLabel={() => 'Temperature range'}
+        value={price}
+        
+        onChange={setprice}
+        min={100}
+        max={100000}
+        step={5}
+
+        valueLabelDisplay="auto"
+
+
+       
+      />
+    </Box></div>
+
+<div className='price-f'>
+
+
+
+
+        <div>From:-{price[0]}</div>
+        <div>To:-{price[1]}</div>
+        </div>
+     
+     
+      </div>
+
+      <h5 className='price-f'>
+        Ratings
+      </h5>
+
+      <div className="">
+        <Link to= "" >
+         <Stack spacing={1}>
+
+      <Rating name="half-rating-read" defaultValue={5} precision={0.5} readOnly
+    
+      
+      />
+    </Stack></Link>
+
+      </div>
+      
+      
+      <div className="">
+        <Link>
+         <Stack spacing={1}>
+      <Rating name="half-rating-read" defaultValue={4} precision={0.5} readOnly />
+    </Stack></Link>
+      </div>
+      
+      <div className="">
+       <Link> <Stack spacing={1}>
+      <Rating name="half-rating-read" defaultValue={3} precision={0.5} readOnly />
+    </Stack></Link> 
+      </div>
+      
+      <div className="">
+       <Link>  <Stack spacing={1}>
+      <Rating name="half-rating-read" defaultValue={2} precision={0.5} readOnly />
+    </Stack></Link>
+      </div>
+      
+      <div className="">
+         <Link><Stack spacing={1}>
+      <Rating name="half-rating-read" defaultValue={1} precision={0.5} readOnly />
+    </Stack></Link>
+      </div>
+      
+
+
+
+      
+    </Collapse>
+
+    </aside> :''
+}
+
             </div>
 
             
@@ -684,7 +868,11 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
     
     <div className='f-col1 w-[10%]'>
 
-      <div className='text-blue-600'><IoGridSharp /></div>
+      <div className='text-blue-600'>
+        <button  onClick={(()=>{setopen(open?false:true)})}>
+          <IoGridSharp />
+        </button>
+      </div>
    
 
     </div>

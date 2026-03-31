@@ -1,0 +1,19 @@
+.Footer{
+    background-color: #000f46;
+}
+
+.upper-Footer{
+
+}
+.Numbers-Footer{
+    text-decoration: underline;
+}
+
+.FooterLink:hover{
+    color: #ABBED5;
+    text-decoration: underline;
+  
+}
+.MArgin-Footer{
+
+}

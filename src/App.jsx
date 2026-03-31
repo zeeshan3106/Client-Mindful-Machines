@@ -44,6 +44,8 @@ import ProductItemSearch from './Components/Navabar/Header/ProductItemSearch'
 import ProductItem from './Components/Navabar/Header/ProductItem'
 import HomeNoLogin from './Components/Navabar/Header/HomeNoLogin'
 
+import Footer from './Pages/Footer/Footer'
+
 
 
 const App = () => {
@@ -104,7 +106,9 @@ const apiurl = import.meta.env.VITE_API_URL
               <Route path={'/SearchProduct'} exact={true} element={<ProductItemSearch/>}/>
 
               <Route path={'/Home'} exact={true} element={<HomeNoLogin/>}  /> 
-         
+              <Route path={'/Footer'} exact={true} element={<Footer/>}/>
+
+            
       </Routes>
 
 

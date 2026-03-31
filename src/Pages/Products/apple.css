@@ -1,4 +1,4 @@
-.Sidebar {
+.Sidebar1 {
   max-width: 280px;
   padding: 20px;
  
@@ -14,13 +14,13 @@
 }
  
 
-.Sidebar h4 {
+.Sidebar1 h4 {
   margin-bottom: 15px;
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.Sidebar h5 {
+.Sidebar1 h5 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 1rem;
@@ -28,7 +28,7 @@
   color: #555;
 }
 
-.Sidebar h6 {
+.Sidebar1 h6 {
   margin: 8px 0;
   font-size: 0.95rem;
   font-weight: 500;
@@ -47,7 +47,7 @@
     
 }
 
-.Sidebar .MuiBox-root{
+.Sidebar1 .MuiBox-root{
 
     max-width: 200px;
     display: flex;
@@ -59,12 +59,12 @@
   margin-top: 1px;  
   margin-bottom: 1px;
 }
-.Sidebar h5 {
+.Sidebar1 h5 {
     font-weight: bold;
     color: black;
     font-size:  20px;
 }
-.Sidebar .scrol{
+.Sidebar1 .scrol{
    
 
    /* overflow-y: scroll;*/
@@ -74,17 +74,17 @@
     display: flex;
     gap:70px
 }
-.Sidebar{
+.Sidebar1{
  
  overflow-x: hidden;
   overflow-y: auto;
   height: auto;
 }
 
-.Sidebar .scrol{
+.Sidebar1 .scrol{
 
 }
-.Sidebar{
+.Sidebar1{
   background-color: white}
 
 .filters{
@@ -92,18 +92,45 @@
   align-items: center;
   justify-content: center;}
 
+ .Sidebar1{
+        position: absolute;
+        z-index: 2000;
+    }
+    .Sidebar1 {
+    position: fixed;  
+    top: 0;             
+    left: 0;            
+    height: 100vh;      
+    width: 280px;      
+    z-index: 2000;      
+    background: #fff;   
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
+   transition: transform 0.3s ease-in-out;
+}
 
+.Sidebar1 {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9999 !important; 
+    width: 280px;
+    height: 100vh;
+    background: white;
+}
+
+.Sidebar1::-webkit-scrollbar{
+    display: block;
+}
+.Sidebar1::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: 20px;
+}
+.Sidebar1::-webkit-scrollbar-track{
   
+}
   @media screen and (max-width:500px) {
 
-    .Sidebar{
-      position: fixed;
-      top: 0px;
-      left: 0px;
-    display: none;  
-    }
-
-
-
+   
     
   }
+
