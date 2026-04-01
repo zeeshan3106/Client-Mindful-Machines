@@ -95,7 +95,7 @@ function Footer() {
 <div>
  <div className=' text-white font-bold p-5 pb-2 text-[18px]'>
            Support</div>
-            <div className='text-white p-5 pt-0'>
+            <div className='text-white p-5 pt-0 font-bold'>
                  <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white hover:text-[#ABBED5]'>System Assistance</div></Link>    
              <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white'> Neural Community</div></Link>    
              <Link className='FooterLink hover:text-[#ABBED5]'> <div className='text-white'>Logic FAQ's</div></Link>    
@@ -109,14 +109,21 @@ function Footer() {
 
 
 <div className=' bg-[#00082a] font-bold h-[100px] p-5'>
+  <div></div>
+
   <div className='flex text-white gap-2 underline text-[13px] '>
+
     <Link className='text-white'>  <div >Terms Privacy</div></Link>
 <Link className='text-white'>  <div >Accessability</div></Link>
 <Link className='text-white'>  <div >AI Ethics & Safety</div></Link>
 <Link className='text-white'>  <div >Privacy</div></Link>
 <Link className='text-white'>  <div ></div></Link>
 
+
+
+
   </div>
+  
   
   </div>
 

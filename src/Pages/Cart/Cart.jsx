@@ -15,6 +15,7 @@ import axios from 'axios'
 import Products from '../Products/Products'
 import toast, { Toaster } from 'react-hot-toast'
 import Pagination from '@mui/material/Pagination';
+import Footer from '../Footer/Footer'
 
 
 
@@ -362,6 +363,7 @@ fontFamily:'Times New Roman'
 
 
 <Benefits/>
+<Footer/>
   </section>
 
 

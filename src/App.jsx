@@ -45,7 +45,8 @@ import ProductItem from './Components/Navabar/Header/ProductItem'
 import HomeNoLogin from './Components/Navabar/Header/HomeNoLogin'
 
 import Footer from './Pages/Footer/Footer'
-
+import SearchBar from './Pages/Search/Search'
+import OrderPlaced from './Pages/OrderConfirmation/OrderPlaced'
 
 
 const App = () => {
@@ -101,12 +102,14 @@ const apiurl = import.meta.env.VITE_API_URL
 <Route path={'/Cartput'} exact={true} element={<Cartput/>}/>
 
        <Route path={'/Cartput'} exact={true} element={<Cartput/>}/>
-        <Route path={'/Search'} exact={true} element={<ProductsSearch/>}/>
+        <Route path={'/Searching'} exact={true} element={<ProductsSearch/>}/>
 
               <Route path={'/SearchProduct'} exact={true} element={<ProductItemSearch/>}/>
 
               <Route path={'/Home'} exact={true} element={<HomeNoLogin/>}  /> 
               <Route path={'/Footer'} exact={true} element={<Footer/>}/>
+              <Route path={'/Search'} exact = {true} element = {<SearchBar/>} />
+              <Route path={'/OrderPlaced'} exact={true} element={<OrderPlaced/>} />
 
             
       </Routes>

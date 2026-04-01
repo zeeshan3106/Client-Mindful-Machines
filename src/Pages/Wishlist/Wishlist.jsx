@@ -14,6 +14,7 @@ import { Button } from '@mui/material'
 import ProductItem from '../../Components/Navabar/Header/ProductItem'
 import axios from 'axios'
 import Pagination from '@mui/material/Pagination';
+import Footer from '../Footer/Footer'
 
 
 
@@ -267,6 +268,7 @@ console.log(wishget)
 
 
 <Benefits/>
+<Footer/>
   </section>
 
 

@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom'
 import { SiPaypal } from "react-icons/si";
 import { BsCashCoin } from "react-icons/bs";
 import Stripe from './Stripe'
+import Footer from '../Footer/Footer'
 function Billing() {
   
 
@@ -586,6 +587,8 @@ console.log(items)
 
 
 <Benefits/>
+
+<Footer/>
 
     </div>
  
