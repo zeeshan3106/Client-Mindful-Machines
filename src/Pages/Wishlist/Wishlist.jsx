@@ -39,7 +39,7 @@ function Wishlist() {
 
     const token = localStorage.getItem("token")
  const currentPage = localStorage.getItem('page')
-  axios.get('http://localhost:8000/api/wish/wishGet',
+  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/wish/wishGet',
    {
     headers:{
       Authorization:`Bearer ${token}`
@@ -80,7 +80,7 @@ useEffect(()=>{
 
 const token = localStorage.getItem("token")
  const currentPage = localStorage.getItem('page')
-  axios.get('http://localhost:8000/api/wish/wishGet',
+  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/wish/wishGet',
    {
     headers:{
       Authorization:`Bearer ${token}`
