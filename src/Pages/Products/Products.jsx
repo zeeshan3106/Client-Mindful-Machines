@@ -80,7 +80,7 @@ function Products() {
       const AddtoWishlist = (_id) =>{
   const token = localStorage.getItem("token")
   
-        axios.post('https://backend-mindful-machines-44vc.vercel.app/api/wish/addWish',
+        axios.post(`${import.meta.env.VITE_API_URL}api/wish/addWish`,
            {
             "_id":_id
           }
@@ -121,7 +121,7 @@ function Products() {
       const onClick = (_id) =>{
   const token = localStorage.getItem("token")
   
-        axios.get('https://backend-mindful-machines-44vc.vercel.app/api/cart/cartget',{
+        axios.get(`${import.meta.env.VITE_API_URL}api/cart/cartget`,{
   
           headers:{
   
@@ -165,7 +165,7 @@ function Products() {
           
           const token = localStorage.getItem("token")
           const fileritem = localStorage.getItem("item")
-          axios.get('https://backend-mindful-machines-44vc.vercel.app/products/getbycategory',
+          axios.get(`${import.meta.env.VITE_API_URL}api/products/getbycategory`,
   
         {    /*  
               headers:{
@@ -239,7 +239,7 @@ function Products() {
   
   useEffect( (e)=>{
   
-    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getCategory')
+    axios.get(`${import.meta.env.VITE_API_URL}api/products/getCategory`)
     .then(res => 
   
       setcategoryitems(res.data.data)
@@ -256,7 +256,7 @@ function Products() {
   useEffect(()=>{
     if (selected.length === 0) return; // optional: prevent empty request
   
-    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory', {
+    axios.get(`${import.meta.env.VITE_API_URL}api/products/getbycategory`, {
       params: {
         categoryid: selected
 
@@ -292,7 +292,7 @@ function Products() {
 
           const token = localStorage.getItem("token")
           const fileritem = localStorage.getItem("item")
-          axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
+          axios.get(`${import.meta.env.VITE_API_URL}api/products/getbycategory`,
   
         {    /*  
               headers:{
@@ -381,7 +381,7 @@ function Products() {
 
           const token = localStorage.getItem("token")
           const fileritem = localStorage.getItem("item")
-          axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
+          axios.get(`${import.meta.env.VITE_API_URL}api/products/getbycategory`,
   
         {    /*  
               headers:{
@@ -426,7 +426,7 @@ const OnChangeSort=((e) =>{
   const sorting = e.target.value
   setsort(sorting)
   console.log(sorting)
- axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory', {
+ axios.get(`${import.meta.env.VITE_API_URL}api/products/getbycategory`, {
     params: {
       categoryid: localStorage.getItem("token"),
       sortingId: sorting
@@ -443,7 +443,7 @@ const OnChangeSort=((e) =>{
 
 
 
-   axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getCategory')
+   axios.get(`${import.meta.env.VITE_API_URL}api/products/getCategory`)
     .then(res => 
   
       setcategoryitems(res.data.data)
@@ -465,7 +465,7 @@ useEffect(()=>{
   const token = localStorage.getItem("token")
   
   const filteritem = localStorage.getItem("item")
-  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/getbycategory',
+  axios.get(`${import.meta.env.VITE_API_URL}api/products/getbycategory`,
     {
       params:{
            categoryid:filteritem,
