@@ -31,7 +31,7 @@ import Button from '@mui/material/Button';
 
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
-
+import { createContext } from 'react'
 
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
@@ -40,7 +40,13 @@ import { TbFilterCheck } from "react-icons/tb";
 import img1 from './Components/1.jpg'
 
 
+export const appleContext = createContext()
 
+export const appleProvider = ({childern})=>{
+    const [selectedd, setSelected] = useState(() =>{
+   return localStorage.getItem('item')
+   });
+}
 
 
 
@@ -494,7 +500,10 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
   return (
 
+
+
     <section>
+    
        <div><Product/></div>
 
         <div className='container-side Product'>

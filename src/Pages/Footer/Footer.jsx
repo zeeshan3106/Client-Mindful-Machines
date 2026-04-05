@@ -7,17 +7,17 @@ import linkedin from './linkedin.png'
 import { FaArrowRightLong } from "react-icons/fa6";
 function Footer() {
   return (
-    <div className='Footer w-[100%] h-[604px] '>
+    <div className='Footer w-[100%] h-[604px] m-c-2 '>
 
 
-        <div className='text-white p-5 font-bold text-[30px] MArgin-Footer bg-blue-950'> Mindful Machines</div>
-  <div className='flex  '>
+        <div className='text-white p-5 font-bold text-[30px] MArgin-Footer bg-blue-950 m-c-1'> Mindful Machines</div>
+  <div className='flex Mobile-Footer-Container '>
 
-    <div>
-       <div className='text-white font-bold p-5  pb-0 text-[18px]'>
+    <div className='Mobile-Element-Footer'>
+       <div className='text-white font-bold p-5  pb-0 text-[18px] Mobile-No'>
            </div>
  
-            <div className='text-white  p-5 pt-0 flex flex-col gap-4 font-bold text-[20px]'>
+            <div className='text-white  p-5 pt-0 flex flex-col gap-4 font-bold text-[20px] m-c-3 '>
                  <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white FooterLink hover:text-[#396dac] '>
                <div className='flex items-center gap-2'>  <div className='text-blue-400'><FaArrowRightLong /></div>
                  <div>About us</div></div></div> </Link>    
@@ -40,9 +40,9 @@ function Footer() {
 
 
     <div>
-        <div className='text-white font-bold p-5 pb-0 text-[18px]'>
+        <div className='text-white font-bold p-5 pb-0 text-[18px] m-c-4'>
             Products</div>
-            <div className='text-white p-5 pt-0 flex flex-col gap-2 pt-4 font-bold'>
+            <div className='text-white p-5 pt-0 flex flex-col gap-2 pt-4 font-bold Mobile-Footer-Part2'>
                     <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Health Devices</div></Link> 
                 <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Wellness Devices</div></Link>
               <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Home Devices</div></Link>
@@ -56,8 +56,8 @@ function Footer() {
  <div className='text-white font-bold p-5 pb-0 text-[18px]'>
            Contact Details</div>
             <div className='text-white p-5 pt-3 '>
-                 <Link><div className='text-white flex gap-2 font-bold '>Pakistan<div className='Numbers-Footer'>0309-8789844</div> </div></Link>    
-             <Link><div className='text-white flex gap-2 font-bold'>International<div className='Numbers-Footer'>+92-309-8789844</div></div></Link>    
+                 <Link><div className='text-white flex gap-2 font-bold Mobile-County-Footer '>Pakistan<div className='Numbers-Footer'>0309-8789844</div> </div></Link>    
+             <Link><div className='text-white flex gap-2 font-bold Mobile-International-Footer'>International<div className='Numbers-Footer'>+92-309-8789844</div></div></Link>    
              <Link> <div className='text-white font-bold pt-4'><div className='text-[18px]'>Address</div></div><div className='text-white '>
               1 Melbourne Street
               
@@ -72,7 +72,7 @@ function Footer() {
 </div>
 </div>
 <div>
- <div className='text-white font-bold p-5 pb-0 text-[18px]'>
+ <div className='text-white font-bold p-5 pb-0 text-[18px] flex justify-center'>
            Connect</div>
            <div className='flex gap-3 items-center pt-2 justify-center pt-2'>
             <div className='w-[10%]'>
@@ -108,10 +108,10 @@ function Footer() {
 </div>
 
 
-<div className=' bg-[#00082a] font-bold h-[100px] p-5'>
+<div className=' bg-[#00082a] font-bold h-[100px] p-5 Mobile-Last-Footer'>
   <div></div>
 
-  <div className='flex text-white gap-2 underline text-[13px] '>
+  <div className='flex text-white gap-2 underline text-[13px] Mobile-Last-Options '>
 
     <Link className='text-white'>  <div >Terms Privacy</div></Link>
 <Link className='text-white'>  <div >Accessability</div></Link>

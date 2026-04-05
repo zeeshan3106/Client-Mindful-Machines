@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Product from '../../../Components/Navabar/Header/Header1'
 import Benefits from '../../../Components/Navabar/Header/Benefits'
 import './ProductDetail.css'
@@ -22,11 +22,31 @@ import img1 from '../Components/1.jpg'
 import { Button } from '@mui/material'
 
 import { FaCartArrowDown } from "react-icons/fa";
+import axios from 'axios'
 
 
 function Productdetail() {
 
+  const [state,setstate]=useState([])
+
     const [productsize, setproductsize]=useState(0)
+
+
+    console.log('title',state.title)
+
+    useEffect(()=>{
+      axios.get('http://localhost:8000/api/users/detail',{
+        params:{
+
+         id:"697e884b332e75de07e652d7"
+
+        }
+      }).then(res => {console.log(res.data)
+
+        setstate(res.data.data[0])
+      }).catch(err => err)
+
+    },[])
 
     
 
@@ -92,13 +112,13 @@ function Productdetail() {
 <div className='container-p'>
 <div className='package'>
 
-<div className='title-p'>AI Powered Advance Drone</div>
-<div className='company-p'><Link to="/Home">Mindful Machines</Link></div>
+<div className='title-p'>{state.title}</div>
+<div className='company-p'><Link to="/Home">{state.company}</Link></div>
 
 <div className='price'>
 <span class="stock-badge in-stock">In Stock</span>
-    <div className='old' > $2000.00</div>
-     <div className="new">$1500.00</div>
+    <div className='old' > ${state.oldPrice}</div>
+     <div className="new">${state.price}</div>
 
 
 </div>
@@ -111,12 +131,7 @@ function Productdetail() {
 
 <div class="product-description">
     <p>
-      This AI Powered Advanced Drone is built for precise, stable, and intelligent flight. 
-      It adapts in real time to its environment, maintaining control and balance even when 
-      conditions change. Smart navigation and tracking reduce manual effort, allowing you 
-      to focus on capturing clean, steady aerial footage. The modern, streamlined build 
-      prioritizes durability and performance, making it reliable for both creative and 
-      practical use.
+      {state.description}
     </p>
   </div>
 
@@ -133,7 +148,7 @@ function Productdetail() {
   </div>
 <div className='price-d'>
   <h5>Available in Stocks:-</h5>
-   <h5 className='b'>400 items</h5>
+   <h5 className='b'>{state.stock}</h5>
 </div>
 
 <div>

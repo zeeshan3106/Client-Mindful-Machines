@@ -428,7 +428,7 @@ console.log(items)
    
    
    
-   >Check-Out
+   ><Link to='/OrderPlaced' className='text-white'>Check-Out</Link>
 
 
 

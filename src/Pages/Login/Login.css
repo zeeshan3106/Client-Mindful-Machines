@@ -13,8 +13,8 @@
    max-width: 20px;
 }
 .Login{
-    background-color: white;
   
+  background-color: white;
     justify-content: center;
     align-content:center;
     align-items: center;
@@ -86,7 +86,7 @@
 }
 
 .Login {
-    background-color: white;
+  
     width: 100%;
     padding: 50px;
   
@@ -216,6 +216,8 @@ color: rgb(109, 107, 107);
 .Login{
     justify-content: center;
 }.Login-Inner-Container{
+
+ 
    
 }
 
@@ -227,6 +229,9 @@ color: rgb(109, 107, 107);
 }
 .Mobile-login-width{
     width: 120%;
+}
+.Login{
+    background-color: white;
 }
 
     

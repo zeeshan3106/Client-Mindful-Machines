@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
   import { MdKeyboardArrowDown } from "react-icons/md";
   import { FaGlobe } from "react-icons/fa6";
 
- 
   function Navbar(){
 
   
@@ -216,19 +215,19 @@ import { Link } from 'react-router-dom'
       <ul className='submenu'>
         
           <li className='list-btn'>
-          <Link to ="/Product" >Customer Support</Link>
+          <Link to ="/Contact" >Customer Support</Link>
 
         </li>
           <li className='list-btn'>
-          <Link to ="/Product" >Sales Inquiry</Link>
+          <Link to ="/Contact" >Sales Inquiry</Link>
 
         </li>
           <li className='list-btn'>
-          <Link to ="/Product" >Feedback</Link>
+          <Link to ="/Feedback" >Feedback</Link>
 
         </li>
           <li className='list-btn'>
-          <Link to ="/Product" >Locations</Link>
+          <Link to ="/Footer" >Locations</Link>
 
         </li>
 

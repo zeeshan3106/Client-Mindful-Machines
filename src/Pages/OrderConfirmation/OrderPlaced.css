@@ -4,3 +4,22 @@
 .Order-c{
    margin-top: 0PX;
 }
+
+
+
+@media screen and (max-width:500px){
+
+    .ODPL-Text{
+        font-size: 20px;
+    }
+    .Mobile-Order-Summary{
+        max-width: 100%;
+    }
+
+    .mobile-decs-order{
+         font-size:10px;
+    }
+    .mobile-order-sum{
+        width: 100%;
+    }
+}

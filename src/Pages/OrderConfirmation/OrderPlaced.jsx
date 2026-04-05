@@ -21,17 +21,17 @@ function OrderPlaced() {
 
 <div className=' flex justify-center Order-c '>
 
-  <div className='w-[90%]    p-5 pt-2  flex justify-center '>
+  <div className='w-[90%]    p-5 pt-2  flex justify-center mobile-order-sum '>
    
     <div >
        <div className='  w-[100%] flex justify-center '>
-        <div className='w-[40%] ROUNDED-MD shadow-md'><img  src={img}/></div>
+        <div className='w-[30%] ROUNDED-MD shadow-md'><img  src={img}/></div>
        </div>
 <div className='flex flex-col items-center pt-0 '>
   
-    <div className='text-[30px] font-bold'>Thank You For Your Purchase. </div>
- <div className='text-[14px] font-bold text-gray-500'>We've Recieved Your Order will ship in 5-10 Bussiness Days </div>
- <div className='text-[14px] font-bold text-gray-500'>Your Order Id is #123456 </div>
+    <div className='text-[30px] font-bold ODPL-Text'>Thank You For Your Purchase. </div>
+ <div className='text-[14px] font-bold text-gray-500 mobile-decs-order'>We've Recieved Your Order will ship in 5-10 Bussiness Days </div>
+ <div className='text-[14px] font-bold text-gray-500 mobile-decs-order'>Your Order Id is #123456 </div>
 
 
 
@@ -39,7 +39,7 @@ function OrderPlaced() {
 
 <div>
 
-  <div className='bg-white p-4 w-[100%] mt-5 font-bold shadow-md rounded-md'>
+  <div className='bg-white p-4 w-[100%] mt-5 font-bold shadow-md rounded-md Mobile-Order-Summary'>
     
    <div className='font-bold text-[20px] pb-3  '> Order Summary</div>
   

@@ -26,7 +26,7 @@ import AdsBanner3 from './AdsBanner3';
 import logo from './Images/Banners/logo.jpg'
 import Blog from './Blog';
 import Benefits from './Benefits';
-import Products from '../../../Pages/Products/Products';
+import Products, { appleContext } from '../../../Pages/Products/Products';
 import Cart from '../../../Pages/Cart/Cart';
 import { Button } from '@mui/material';
 import Cartbar from '../../../Pages/Cart/Cartbar';
@@ -48,9 +48,13 @@ import Footer from '../../../Pages/Footer/Footer';
 
 
 
-
-
 function Header() {
+
+
+
+
+
+
 const [userdata, setdata] = useState([])
 
   const [islogin, setislogin]=useState(false)

@@ -46,7 +46,10 @@ import HomeNoLogin from './Components/Navabar/Header/HomeNoLogin'
 
 import Footer from './Pages/Footer/Footer'
 import SearchBar from './Pages/Search/Search'
+import { useContext } from 'react'
 import OrderPlaced from './Pages/OrderConfirmation/OrderPlaced'
+import { appleProvider } from './Pages/Products/Products'
+import Navbar from './Components/Navabar/Header/Navbar'
 
 
 const App = () => {
@@ -65,7 +68,11 @@ const apiurl = import.meta.env.VITE_API_URL
   };
   return (
 
+    
+
   <MyContext.Provider value={{ setOpenDrawer, selectedCategory, setSelectedCategory }}>
+
+
 
 
 
