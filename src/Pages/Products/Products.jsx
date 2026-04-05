@@ -63,6 +63,7 @@ import { FaRegHeart } from "react-icons/fa";
 
 
 import toast, { Toaster } from 'react-hot-toast';
+import Footer from '../Footer/Footer'
 function Products() {
 
 
@@ -1166,6 +1167,8 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
  <div >
                <Benefits/>
+
+               <Footer/>
             </div>
 
           

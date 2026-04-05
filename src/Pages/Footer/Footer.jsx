@@ -24,7 +24,7 @@ function Footer() {
                      <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white FooterLink hover:text-[#396dac] '>
                <div className='flex items-center gap-2'>  <div className='text-blue-400'><FaArrowRightLong /></div>
                  <div>Careers</div></div></div> </Link> 
-                      <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white FooterLink hover:text-[#396dac] '>
+                      <Link to="/contact" className='FooterLink hover:text-[#ABBED5]'><div className='text-white FooterLink hover:text-[#396dac] '>
                <div className='flex items-center gap-2'>  <div className='text-blue-400'><FaArrowRightLong /></div>
                  <div>Contact us</div></div></div> </Link> 
                         <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white FooterLink hover:text-[#396dac] '>
@@ -74,7 +74,7 @@ function Footer() {
 <div>
  <div className='text-white font-bold p-5 pb-0 text-[18px] flex justify-center'>
            Connect</div>
-           <div className='flex gap-3 items-center pt-2 justify-center pt-2'>
+           <div className='flex gap-3 items-center pt-2 justify-center pt-2 Mobile-Footer-icons'>
             <div className='w-[10%]'>
               <a href='Https://www.facebook.com/profile.php?id=100015850997278'>
             <img className='max-w-[23px]'  src='https://logo.svgcdn.com/logos/facebook.png'/>

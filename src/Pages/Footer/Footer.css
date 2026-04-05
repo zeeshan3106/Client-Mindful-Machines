@@ -42,6 +42,13 @@
         margin: 0px;
         gap: 0px;
     }
+    .Footer{
+  
+    }
+    .Mobile-Footer-icons{
+        display: flex;
+      gap: 0px;
+    }
     .Mobile-No{
         max-width: 0px;
         display: none;

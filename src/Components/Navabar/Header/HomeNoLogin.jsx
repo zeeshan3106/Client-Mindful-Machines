@@ -34,6 +34,7 @@ import Cartbar from '../../../Pages/Cart/Cartbar';
 import { MyContext } from '../../../App';
 import { useEffect } from 'react';
 import axios from 'axios';
+import Footer from '../../../Pages/Footer/Footer';
 
 
 
@@ -277,7 +278,7 @@ console.log(size)
 
 </div>
 <div>
-
+<Footer/>
 </div>
 
 
