@@ -126,7 +126,7 @@ console.log(wishget)
   <section>
     <Product/>
 
-    <div className='sec p-5'>
+    <div className='sec p-5 Wishlist-Mobile'>
       <div className='Cart-container center flex  w-[80%] max-w-[100%] justify-center gap-10'>
 
 

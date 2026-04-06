@@ -1,12 +1,12 @@
 .Sidebar {
   max-width: 280px;
-  padding: 20px;
- 
+
 
   border-right: 1px solid #ddd;
   font-family: Arial, sans-serif;
   height: 100vh;
   overflow-y: auto;
+  background-color: white;
 
 }
 .ReactCollapse--collapse {
@@ -37,6 +37,7 @@
 
 .category {
   margin-bottom: 20px;
+  margin: 20px;
 }
 
 .scrol {
@@ -106,4 +107,11 @@
 
 
     
+  }
+
+  .side {
+    background-color: white;
+  }
+  .Sidebar{
+    background-color: white;
   }

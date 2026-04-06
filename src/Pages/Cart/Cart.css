@@ -135,6 +135,33 @@ margin-left: 100px;
     .Cart-Pagination{
         width: 100%;
     }
+    .Mobile-Cart-Resposive{
+        padding: 0px !important;
+    }
+    .Left-Mobile-Cart{
+        width: 100%;
+        border-radius: 0px;
+    }
+    .Cart-Mobile-Title{
+        border-radius: 0px;
+        padding-top: 0px;
+        padding: 0px !important;
+        margin-top: 0px !important;
+    }
+    .heading{
+        font-size: 20px !important;
+    }
+    .Mobile-Cart-Element-font{
+        font-size: 12px;
+    }
+    .Title-cart{
+        padding: 10px !important;
+    }
+    .Mobile-cart-font-part{
+        font-size: 20px;
+    }
 }
-
+.Cart-Pagination{
+    margin-top: 100px;
+}
 

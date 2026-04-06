@@ -360,4 +360,41 @@ margin-left: 1px;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+.filters{
+   width: 100%;
+}
+.Sidebar1 {
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+}
+.category{
+   
+    box-shadow: none;
+    width: 270px;
+    padding-left: 0px;
+    margin-left: -10px;
+}
+.avaiable{
+    margin-left: 20px;
+}
+}
+.category{
+   
+    box-shadow: none;
+   
+    padding-left: 0px;
+    margin-left: -10px;
+}
+.scrol{
+   width: 100%;
+  
+}
+
+.Sidebar{
+    background-color: white;
+    background-color: black;
+}
+.side{
+    background-color: black;
 }

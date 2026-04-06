@@ -159,20 +159,20 @@ const token = localStorage.getItem("token")
   <section>
     <Product/>
 
-    <div className='sec p-5'>
+    <div className='sec p-5 Mobile-Cart-Resposive'>
       <div className='Cart-container center flex  w-[80%] max-w-[100%] justify-center gap-20 Mobile-Cart'>
 
 
-        <div className='left w-[70%]  '>
+        <div className='left w-[70%]  Left-Mobile-Cart'>
 
 
 
         
         
-<div className='cart-side apple   shadow-md rounded-md p-5 bg-white '>
-  <div className='Title-cart border-b border-[rgba(0,0,0,0.1)] h-[100%]' >
-  <h2 className='heading'>Your Delightful Cart</h2>
-          <div className='font-bold text-blue-500 h-[100%]'>
+<div className='  shadow-md rounded-md  bg-white Cart-Mobile-Title '>
+  <div className='Title-cart border-b border-[rgba(0,0,0,0.1)]  flex  flex-col items-center ' >
+  <div><h2 className='text-[30px] Mobile-cart-font-part'>Your Delightful Cart</h2></div>
+          <div className='font-bold text-blue-500 Mobile-Cart-Element-font '>
           <span>Has: <span>{total}</span><span> items</span></span>
 
           </div>

@@ -529,7 +529,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
 
 
-            <div className='side flex'>
+            <div className='side flex bg-white'>
 
  <aside className='Sidebar'>
      
@@ -597,11 +597,11 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
 
 
-  <div>
-             <h5>Availability</h5>
+  <div className='avaiable ml-5'>
+             <h5 className='avaiable'>Availability</h5>
                 <FormGroup className='text-f'>
-            <FormControlLabel control={<Checkbox />} label="Available"  name="Available" onChange={handleChange} />
-            <FormControlLabel control={<Checkbox />} label="Out of Stock"name="Out of Stock" onChange={handleChange} 
+            <FormControlLabel control={<Checkbox />} label="Available" className='avaiable ml-4' name="Available" onChange={handleChange} />
+            <FormControlLabel control={<Checkbox />} label="Out of Stock" className='avaiable' name="Out of Stock" onChange={handleChange} 
             
             />
  
@@ -1137,7 +1137,57 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                             
                       
                 
-                       <div className='flex justify-center bg-red-600 text-white Addtobtns'>
+                    {apple === null ?    <div className='flex justify-center bg-red-600 text-white Addtobtns'>
+                              <Link to="/Login" className=' text-white'>
+                            <Button 
+                
+                          
+                
+                            sx={{
+                              color:'white'
+                            }}
+                
+                            
+                            
+                            
+                            className=' text-white '>
+                
+                               <Toaster
+                                      toastOptions={{
+                                  
+                                        style:{
+                                          background:"white",
+                                          color:"black",
+                                          borderRadius:"20px",
+                                          fontSize:"14px",
+                                          fontFamily:"Roboto",
+                                  
+                                        }
+                                  
+                                  
+                                      }}
+                                      
+                                      
+                                      
+                                      />
+                
+                
+                
+                
+                
+                
+                
+                             
+                
+                              <div className=" Mobile-btn-product"> Add To WishList</div>
+                              
+                              
+                              
+                              </Button></Link>
+                            </div>
+
+                            :
+                            <div className='flex justify-center bg-red-600 text-white Addtobtns'>
                               <Link to="" className=' text-white'>
                             <Button 
                 
@@ -1184,7 +1234,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                               
                               
                               </Button></Link>
-                            </div>
+                            </div>}
                 
                 
                               

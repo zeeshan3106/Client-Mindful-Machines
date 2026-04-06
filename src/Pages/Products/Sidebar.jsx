@@ -149,7 +149,7 @@ console.log(selected)
           
 
 
-          <FormGroup className='text-f'>
+          <FormGroup className=''>
 
             
 {
