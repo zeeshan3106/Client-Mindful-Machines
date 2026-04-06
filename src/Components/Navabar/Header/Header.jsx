@@ -127,14 +127,14 @@ console.log(size)
          
        </div>
                     <div className='element-2'> 
-                          <ul className='flex gap-3 items-center mb-4'>
-                            <li className='list  items-center'>
+                          <ul className='flex gap-3 items-center mb-4 element-items'>
+                            <li className='font-bold'>
                              <Link to = "/Contact"  className='link'> Help Center</Link>
                               </li>
                           
                             <li>
 
-                            <Link to ="/Feedback" className='link' link >Order History</Link>
+                            <Link to ="/Feedback" className='link font-bold' link >Order History</Link>
                            
                             </li>
                              

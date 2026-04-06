@@ -43,11 +43,27 @@ function Footer() {
         <div className='text-white font-bold p-5 pb-0 text-[18px] m-c-4'>
             Products</div>
             <div className='text-white p-5 pt-0 flex flex-col gap-2 pt-4 font-bold Mobile-Footer-Part2'>
-                    <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Health Devices</div></Link> 
-                <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Wellness Devices</div></Link>
-              <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Home Devices</div></Link>
-               <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Humanoid Robots</div></Link>
-               <Link className='FooterLink hover:text-[#ABBED5]'> <div className='text-white'>AI Industrial Robots</div></Link>
+                    <Link onClick={()=>{
+                      localStorage.setItem('item','AI Powered Health Devices')
+                    }} to="/Product" className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Health Devices</div></Link> 
+                <Link 
+                onClick={()=>{
+                      localStorage.setItem('item','AI Powered Wellness Devices')
+                    }}
+                
+                to="/Product" className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Wellness Devices</div></Link>
+              <Link 
+                  onClick={()=>{
+                      localStorage.setItem('item','AI Powered Home Devices')
+                    }}to="/Product" className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Home Devices</div></Link>
+               <Link
+                   onClick={()=>{
+                      localStorage.setItem('item','AI Powered Humanoid Robots')
+                    }} to="/Product" className='FooterLink hover:text-[#ABBED5]'><div className='text-white'>AI Humanoid Robots</div></Link>
+               <Link
+                   onClick={()=>{
+                      localStorage.setItem('item','AI Powered Industrial Robots')
+                    }} to="/Product" className='FooterLink hover:text-[#ABBED5]'> <div className='text-white'>AI Industrial Robots</div></Link>
 </div>
 </div>
 

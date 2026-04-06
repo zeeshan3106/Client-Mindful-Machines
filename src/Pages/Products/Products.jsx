@@ -69,6 +69,7 @@ function Products() {
 
 
 
+  const localitem = localStorage.getItem("item")
 
   const [apple , setapple]=useState("")
 
@@ -265,10 +266,10 @@ function Products() {
   
   
   
-  
   useEffect(()=>{
     if (selected.length === 0) return; // optional: prevent empty request
-  
+
+   
     axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`, {
       params: {
         categoryid: selected
@@ -496,7 +497,7 @@ useEffect(()=>{
   })
   .catch(err => err)
 
-},[sort])
+},[])
 
 const [open,setopen]=useState(false)
 

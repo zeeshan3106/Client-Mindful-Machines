@@ -303,6 +303,36 @@ width: 15px !important;
  .list{
     gap: 0px;
   }
+
+  .strip .container{
+    padding: 0px;
+   width: 100%;
+    margin: 5px;
+  }
+.strip{
+  padding: 0px;
+}
+.element-2{
+  padding: 0px;
+  margin: 0px;
+gap: 10px;
+
+}
+.element-items{
+  display: flex;
+  gap: 10px !important;
+  padding: 0px;
+  margin: 0px;
+  justify-content: start;
+  align-items: center;
+
+}
+.element-1{
+  max-width: 30%;
+}
+
+
+
 }
 .link1{
 width: 5px;
