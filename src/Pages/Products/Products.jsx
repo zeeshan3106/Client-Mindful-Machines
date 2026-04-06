@@ -67,6 +67,19 @@ import Footer from '../Footer/Footer'
 function Products() {
 
 
+
+
+
+  const [apple , setapple]=useState("")
+
+
+  useEffect(()=>{
+    const tokenn = localStorage.getItem("token")
+    setapple(tokenn)
+    console.log("token",tokenn)
+  },[])
+
+
  
    const [selectedd, setSelected] = useState(() =>{
    return localStorage.getItem('item')
@@ -689,16 +702,16 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
     {
       open===true?
- <aside className='Sidebar1 absolute pt-4 z-40 bg-white'>
+ <aside className='Sidebar1 absolute pt-4 z-40 bg-white overlay'>
      
-      <h4  className='filters'>
+      <h4  className='filters '>
         
         <div><button onClick={() => setisOpenCategoryFilter(!isOpenCAtegoryFilter)}>
 
         
         <div>  <div className='flex gap-10  !items-center'><div className="flex w-[70%] items-center gap-2"> <div > <TbFilterCheck /></div> <div>Filters</div></div><div><FaAngleDown />
         </div>
-          <div className='text-blue-600'>
+          <div className='text-blue-600 '>
         <button  onClick={(()=>{setopen(open?false:true)})}>
           <IoGridSharp />
         </button>
@@ -986,6 +999,71 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                 
                             
                   </div>
+
+
+                  {apple === null ?  <div className='flex justify-center bg-blue-800 text-white Addtobtns ADDCARTMOBILE  '>
+                              <Link to="/Login" className=' text-white ADDCARTMOBILE' >
+                
+                            
+                            <Button 
+                
+                            sx={{
+                              color:'white',
+                
+                
+                                width: {
+                    xs: "100%",   // mobile
+                    sm: "50%",    // small screens
+                    md: "200px"   // desktop
+                  }
+                            }}
+                
+                
+                
+                
+                
+                
+                      
+                
+                            
+                            
+                            
+                            className='AddToCartbtn  text-white ADDCARTMOBILE '>
+                
+                               <Toaster
+                                      toastOptions={{
+                                  
+                                        style:{
+                                          background:"white",
+                                          color:"black",
+                                          borderRadius:"20px",
+                                          fontSize:"14px",
+                                          fontFamily:"Roboto",
+                                          
+                                  
+                                        }
+                                  
+                                  
+                                      }}
+                                      
+                                      
+                                      
+                                      />
+                
+                
+                
+                
+                
+                
+                
+                             <div className="Mobile-btn-product">Add To Cart</div> </Button>
+                              
+                              
+                              
+                              
+                              
+                              </Link>
+                            </div> :
                 
                 
                     <div className='flex justify-center bg-blue-800 text-white Addtobtns ADDCARTMOBILE  '>
@@ -1051,6 +1129,9 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                               
                               </Link>
                             </div>
+
+                                    }
+
                 
                             
                       
@@ -1140,13 +1221,15 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
             <div className=' flex justify-center pt-4 mobilePageProduct '>
 <div className='bg-white w-[50%] Products-Pagination  rounded-md shadow-md p-2 flex justify-center pagenomobile'>
-  <Pagination
+  <Link to="/Product"> <Pagination
+  to=""
   color='primary'
   count={pages}
   onChange={onPageChange}
   page={thispage}
   
   />
+ </Link>
 </div>
 
 

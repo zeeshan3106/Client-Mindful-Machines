@@ -20,7 +20,7 @@ function Cartbar() {
 
 
 
-              <Drawer open={open} onClose={toggleDrawer(false)}>
+              <Drawer open={open} onClose={toggleDrawer(false)} transitionDuration={500}>
         {DrawerList}
       </Drawer>
 

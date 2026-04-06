@@ -10,10 +10,11 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast'
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
+
 
 import SaveIcon from '@mui/icons-material/Save';
 import Stack from '@mui/material/Stack';
@@ -29,11 +30,16 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { blue, green } from '@mui/material/colors';
+
+
+
 function Login() {
 
 
-  const navigate = useNavigate();
 
+
+  const navigate = useNavigate();
+  const loginToHome = 1
 
   const [loading , isloading]=useState(false)
 
@@ -97,7 +103,8 @@ if (login.password === "" ){
  toast.success('Login Successfully!')
 
    localStorage.setItem("token", res.data.token);
-  
+
+     navigate('/Home')
 
       setlogin({
         email:"",
@@ -118,6 +125,8 @@ if (login.password === "" ){
    console.log(err => 
 
     toast.error("Your Credentials are Wrong.")
+
+    
 
 
 
@@ -303,7 +312,7 @@ isloading===true ?  <CircularProgress color="inherit" /> : ""
     
     
     />
-  <Link to="/Home" className='text-white '> <div className='text-white '>
+  <Link to="" className='text-white '> <div className='text-white '>
     <div className='flex items-center gap-2'>
      <div>
     
@@ -312,7 +321,17 @@ isloading===true ?  <CircularProgress color="inherit" /> : ""
     
     <div>
     
-    Login</div></div></div></Link>
+    Login
+
+    {  loginToHome === 1 ? <Link to= "/Home"></Link>  :""
+
+
+
+    }
+    
+    
+    
+    </div></div></div></Link>
 
 <div>
 

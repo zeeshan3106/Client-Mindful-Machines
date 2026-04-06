@@ -178,25 +178,27 @@ console.log(size)
 
               
 <div className=' cart-theme'>
-                  <Link to="/Profile" className='link1 '><CgProfile className='homelogo'/></Link>
+                  <Link to="/Login" className='link1 '><CgProfile className='homelogo'/></Link>
 </div>
               <li className='cart cart-theme'>
-   <Link to="/wishlist" className='link1'><FaRegHeart  className='homelogo'/></Link>
+   <Link to="/Login" className='link1'><FaRegHeart  className='homelogo'/></Link>
    
    
    
 </li>
 
  <div className=' cart-theme'>
+  <Link to="/Login">
    
    <button className='link1'   
-   onClick={()=>context.setOpenDrawer(true)}  
+
+  
 
 
    
    ><FaCartArrowDown  className='homelogo' /></button>
 
-             </div>
+           </Link>  </div>
 
 </div>
               

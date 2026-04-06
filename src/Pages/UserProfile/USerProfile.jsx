@@ -178,11 +178,22 @@ console.log(profile)
 
  
 
- const onClickImage = ()=>{
+ useEffect(()=>{
 
-  
- }
+  const token = localStorage.getItem("token")
 
+  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/frontend/getprofiles',
+    {
+      headers:{
+        Authorization:`Bearer ${token}`
+      }
+
+    }
+  ).then(res=>{console.log(res.data)})
+  .catch(err => err)
+
+
+ },[])
 
 
 
@@ -219,7 +230,7 @@ src ={newdata.length > 0 ? newdata[0].Image : ''} / >
            
 <div className='font-bold border-gray-500 pt-2 pb-5 ml-5 flex justify-center items-center'>
 
-    <div> <input type = "file" id= "picture" className='' onChange={(e)=>{onImageChnage(e);}}></input> </div> 
+    <div> <input type = "file" id= "picture" className='Type-file' onChange={(e)=>{onImageChnage(e);}}></input> </div> 
        
 
 

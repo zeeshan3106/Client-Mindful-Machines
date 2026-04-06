@@ -346,4 +346,18 @@ margin-left: 1px;
 .ProductPage  {
     width: 100%;
 }
+.Sidebar1{
+    transition-duration: 300ms;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+   transition: transform 1s ease-in-out !important;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './Components/Navabar/Header/Header'
 import { BrowserRouter, Routes , Route, Link} from 'react-router-dom'
 
@@ -16,7 +16,7 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 
 
-
+import { useLocation } from 'react-router-dom'
 import { IoClose } from "react-icons/io5";
 
 import { useState } from 'react'
@@ -52,7 +52,34 @@ import { appleProvider } from './Pages/Products/Products'
 import Navbar from './Components/Navabar/Header/Navbar'
 
 
+const Scroll = ()=>{
+
+  const pathname = useLocation()
+
+  useEffect(()=>{
+
+
+    window.scroll(0,0)
+
+
+
+
+  },[pathname])
+
+
+
+
+}
+
+
+
+
+
 const App = () => {
+
+
+
+
 const apiurl = import.meta.env.VITE_API_URL
   const [islogin, setislogin]=useState(false)
 
@@ -79,7 +106,7 @@ const apiurl = import.meta.env.VITE_API_URL
     <>
 
 <BrowserRouter>
-
+<Scroll/>
        
 <Routes>
 
