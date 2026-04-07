@@ -10,14 +10,14 @@ function Footer() {
     <div className='Footer w-[100%] h-[604px] m-c-2 '>
 
 
-        <div className='text-white p-5 font-bold text-[30px] MArgin-Footer bg-blue-950 m-c-1'> Mindful Machines</div>
+        <div className='text-white p-5 font-bold text-[30px] MArgin-Footer bg-blue-950 First-Footer-Responsive '> Mindful Machines</div>
   <div className='flex Mobile-Footer-Container '>
 
     <div className='Mobile-Element-Footer'>
        <div className='text-white font-bold p-5  pb-0 text-[18px] Mobile-No'>
            </div>
  
-            <div className='text-white  p-5 pt-0 flex flex-col gap-4 font-bold text-[20px] m-c-3 '>
+            <div className='text-white  p-5 pt-0 flex flex-col gap-4 font-bold text-[20px] Mobile-Footer-Element '>
                  <Link className='FooterLink hover:text-[#ABBED5]'><div className='text-white FooterLink hover:text-[#396dac] '>
                <div className='flex items-center gap-2'>  <div className='text-blue-400'><FaArrowRightLong /></div>
                  <div>About us</div></div></div> </Link>    
@@ -40,7 +40,7 @@ function Footer() {
 
 
     <div>
-        <div className='text-white font-bold p-5 pb-0 text-[18px] m-c-4'>
+        <div className='text-white font-bold p-5 pb-0 text-[18px] m-c-4 text-[18px]'>
             Products</div>
             <div className='text-white p-5 pt-0 flex flex-col gap-2 pt-4 font-bold Mobile-Footer-Part2'>
                     <Link onClick={()=>{
