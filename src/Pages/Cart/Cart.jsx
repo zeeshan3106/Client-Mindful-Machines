@@ -10,14 +10,14 @@ import { Link } from 'react-router-dom'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import img1 from './Components/1.jpg'
-import { Button } from '@mui/material'
+import { Button, IconButton } from '@mui/material'
 import axios from 'axios'
 import Products from '../Products/Products'
 import toast, { Toaster } from 'react-hot-toast'
 import Pagination from '@mui/material/Pagination';
 import Footer from '../Footer/Footer'
 
-
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Cart() {
 
@@ -116,6 +116,77 @@ const token = localStorage.getItem("token")
 
 
 
+const onClickDelete = async(_id)=>{
+
+const token = localStorage.getItem("token")
+ await  axios.delete(`${import.meta.env.VITE_API_URL}/api/cart/delete`,{
+
+    headers:{
+      Authorization:`Bearer ${token}`
+    },
+
+    params:{
+      "_id":_id
+    }
+
+
+
+  }).then(
+    res => {
+      toast.success("Deleted Successfully...")
+   
+      console.log(res.data)
+      console.log(_id)
+    }
+  ).catch(err => {err
+
+  toast.error("Not Found...")
+  }
+
+
+
+  )
+
+
+   await axios.get(`${import.meta.env.VITE_API_URL}api/cart/get`,{
+
+    params:{
+      page: thispage
+    }
+
+   },
+
+      {
+        headers:{
+           Authorization: `Bearer ${token}`
+        }
+      }
+
+
+
+    )
+    .then(res => {
+      setcart(res.data.data)
+      settotal(res.data.totalItems)
+      setcarttotal(res.data.carttotal)
+      console.log(res.data)
+
+    
+     
+
+    }
+    )
+    .catch(err => console.log(err))
+ 
+
+
+
+
+
+
+}
+
+
 
 
 
@@ -186,8 +257,9 @@ const token = localStorage.getItem("token")
 <div className='cart-side   shadow-md rounded-md p-1  bg-white'>
 
 
-<div className='cart-item p-3 flex items-center gap-4 border'>
+<div className='border flex items-center'>
 
+  <div className='cart-item p-3 flex items-center gap-4 '>
   <div className='img w-[20%] rounded-md overflow-hidden group-hover:scale-105'>
     <Link>
 
@@ -221,16 +293,19 @@ const token = localStorage.getItem("token")
 
                 </div>
        
-
+   
 </div>
 
+</div>
+<div className='ml-[-10]'>
 
 
+ <IconButton aria-label="delete" onClick={()=>{onClickDelete(product._id)}}>
+        <DeleteIcon />
+      </IconButton>
 
 
-
-
-
+</div>
 
 
 
