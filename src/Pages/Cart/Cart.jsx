@@ -148,19 +148,14 @@ const token = localStorage.getItem("token")
   )
 
 
-   await axios.get(`${import.meta.env.VITE_API_URL}api/cart/get`,{
-
-    params:{
-      page: thispage
+   
+    axios.get(`${import.meta.env.VITE_API_URL}/api/cart/get`,{
+      headers:{
+        Authorization:`Bearer ${token}`
+      }
     }
 
-   },
-
-      {
-        headers:{
-           Authorization: `Bearer ${token}`
-        }
-      }
+    
 
 
 
@@ -178,13 +173,28 @@ const token = localStorage.getItem("token")
     )
     .catch(err => console.log(err))
  
-
+  
 
 
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
