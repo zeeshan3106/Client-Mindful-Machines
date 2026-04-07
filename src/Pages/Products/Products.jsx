@@ -599,6 +599,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
   <div className='avaiable ml-5'>
              <h5 className='avaiable'>Availability</h5>
+             <div className='scrol pl-10'>
                 <FormGroup className='text-f'>
             <FormControlLabel control={<Checkbox />} label="Available" className='avaiable ml-4' name="Available" onChange={handleChange} />
             <FormControlLabel control={<Checkbox />} label="Out of Stock" className='avaiable' name="Out of Stock" onChange={handleChange} 
@@ -608,6 +609,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
           
            
           </FormGroup>
+          </div>
 </div>
 
 

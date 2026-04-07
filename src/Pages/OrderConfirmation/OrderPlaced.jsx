@@ -25,7 +25,7 @@ function OrderPlaced() {
    
     <div >
        <div className='  w-[100%] flex justify-center '>
-        <div className='w-[30%] ROUNDED-MD shadow-md'><img  src={img}/></div>
+        <div className='w-[30%] '><img  src={img}/></div>
        </div>
 <div className='flex flex-col items-center pt-0 '>
   

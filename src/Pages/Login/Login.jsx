@@ -91,7 +91,7 @@ if (login.password === "" ){
 
 
 
- axios.post('https://backend-mindful-machines-44vc.vercel.app/api/users/login',login
+ axios.post(`http://localhost:8000/api/users/login`,login
 
   )
   
@@ -122,13 +122,13 @@ if (login.password === "" ){
   .catch(err => 
 
 
-   console.log(err => 
+   console.log(err => { console.log(err)
 
     toast.error("Your Credentials are Wrong.")
 
     
 
-
+   }
 
    )
 

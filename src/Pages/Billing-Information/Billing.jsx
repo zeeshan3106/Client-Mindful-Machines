@@ -540,34 +540,23 @@ console.log(items)
      <img src='https://crystalpng.com/wp-content/uploads/2024/10/Easypaisa-logo-600x600.png'></img>
       </div>
       <div>Easy Paisa</div></div>
-        
-        
-        
         </div>
 </Link>
-  <Link> <div className='mt-4 ABC  flex justify-center text-gray-700  pb-2 pb-2 '> 
+
+
+ <Link> <div className='mt-4 ABC  flex justify-center text-gray-700 shadow-md p-2 border-rgba(0,0,0,0.1)  pb-2 pb-2 '> 
     <div className='payment '>
-    <div >
-
+    <div className='w-[25px]'>
+   
+     <img src=' https://crystalpng.com/wp-content/uploads/2024/12/new-Jazzcash-logo-600x600.png'></img>
       </div>
-      <div className='flex gap-3 items-center shadow-md p-2 shadow-md p-2 border-rgba(0,0,0,0.1) border-rgba(0,0,0,0.1)'>
-
-<div className=' w-[30px] '>
-       <img src='https://crystalpng.com/wp-content/uploads/2024/12/new-Jazzcash-logo-600x600.png'></img>
+      <div>Jazz Cash</div></div>
         
         
-        </div>
-
-        <div>JazzCash</div>
-        
-        
-        </div>
-        
-        
-        
-        </div>
+       
         </div>
 </Link>
+
 
 </div>
 

@@ -346,6 +346,9 @@ margin-left: 1px;
 .ProductPage  {
     width: 100%;
 }
+.category{
+    width: 50px;
+}
 .Sidebar1{
     transition-duration: 300ms;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
@@ -371,13 +374,16 @@ margin-left: 1px;
 .category{
    
     box-shadow: none;
-    width: 270px;
+    width: 200px;
     padding-left: 0px;
-    margin-left: -10px;
+    padding: 0px !important;
+    margin-left: -10px !important;
+  
 }
 .avaiable{
-    margin-left: 20px;
+
 }
+
 }
 .category{
    
@@ -385,6 +391,8 @@ margin-left: 1px;
    
     padding-left: 0px;
     margin-left: -10px;
+    padding: 0px !important;
+    margin-left: 0p !important;
 }
 .scrol{
    width: 100%;
