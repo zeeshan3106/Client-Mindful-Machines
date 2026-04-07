@@ -94,13 +94,8 @@ function Products() {
       const AddtoWishlist = (_id) =>{
   const token = localStorage.getItem("token")
   
-        axios.post(`${import.meta.env.VITE_API_URL}/api/wish/addWish`,
-           {
-            "_id":_id
-          }
-  ,
-  
-  {
+        axios.post(`${import.meta.env.VITE_API_URL}/api/wish/addWish`,{},
+        {
   
   
           headers:{
@@ -108,6 +103,9 @@ function Products() {
             Authorization:`Bearer ${token}`
   
           },
+            params:{
+            "_id":_id
+          }
   
      
   
@@ -1193,7 +1191,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                               <Link to="" className=' text-white'>
                             <Button 
                 
-                            onClick={()=>onClick(product._id)}
+                            onClick={()=>AddtoWishlist(product._id)}
                 
                             sx={{
                               color:'white'

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import img1 from './Components/1.jpg'
-import { Button } from '@mui/material'
+import { Button, IconButton } from '@mui/material'
 import ProductItem from '../../Components/Navabar/Header/ProductItem'
 import axios from 'axios'
 import Pagination from '@mui/material/Pagination';
@@ -18,6 +18,7 @@ import Footer from '../Footer/Footer'
 
 
 
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 
@@ -69,6 +70,64 @@ function Wishlist() {
   }
 
 
+
+
+  const onDelete = async(_id) =>{
+
+const token = localStorage.getItem("token")
+
+
+   await axios.delete(`${import.meta.env.VITE_API_URL}/api/wish/deleteWish`,
+      {
+        params:{
+          _id:_id
+        }
+      }
+
+
+    )
+    .then(res => res).catch(err => err)
+
+
+
+ const currentPage = localStorage.getItem('page')
+ await axios.get(`${import.meta.env.VITE_API_URL}/api/wish/wishGet`,
+   {
+    headers:{
+      Authorization:`Bearer ${token}`
+    },
+    params:{
+      page:currentPage,
+
+
+    }
+   }
+
+  
+
+
+
+
+  ).then(res =>{
+
+
+    setwishget(res.data.data)
+     settotalwish(res.data.totalwish)
+     setpage(res.data.totalpages)
+
+
+
+  }).catch(err => err)
+
+
+  }
+
+
+
+
+
+
+
 const [currentpage , setcurrentpage] =useState()
 
   
@@ -80,13 +139,14 @@ useEffect(()=>{
 
 const token = localStorage.getItem("token")
  const currentPage = localStorage.getItem('page')
-  axios.get('https://backend-mindful-machines-44vc.vercel.app/api/wish/wishGet',
+  axios.get(`${import.meta.env.VITE_API_URL}/api/wish/wishGet`,
    {
     headers:{
       Authorization:`Bearer ${token}`
     },
     params:{
-      page:currentPage
+      page:currentPage,
+
 
     }
    }
@@ -146,7 +206,10 @@ console.log(wishget)
 
   {wishget.map((product, index) => (
         
-<div className='cart-side   shadow-md rounded-md p-0 bg-white '>
+<div className='cart-side   shadow-md rounded-md p-0 bg-white flex gap-6 items-center '>
+
+  <div>
+
   <div className='Title-cart  border-[rgba(0,0,0,0.1)] p-20' >
  
          
@@ -195,6 +258,7 @@ console.log(wishget)
 
      </div>
      </div>
+
      </div>
      
   
@@ -226,10 +290,13 @@ console.log(wishget)
 </div>
 
 
+</div>
 
 
 
-
+     <IconButton aria-label='delete' onClick={()=>onDelete(product._id)}>
+      <DeleteIcon/>
+     </IconButton>
 
 
 </div>
