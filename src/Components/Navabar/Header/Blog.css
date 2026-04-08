@@ -184,19 +184,19 @@ transform: none;
     padding-top: 0 !important;
   }
 
-  .Slider {
+  .Blog1 .Slider {
     width: 100% !important;
     max-width: 100% !important;
     display: block !important;
   }
 
-  .mySwiper {
+   .mySwiper {
     width: 100% !important;
     height: 200px !important;
   
   }
 
-  .swiper-slide {
+  .Blog1 .swiper-slide {
     width: 20% !important; 
     max-width: 50% !important;
 

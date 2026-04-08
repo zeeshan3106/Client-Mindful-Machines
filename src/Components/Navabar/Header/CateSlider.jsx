@@ -21,8 +21,8 @@ function CateSlider() {
       <div className='container '>
       
 <Swiper
-        slidesPerView={5}
-        spaceBetween={8}
+        slidesPerView={4}
+        spaceBetween={3}
         navigation={true}
         pagination={{
           clickable: true,

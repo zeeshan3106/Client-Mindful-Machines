@@ -137,8 +137,10 @@ font-weight: bold;
    }
    .CateSlider .mySwiper{
     padding: 0px;
+    height: 100px !important ;
    }
    .swiper-slide{
+   
    
    }
 
@@ -160,9 +162,28 @@ font-weight: bold;
   font-weight: bold;
 
 }
+   .all .Pop{
+    margin-top: 0px;
+   }
+.CateSlider .mySwiper {
    
+   max-height: 40vh; 
+ 
 
-
+   
+    
+  }
+.CateSlider .container{
+ width: 95% !important;
+  padding: 0px !important;
+  margin: 0px !important;
+} 
+.CateSlider{
+  padding: 0px !important;
+  margin: 0px ;
+  display: flex;
+  justify-content: center;
+}
 
   
 }
