@@ -50,6 +50,7 @@ import { useContext } from 'react'
 import OrderPlaced from './Pages/OrderConfirmation/OrderPlaced'
 import { appleProvider } from './Pages/Products/Products'
 import Navbar from './Components/Navabar/Header/Navbar'
+import Profile from './Pages/UserProfile/Profile'
 
 
 const Scroll = ()=>{
@@ -124,7 +125,7 @@ const apiurl = import.meta.env.VITE_API_URL
     <Route path={'/Billing'} exact={true} element={<Billing/>}/>
 
     <Route path={'/item'} exact={true} element={<ProductItem/>}/>
-    <Route path={'/Profile'} exact={true} element={<USerProfile/>}/>
+    <Route path={'/Profiles'} exact={true} element={<USerProfile/>}/>
   <Route path={'/Wishlist'} exact={true} element={<Wishlist/>}/>
   <Route path={'/History'} exact={true} element={<Orderhis/>}/>
 
@@ -144,6 +145,8 @@ const apiurl = import.meta.env.VITE_API_URL
               <Route path={'/Footer'} exact={true} element={<Footer/>}/>
               <Route path={'/Search'} exact = {true} element = {<SearchBar/>} />
               <Route path={'/OrderPlaced'} exact={true} element={<OrderPlaced/>} />
+
+              <Route path={'/Profile'} exact={true}   element={<Profile/>}   />
 
             
       </Routes>

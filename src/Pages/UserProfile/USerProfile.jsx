@@ -205,6 +205,10 @@ console.log(profile)
     <section>
       <Product/>
       <div className='p-10 w-full Mobile-REsponsve-Profile-User'>
+
+
+
+        
         <div className=' Profile flex gap-1  '>
           <div className='col1 Profile-Left-Mobile '>
           <div className=' bg-white shadow-md rounded-md  w-[70%] mobile-profile-responsive'>
@@ -528,6 +532,11 @@ onChange={onChangeInputProile}
 </div>
        </div>
        
+
+
+
+
+
        
         </div>
       </div>
