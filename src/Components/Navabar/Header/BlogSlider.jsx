@@ -11,7 +11,7 @@ import BlogItem from './BlogItem';
 function BlogSlider() {
   return (
    <div className='Slider'>
-      
+    <div className='BlogSlides'>
 
                 <Swiper
 
@@ -94,7 +94,8 @@ function BlogSlider() {
             
             
             
-            
+        </div>
+          
             
            
 

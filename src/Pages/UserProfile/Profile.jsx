@@ -10,6 +10,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { FaHeart } from "react-icons/fa";
 import './Profile.css'
 import { MdStarBorderPurple500 } from "react-icons/md";
+import { Link } from 'react-router-dom'
 function Profile() {
   return (
     <section>
@@ -17,7 +18,7 @@ function Profile() {
       <Navbar/>
 
 
-        <div className='flex justify-center items-center ' >
+        <div className=' justify-center items-center ' >
 
             <div className='left-part bg-white w-[100%] rounded-md shadow-md'>
 
@@ -34,45 +35,80 @@ function Profile() {
 
                     <div className='w-[20%] border shadow-md  Image-Profile-Page flex items-center justify-center overflow-hidden '>
                         <img className=' block w-[100%] h-[100%] objrct-cover ' src='https://scontent.flyp6-1.fna.fbcdn.net/v/t39.30808-1/461156257_1735186470353036_2438694730772632876_n.jpg?stp=c0.0.683.683a_dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeEnkNY7Vk_KMyxFUY6WqAv2QFrUorSdIR9AWtSitJ0hH4nf3j6YbvxhSk-LVnlEW5g5rV381ZLCbDj55eS3c0zZ&_nc_ohc=6rVu5kkwtjMQ7kNvwElGUP4&_nc_oc=AdpZ3OAdO-BDPWYMueuoyVOl3T1QHMLI1SaiBLR48KSymr1kdKolTVNdv5ZIyIclXqI&_nc_zt=24&_nc_ht=scontent.flyp6-1.fna&_nc_gid=c2QBbuM3dxVFpiubIawxLQ&_nc_ss=7a3a8&oh=00_Af1pCL52jCDQoJMXmpFmoapqPnLZ8JIUcOgDjQb29HhYGw&oe=69DC0140' /></div>
-                            <div className=' w-[45%] font-bold text-[25px]'>
+                            <div className=' w-[40%] font-bold text-[25px]'>
                                 <div> Zeeshan Ali Zafar</div>
-                                  <div className='text-[15px] text-gray-700'> Full Stack AI Engineer</div>
+                                  <div className='text-[15px] text-gray-700'>zeeshanalizafar53@gmail.com</div>
                                
+
+
+                               
+                                <div className=' gap-1 flex w-[30px pt-2'>
+                                  
+                                  <Link className='cursor-pointer w-[25px]' to="https://web.facebook.com/profile.php?id=100015850997278">
+                                  <img className=''  src = "https://img.freepik.com/premium-vector/facebook-logo-vector-facebook-official-logo-vector-facebook-logo-illustrator_1002350-1803.jpg?semt=ais_hybrid&w=740&q=80"/>
+          </Link>
+        
+              <Link className='w-[25px]' to="https://www.instagram.com/zeeshan.ali.zafar?igsh=MWExMmhvZnB5eno0bA==">  <img src="https://img.freepik.com/free-photo/instagram-logo-3d_23-2152000279.jpg?semt=ais_hybrid&w=740&q=80" />        </Link> 
+              <Link  className='cursor-pointer w-[25px]' to="https://www.linkedin.com/in/zeeshan-ali-zafar-22103b250/">   <img  className=" " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTJhm9N7gGP7dAPXocMOz0IBDksmFMFc-_9A&s" />
+            </Link>  
                                 </div>
+                                </div>
+
+
+
+
+
+
+
+
 
                     <div className='flex gap-5 font-bold text-[18px] '>
                         <div className='flex flex-col justify-center items-center '>
-                            <div className='flex items-center text-gray-600 '><MdStarBorderPurple500 />Orders</div>
-                             <div className=''>2000</div>
+                            <div className='flex items-center text-gray-600 text-[15px] '> <MdStarBorderPurple500 className='text-green-600 text-[20px]'/>Orders</div>
+                             <div className='text-[20px]'>2000</div>
                             </div>
-                         <div  className='flex flex-col justify-center items-center '> 
-                          <div className='flex items-center'>
+                         <div  className=' flex flex-col justify-center items-center CArt-Flex-Profile'> 
+                          <div className='flex items-center text-[15px]'>
                                 <Tooltip title="Click to see loading">
       <IconButton >
-        <ShoppingCartIcon />
+        <ShoppingCartIcon  className='text-blue-700' sx={{fontSize:"19px"}}/>
       </IconButton>
     </Tooltip>
                             
                             
-                         <div className='text-gray-600'> Cart</div>  
+                         <div className='text-gray-600 text-[15px]'> Cart</div>  
                             
                             </div>
-                             <div className=''>2000</div></div>
+                             <div className='text-[20px] '>2000</div></div>
                               <div  className='flex flex-col justify-center items-center '> 
-                                <div className='text-gray-600 flex items-center gap-2 '><FaHeart />Wishlist</div>
-                             <div className=' '>2000</div>
+                                <div className='text-gray-600 flex items-center gap-2 text-[15px] text-red'><FaHeart className='text-red-600' />Wishlist</div>
+                             <div className=' text-[20px]'>2000</div>
                              
                              </div>
+
+
+                             
                     </div>
 
 
 
 
                 </div>
+                
 
 
             </div>
 
+
+
+            <div className='bg-white mt-2'>
+
+              <div>Personal Details</div>
+
+
+
+            </div>
+           
         
 
        
