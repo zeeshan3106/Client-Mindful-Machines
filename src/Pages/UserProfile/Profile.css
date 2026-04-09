@@ -92,3 +92,38 @@
 .Gap-Profile{
    gap: 150px;
 }
+
+
+@media screen and (max-width:500px){
+
+.Mobile-Profile-Image{
+   max-height: 100px;
+}
+.Mobile-Profile-PartOne{
+   flex-direction: column;
+   margin-top: -40px;
+}
+.Mobile-P1{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+
+}
+.Image-Mobile{
+   background-color: white;
+   border: none;
+}
+.Mobile-PartTwo{
+   flex-direction: column;
+   padding-left: 50px;
+}
+.Mobile-PartThree{
+   flex-direction: column;  padding-left: 50px;
+}
+.Profile-Personal5{
+    gap:90px
+}
+
+
+}
