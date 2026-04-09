@@ -63,8 +63,14 @@ function Profile() {
 
 
                     <div className='flex gap-5 font-bold text-[18px] '>
-                        <div className='flex flex-col justify-center items-center '>
-                            <div className='flex items-center text-gray-600 text-[15px] '> <MdStarBorderPurple500 className='text-green-600 text-[20px]'/>Orders</div>
+                        <div className='flex flex-col justify-center items-center  '>
+                            <div className='flex justify-center items-center text-gray-600 text-[15px] '>
+
+                              <IconButton><MdStarBorderPurple500 className='text-green-600 text-[20px]'/></IconButton>
+                               
+                               
+                               
+                               Orders</div>
                              <div className='text-[20px]'>2000</div>
                             </div>
                          <div  className=' flex flex-col justify-center items-center CArt-Flex-Profile'> 
@@ -81,7 +87,8 @@ function Profile() {
                             </div>
                              <div className='text-[20px] '>2000</div></div>
                               <div  className='flex flex-col justify-center items-center '> 
-                                <div className='text-gray-600 flex items-center gap-2 text-[15px] text-red'><FaHeart className='text-red-600' />Wishlist</div>
+                                <div className='text-gray-600 flex items-center gap-0 text-[15px] text-red'>
+                                  <IconButton><FaHeart className='text-red-600 text-[18px]' /></IconButton>Wishlist</div>
                              <div className=' text-[20px]'>2000</div>
                              
                              </div>
@@ -101,14 +108,147 @@ function Profile() {
 
 
 
-            <div className='bg-white mt-2'>
+            <div className='bg-white mt-2 rounded-d shadow-md Profile-Personal-Details flex Gap-Profile justify-center '>
+              <div className='w-[50%]'>
 
-              <div>Personal Details</div>
+              <div className='font-bold text-[18px]'>Personal Details </div>
+              <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex Profile-Personal'>
+              <div className='font-bold text-gray-400'>Full name:</div>
+              <div className='font-bold text-[15px]'>Zeeshan Ali Zafar</div></div>
+
+              <div className='flex Profile-Personal1'>
+               <div className='font-bold text-gray-400'>Date of Birth:</div>
+               <div className='font-bold text-[15px]'>14-12-2002</div></div>
 
 
+               <div className='flex Profile-Personal2'> <div className='font-bold text-gray-400'>Nationality:</div>
+               <div className='font-bold text-[15px]'>Pakistani</div> </div> 
+               
+               
+               <div className='flex Profile-Personal3' ><div className='font-bold text-gray-400'>Address:</div>
+                  <div className='font-bold flex gap-2 items-center'>
+
+                    <img className = "w-[25px] h-[18px] text-[15px]" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9PytjB3DjtSi1EPRy3kPvmiGxCP6S4TW9Hg&s" />
+                    
+                    
+                    1 Melbourne St, Islamabad</div></div>
+
+                  <div className='flex Profile-Personal4'>
+                  <div className='font-bold text-gray-400'>Phone:</div>
+                   <div className='font-bold text-[15px]'>+923098789844</div>
+                   </div>
+                           <div className='flex Profile-Personal5'><div className='font-bold text-gray-400'>Email:</div>
+                            <div className='font-bold text-[15px]'>zeeshanalizafar53@gmail.com</div></div>
+
+</div></div>
+
+
+<div className='w-[50%]'>
+<div className='font-bold text-[18px]'>Account Details</div>
+         <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex Profile-Personal6'>
+              <div className='font-bold text-gray-400'>User name:</div>
+              <div className='font-bold text-[15px]'>zeeshan3106</div></div>
+
+              <div className='flex Profile-Personal7'>
+               <div className='font-bold text-gray-400'>Account Created:</div>
+               <div className='font-bold text-[15px]'>14-12-2026</div></div>
+
+
+               <div className='flex Profile-Personal8'> <div className='font-bold text-gray-400'>Last Login:</div>
+               <div className='font-bold text-[15px]'>14-12-2026</div> </div> 
+               
+               
+               <div className='flex Profile-Personal9' ><div className='font-bold text-gray-400'>Password</div>
+                  <div className='font-bold flex gap-2 items-center'>
+
+              ********</div></div>
+
+                  <div className='flex Profile-Personal10'>
+                  <div className='font-bold text-gray-400'>Current Device</div>
+                   <div className='font-bold text-[15px]'>PC</div>
+                   </div>
+                           <div className='flex Profile-Personal11'><div className='font-bold text-gray-400'>Device Name</div>
+                            <div className='font-bold text-[15px]'>Apple 17 Pro</div></div>
+
+</div>
 
             </div>
+           </div>
+
+
+
            
+
+              <div className='bg-white  rounded-d shadow-md Profile-Personal-Details flex Gap-Profile  '>
+              <div className='w-[50%]'>
+
+              <div className='font-bold text-[18px]'>Address Details </div>
+              <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex Profile-Personal11'>
+              <div className='font-bold text-gray-400'>Country:</div>
+              <div className='font-bold text-[15px] flex items-center gap-2'><img className = "w-[25px] h-[18px] text-[15px] " src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9PytjB3DjtSi1EPRy3kPvmiGxCP6S4TW9Hg&s" />
+                    
+                    
+                   Pakistan</div></div>
+
+              <div className='flex Profile-Personal12'>
+               <div className='font-bold text-gray-400'>City:</div>
+               <div className='font-bold text-[15px]'>Islamabad</div></div>
+
+
+               <div className='flex Profile-Personal13'> <div className='font-bold text-gray-400'>State / Province:</div>
+               <div className='font-bold text-[15px]'>Capital Territory</div> </div> 
+               
+               
+               <div className='flex Profile-Personal14' ><div className='font-bold text-gray-400'>Postal Code:</div>
+                  <div className='font-bold flex gap-2 items-center'>
+44000
+                    </div></div>
+
+                  <div className='flex Profile-Personal15'>
+                  <div className='font-bold text-gray-400'>Street Address:</div>
+                   <div className='font-bold text-[15px]'>1 Melbourne Street, Melbourne</div>
+                   </div>
+                           <div className='flex Profile-Personal115'><div className='font-bold text-gray-400'>Landmark:</div>
+                            <div className='font-bold text-[15px]'>Faisal Mosque</div></div>
+
+</div></div>
+
+
+<div className='w-[50%]'>
+<div className='font-bold text-[18px]'>Preferences</div>
+         <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex Profile-Personal16'>
+              <div className='font-bold text-gray-400'>News Letter:</div>
+              <div className='font-bold text-[15px]'>joined</div></div>
+
+              <div className='flex Profile-Personal17'>
+               <div className='font-bold text-gray-400'>Products Categories:</div>
+               <div className='font-bold text-[15px]'>IT, PC, Men Shirts</div></div>
+
+
+               <div className='flex Profile-Personal18'> <div className='font-bold text-gray-400'>Dark Mode:</div>
+               <div className='font-bold text-[15px]'>Not-Activated</div> </div> 
+               
+               
+               <div className='flex Profile-Personal19' ><div className='font-bold text-gray-400'>Language Content</div>
+                  <div className='font-bold flex gap-2 items-center'>
+
+              English</div></div>
+
+                  <div className='flex Profile-Personal20'>
+                  <div className='font-bold text-gray-400'>Currency</div>
+                   <div className='font-bold text-[15px]'>AUD</div>
+                   </div>
+                           <div className='flex Profile-Personal21'><div className='font-bold text-gray-400'>Region / Country</div>
+                            <div className='font-bold text-[15px]'>Asia/Pacafic</div></div>
+
+</div>
+
+            </div>
+           </div>
         
 
        
