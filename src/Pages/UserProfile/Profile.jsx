@@ -355,8 +355,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
 
               <div className='font-bold text-[18px]'>Personal Details </div>
               <div className='flex flex-col gap-3 pt-4'>
-                <div className='flex  items-center'>
-              <div className='font-bold text-gray-400 w-[35%] '>Full name:</div>
+                <div className='flex  items-center Mobile-Text-Resposiveness'>
+              <div className='font-bold text-gray-400 w-[35%] Mobile-labelTextboxes '>Full name:</div>
               <div className='font-bold text-[15px]'>    <Box
 
 
@@ -371,8 +371,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
     >
       <TextField   onChange={onchange}  name='Name' value={profileitems.Name}            sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
 
-              <div className='flex items-center '>
-               <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Date of Birth:</div>
+              <div className='flex items-center  Mobile-Text-Resposiveness'>
+               <div className='font-bold text-gray-400 w-[35%] w-[35%]  Mobile-labelTextboxes'>Date of Birth:</div>
                <div className='font-bold text-[15px]'>  <Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
@@ -382,11 +382,13 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       <TextField onChange={onchange} name='DOB' value={profileitems.DOB}    sx={{}} id="outlined-basic" label="Date of Birth" variant="outlined" /></Box></div></div>
 
 
-               <div className='flex items-center '> <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Nationality:</div>
+               <div className='flex items-center Mobile-Text-Resposiveness '>
+                 <div className='font-bold text-gray-400 w-[35%] w-[35%]  Mobile-labelTextboxes'>Nationality:</div>
                <div className='font-bold text-[15px]'>    </div> </div> 
                
                
-               <div className='flex items-center ' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Address:</div>
+               <div className='flex items-center Mobile-Text-Resposiveness ' >
+                <div className='font-bold text-gray-400 w-[35%] w-[35%]  Mobile-labelTextboxes'>Address:</div>
                   <div className=' '>
 
                    
@@ -404,8 +406,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
   variant="outlined"
 /></Box></div></div>
 
-                  <div className='flex items-center '>
-                  <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Phone:</div>
+                  <div className='flex items-center Mobile-Text-Resposiveness '>
+                  <div className='font-bold text-gray-400  Mobile-labelTextboxes w-[35%] w-[35%]'>Phone:</div>
                    <div className='font-bold text-[15px]'> <Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
@@ -414,7 +416,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
     >
       <TextField onChange={onchange} name='Phone' value={profileitems.Phone}    sx={{}} id="outlined-basic" label="Mobile no" variant="outlined" /></Box></div>
                    </div>
-                           <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Email:</div>
+                           <div className='flex items-center Mobile-Text-Resposiveness'>
+                            <div className='font-bold text-gray-400 w-[35%] w-[35%]  Mobile-labelTextboxes'>Email:</div>
                             <div className='font-bold text-[15px]'> <Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
@@ -436,8 +439,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
 <div className='w-[50%]'>
 <div className='font-bold text-[18px]'>Account Details</div>
          <div className='flex flex-col gap-3 pt-4'>
-                <div className='flex items-center '>
-              <div className='font-bold text-gray-400 w-[35%] w-[35%]'>User name:</div>
+                <div className='flex items-center Mobile-Text-Resposiveness'>
+              <div className='font-bold text-gray-400 w-[35%] w-[35%]  Mobile-labelTextboxes'>User name:</div>
               <div className='font-bold text-[15px]'> <Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
@@ -449,7 +452,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
              
                
                
-               <div className='flex  items-center' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Password</div>
+               <div className='flex  items-center Mobile-Text-Resposiveness' >
+                <div className='font-bold text-gray-400 w-[35%] w-[35%]  Mobile-labelTextboxes'>Password</div>
                   <div className=''>
 
               <Box
@@ -460,8 +464,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
     >
       <TextField    sx={{}} id="outlined-basic" label="password" variant="outlined" /></Box></div></div>
 
-                  <div className='flex items-center '>
-                  <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Current Device</div>
+                  <div className='flex items-center Mobile-Text-Resposiveness'>
+                  <div className='font-bold text-gray-400 w-[35%] w-[35%]  Mobile-labelTextboxes'>Current Device</div>
                    <div className='font-bold text-[15px]'> <Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
@@ -470,7 +474,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
     >
       <TextField onChange={onchange} name='CurrentDevice' value={profileitems.CurrentDevice}   sx={{}} id="outlined-basic" label="Current Device" variant="outlined" /></Box></div>
                    </div>
-                           <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Device Name</div>
+                           <div className='flex items-center Mobile-Text-Resposiveness'
+                           ><div className='font-bold text-gray-400 w-[35%] w-[35%]  Mobile-labelTextboxes'>Device Name</div>
                             <div className='font-bold text-[15px]'> <Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}

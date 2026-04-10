@@ -131,7 +131,16 @@
 .Profile-Personal5{
     gap:30px
 }
+.Mobile-Text-Resposiveness{
+  flex-direction: column;
+   width: 100%;
+  justify-content: start;
+  align-items: flex-start;
 
+}
+.Mobile-labelTextboxes {
+   width: 100%;
+}
 
 }
 
