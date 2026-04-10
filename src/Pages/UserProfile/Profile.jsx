@@ -18,6 +18,7 @@ import { MdStarBorderPurple500 } from "react-icons/md";
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Button } from '@mui/material'
+import toast, { Toaster } from 'react-hot-toast'
 
 function Profile() {
   const [profileitems, setprofileitems ]=useState({
@@ -70,7 +71,18 @@ console.log(profileitems)
 
 const onsubmit =() =>{
 
-  axios.post('http://localhost:8000/api/frontend/profile',profileitems).then(res => res ).catch(err => err)
+  const token = localStorage.getItem("token")
+
+  axios.post('http://localhost:8000/api/frontend/profile',profileitems,{
+    headers:{
+      Authorization:`Bearer ${token}`
+    }
+  }).then(res => {console.log(res.data)
+
+
+
+    toast.success("Successfully Updated")
+  } ).catch(err => err)
 }
 
   useEffect(()=>{
@@ -688,7 +700,16 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
     <div className='flex justify-end pt-5'>   <Stack direction="row" spacing={2}>
 
 
-           <Button variant='contained' color='success' className='font-bold h-[50px]'>Save Chanages
+           <Button variant='contained'  onClick={onsubmit} color='success' className='font-bold h-[50px]'>Save Chanages
+
+            <Toaster toastOptions={{
+            style:{
+              borderRadius:"20px",
+           
+
+            }
+           
+            }} />
 
            </Button>
 
