@@ -7,13 +7,18 @@ import Navbar from '../../Components/Navabar/Header/Navbar'
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+import Autocomplete from '@mui/material/Autocomplete';
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import { FaHeart } from "react-icons/fa";
 import './Profile.css'
 import { MdStarBorderPurple500 } from "react-icons/md";
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-function Profile() {
 
+function Profile() {
 
 
   useEffect(()=>{
@@ -72,8 +77,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
                                   <img className=''  src = "https://img.freepik.com/premium-vector/facebook-logo-vector-facebook-official-logo-vector-facebook-logo-illustrator_1002350-1803.jpg?semt=ais_hybrid&w=740&q=80"/>
           </Link>
         
-              <Link className='w-[25px]' to="https://www.instagram.com/zeeshan.ali.zafar?igsh=MWExMmhvZnB5eno0bA==">  <img src="https://img.freepik.com/free-photo/instagram-logo-3d_23-2152000279.jpg?semt=ais_hybrid&w=740&q=80" />        </Link> 
-              <Link  className='cursor-pointer w-[25px]' to="https://www.linkedin.com/in/zeeshan-ali-zafar-22103b250/">   <img  className=" " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTJhm9N7gGP7dAPXocMOz0IBDksmFMFc-_9A&s" />
+              <Link className='w-[25px] ' to="https://www.instagram.com/zeeshan.ali.zafar?igsh=MWExMmhvZnB5eno0bA==">  <img src="https://img.freepik.com/free-photo/instagram-logo-3d_23-2152000279.jpg?semt=ais_hybrid&w=740&q=80" />        </Link> 
+              <Link  className='cursor-pointer w-[25px] ' to="https://www.linkedin.com/in/zeeshan-ali-zafar-22103b250/">   <img  className=" " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTJhm9N7gGP7dAPXocMOz0IBDksmFMFc-_9A&s" />
             </Link>  
                                 </div>
                                 </div>
@@ -275,7 +280,273 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
            </div>
         
 
-       
+
+
+
+
+
+
+       <div className='bg-white mt-2 rounded-d shadow-md Profile-Personal-Details flex Gap-Profile1 justify-center Mobile-PartTwo '>
+              <div className='w-[50%]'>
+
+              <div className='font-bold text-[18px]'>Personal Details </div>
+              <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex  items-center'>
+              <div className='font-bold text-gray-400 w-[35%] '>Full name:</div>
+              <div className='font-bold text-[15px]'>    <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
+
+              <div className='flex items-center '>
+               <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Date of Birth:</div>
+               <div className='font-bold text-[15px]'>  <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Date of Birth" variant="outlined" /></Box></div></div>
+
+
+               <div className='flex items-center '> <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Nationality:</div>
+               <div className='font-bold text-[15px]'>    </div> </div> 
+               
+               
+               <div className='flex ' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Address:</div>
+                  <div className='font-bold flex gap-2 items-center'>
+
+                   
+                    
+                    
+                     <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    ><TextField
+  label=""
+ multiline
+  rows={4} 
+  variant="outlined"
+/></Box></div></div>
+
+                  <div className='flex items-center '>
+                  <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Phone:</div>
+                   <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Mobile no" variant="outlined" /></Box></div>
+                   </div>
+                           <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Email:</div>
+                            <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+        <TextField
+          required
+          id="outlined-required"
+          label="Email"
+        
+  
+        /></Box></div></div>
+
+</div></div>
+
+
+<div className='w-[50%]'>
+<div className='font-bold text-[18px]'>Account Details</div>
+         <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex items-center '>
+              <div className='font-bold text-gray-400 w-[35%] w-[35%]'>User name:</div>
+              <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
+
+             
+               
+               
+               <div className='flex ' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Password</div>
+                  <div className='font-bold flex gap-2 items-center'>
+
+              <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
+
+                  <div className='flex items-center '>
+                  <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Current Device</div>
+                   <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div>
+                   </div>
+                           <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Device Name</div>
+                            <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
+
+</div>
+
+            </div>
+           </div>
+
+      <div className='bg-white  rounded-d shadow-md Profile-Personal-Details flex Gap-Profile1 Mobile-PartThree  '>
+              <div className='w-[50%]'>
+
+              <div className='font-bold text-[18px]'>Address Details </div>
+              <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex items-center '>
+              <div className='font-bold text-gray-400 w-[35%]'>Country:</div>
+              <div className='font-bold text-[15px] flex items-center gap-2'>
+               
+                    
+                    <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Country" variant="outlined" /></Box></div></div>
+
+              <div className='flex items-center '>
+               <div className='font-bold text-gray-400 w-[35%]'>City</div>
+               <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="City" variant="outlined" /></Box></div></div>
+
+
+               <div className='flex items-center '> <div className='font-bold text-gray-400 w-[35%]'>State / Province:</div>
+               <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="State" variant="outlined" /></Box></div> </div> 
+               
+               
+               <div className='flex ' ><div className='font-bold text-gray-400 w-[35%]'>Postal Code:</div>
+                  <div className='font-bold flex gap-2 items-center'>
+ <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Postal Code" variant="outlined" /></Box>
+                    </div></div>
+
+                  <div className='flex'>
+                  <div className='font-bold text-gray-400 w-[35%]'>Street Address:</div>
+                   <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+     
+      autoComplete="off"
+    >
+      <TextField 
+       multiline
+      rows={4} 
+      
+      sx={{}} id="outlined-basic" label="Street Address" variant="outlined" /></Box></div>
+                   </div>
+                           <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%]'>Landmark:</div>
+                            <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Land Mark" variant="outlined" /></Box></div></div>
+
+</div></div>
+
+
+<div className='w-[50%]'>
+<div className='font-bold text-[18px]'>Preferences</div>
+         <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex items-center '>
+              <div className='font-bold text-gray-400 w-[35%]'>News Letter:</div>
+              <div className='font-bold text-[15px]'>joined</div></div>
+
+              <div className='flex items-center '>
+               <div className='font-bold text-gray-400 w-[35%]'>Products Categories:</div>
+               <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Categories" variant="outlined" /></Box></div></div>
+
+
+               <div className='flex items-center '> <div className='font-bold text-gray-400 w-[35%]'>Dark Mode:</div>
+               <div className='font-bold text-[15px]'>Not-Activated</div> </div> 
+               
+               
+               <div className='flex items-center' ><div className='font-bold text-gray-400 w-[35%]'>Language Content</div>
+                  <div className='font-bold flex gap-2 items-center'>
+
+              <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Language" variant="outlined" /></Box></div></div>
+
+                  <div className='flex items-center '>
+                  <div className='font-bold text-gray-400 w-[35%]'>Currency</div>
+                   <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Currency" variant="outlined" /></Box></div>
+                   </div>
+                           <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%]'>Region / Country</div>
+                            <div className='font-bold text-[15px]'> <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Region" variant="outlined" /></Box></div></div>
+
+</div>
+
+            </div>
+           </div>
+
 
 
 
