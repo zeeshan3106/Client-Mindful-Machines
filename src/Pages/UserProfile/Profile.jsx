@@ -286,7 +286,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
 
 
 
-       <div className='bg-white mt-2 rounded-d shadow-md Profile-Personal-Details flex Gap-Profile1 justify-center Mobile-PartTwo '>
+        <div className='bg-white mt-2 rounded-d shadow-md Profile-Personal-Details flex Gap-Profile1 justify-center Mobile-PartTwo '>
               <div className='w-[50%]'>
 
               <div className='font-bold text-[18px]'>Personal Details </div>
@@ -316,7 +316,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
                <div className='font-bold text-[15px]'>    </div> </div> 
                
                
-               <div className='flex ' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Address:</div>
+               <div className='flex items-center ' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Address:</div>
                   <div className='font-bold flex gap-2 items-center'>
 
                    
@@ -373,12 +373,12 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
+      <TextField  sx={{}} id="outlined-basic" label="username" variant="outlined" /></Box></div></div>
 
              
                
                
-               <div className='flex ' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Password</div>
+               <div className='flex  items-center' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Password</div>
                   <div className='font-bold flex gap-2 items-center'>
 
               <Box
@@ -387,7 +387,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
+      <TextField  sx={{}} id="outlined-basic" label="password" variant="outlined" /></Box></div></div>
 
                   <div className='flex items-center '>
                   <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Current Device</div>
@@ -397,7 +397,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div>
+      <TextField  sx={{}} id="outlined-basic" label="Current Device" variant="outlined" /></Box></div>
                    </div>
                            <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Device Name</div>
                             <div className='font-bold text-[15px]'> <Box
@@ -406,7 +406,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
+      <TextField  sx={{}} id="outlined-basic" label="Device Name" variant="outlined" /></Box></div></div>
 
 </div>
 
@@ -543,12 +543,73 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       <TextField  sx={{}} id="outlined-basic" label="Region" variant="outlined" /></Box></div></div>
 
 </div>
-
+     
             </div>
+
+       
            </div>
+           <div className='bg-white mt-2 rounded-d shadow-md Profile-Personal-Details Gap-Profile1  Mobile-PartTwo'>
+<div  className='font-bold text-[18px] flex flex-wrap '>Social Media</div>
+<div className='font-bold text-[18px] flex flex-wrap pt-5 gap-2]'>
+   <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex items-center '>
+              <div className='font-bold text-gray-400 w-[35%]'>Facebook:</div>
+              <div className='font-bold text-[15px] flex items-center gap-2'>
+               
+                    
+                    <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Facebook" variant="outlined" /></Box></div></div></div>
 
+   <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex items-center '>
+              <div className='font-bold text-gray-400 w-[35%]'>Linkedin:</div>
+              <div className='font-bold text-[15px] flex items-center gap-2'>
+               
+                    
+                    <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Linkedin" variant="outlined" /></Box></div></div></div>
 
+   <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex items-center '>
+              <div className='font-bold text-gray-400 w-[35%]'>Instagram:</div>
+              <div className='font-bold text-[15px] flex items-center gap-2'>
+               
+                    
+                    <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Instagram" variant="outlined" /></Box></div></div></div>
 
+   <div className='flex flex-col gap-3 pt-4'>
+                <div className='flex items-center '>
+              <div className='font-bold text-gray-400 w-[35%]'>Youtube:</div>
+              <div className='font-bold text-[15px] flex items-center gap-2'>
+               
+                    
+                    <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField  sx={{}} id="outlined-basic" label="Youtube" variant="outlined" /></Box></div></div></div>
+
+</div>
+
+</div>
 
 
 
