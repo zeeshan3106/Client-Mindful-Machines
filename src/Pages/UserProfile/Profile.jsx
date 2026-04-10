@@ -7,7 +7,7 @@ import Navbar from '../../Components/Navabar/Header/Navbar'
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 
 import Box from '@mui/material/Box';
@@ -17,6 +17,7 @@ import './Profile.css'
 import { MdStarBorderPurple500 } from "react-icons/md";
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { Button } from '@mui/material'
 
 function Profile() {
   const [profileitems, setprofileitems ]=useState({
@@ -64,6 +65,13 @@ function Profile() {
 
   }
 console.log(profileitems)
+
+
+
+const onsubmit =() =>{
+
+  axios.post('http://localhost:8000/api/frontend/profile',profileitems).then(res => res ).catch(err => err)
+}
 
   useEffect(()=>{
 
@@ -424,7 +432,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField onChange={onchange} name='username' value={profileitems.UserName}    sx={{}} id="outlined-basic" label="username" variant="outlined" /></Box></div></div>
+      <TextField onChange={onchange} name='UserName' value={profileitems.UserName}    sx={{}} id="outlined-basic" label="username" variant="outlined" /></Box></div></div>
 
              
                
@@ -660,6 +668,37 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       <TextField onChange={onchange} name='Youtube' value={profileitems.Youtube}  sx={{}} id="outlined-basic" label="Youtube" variant="outlined" /></Box></div></div></div>
 
 </div>
+<div className='flex gap-2 justify-end'>
+<div className='flex justify-end pt-5'>   
+  <Stack direction="row" spacing={2}>
+
+
+           <Button variant='contained' color='success' sx={{
+            backgroundColor:"black"
+            ,width:"150px"
+           }} className='font-bold h-[50px]'>Cancel
+
+           </Button>
+
+      
+      </Stack>
+      </div >
+
+
+    <div className='flex justify-end pt-5'>   <Stack direction="row" spacing={2}>
+
+
+           <Button variant='contained' color='success' className='font-bold h-[50px]'>Save Chanages
+
+           </Button>
+
+      
+      </Stack>
+      </div>
+
+</div>
+
+
 
 </div>
 
