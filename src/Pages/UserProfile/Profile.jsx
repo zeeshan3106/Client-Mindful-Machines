@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Product from '../../Components/Navabar/Header/Header1'
 import Benefits from '../../Components/Navabar/Header/Benefits'
 import Footer from '../Footer/Footer'
@@ -19,7 +19,51 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 function Profile() {
+  const [profileitems, setprofileitems ]=useState({
 
+
+    Name:"",
+     Email:"",
+    Phone:"",
+      Address:"",
+      Nationality:"",
+       DOB:"",
+            UserName:"",
+            
+            LastLogin:"",
+            Image:"",
+            CurrentDevice:"",
+            DeviceName:"",
+            Country:"",
+            State:"",
+            PostalCode:"",
+             Street:"",
+             Landmark:"",
+              ProductCategory:"",
+              Language:""
+              ,Currency:"",Reigion:"",
+              Facebook:"",
+              Instagram:"",
+              Youtube:"",
+              Linkedin:""
+
+
+
+
+  })
+
+
+  const onchange=(e)=>{
+    
+    const {name,value}=e.target
+
+    setprofileitems(prev => ({
+      ...prev ,
+      [name]:value
+   }))
+
+  }
+console.log(profileitems)
 
   useEffect(()=>{
 
@@ -294,12 +338,18 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
                 <div className='flex  items-center'>
               <div className='font-bold text-gray-400 w-[35%] '>Full name:</div>
               <div className='font-bold text-[15px]'>    <Box
+
+
+         
+
+
+
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
+      <TextField   onChange={onchange}  name='Name' value={profileitems.Name}            sx={{}} id="outlined-basic" label="Full Name" variant="outlined" /></Box></div></div>
 
               <div className='flex items-center '>
                <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Date of Birth:</div>
@@ -309,7 +359,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Date of Birth" variant="outlined" /></Box></div></div>
+      <TextField onChange={onchange} name='DOB' value={profileitems.DOB}    sx={{}} id="outlined-basic" label="Date of Birth" variant="outlined" /></Box></div></div>
 
 
                <div className='flex items-center '> <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Nationality:</div>
@@ -317,7 +367,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
                
                
                <div className='flex items-center ' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Address:</div>
-                  <div className='font-bold flex gap-2 items-center'>
+                  <div className=' '>
 
                    
                     
@@ -328,7 +378,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     ><TextField
-  label=""
+  label="Street Addres"
  multiline
   rows={4} 
   variant="outlined"
@@ -342,7 +392,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Mobile no" variant="outlined" /></Box></div>
+      <TextField onChange={onchange} name='Phone' value={profileitems.Phone}    sx={{}} id="outlined-basic" label="Mobile no" variant="outlined" /></Box></div>
                    </div>
                            <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Email:</div>
                             <div className='font-bold text-[15px]'> <Box
@@ -351,7 +401,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-        <TextField
+        <TextField onChange={onchange} 
+        name='Email' value={profileitems.Email} 
           required
           id="outlined-required"
           label="Email"
@@ -373,13 +424,13 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="username" variant="outlined" /></Box></div></div>
+      <TextField onChange={onchange} name='username' value={profileitems.UserName}    sx={{}} id="outlined-basic" label="username" variant="outlined" /></Box></div></div>
 
              
                
                
                <div className='flex  items-center' ><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Password</div>
-                  <div className='font-bold flex gap-2 items-center'>
+                  <div className=''>
 
               <Box
       component="form"
@@ -387,7 +438,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="password" variant="outlined" /></Box></div></div>
+      <TextField    sx={{}} id="outlined-basic" label="password" variant="outlined" /></Box></div></div>
 
                   <div className='flex items-center '>
                   <div className='font-bold text-gray-400 w-[35%] w-[35%]'>Current Device</div>
@@ -397,7 +448,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Current Device" variant="outlined" /></Box></div>
+      <TextField onChange={onchange} name='CurrentDevice' value={profileitems.CurrentDevice}   sx={{}} id="outlined-basic" label="Current Device" variant="outlined" /></Box></div>
                    </div>
                            <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%] w-[35%]'>Device Name</div>
                             <div className='font-bold text-[15px]'> <Box
@@ -406,8 +457,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Device Name" variant="outlined" /></Box></div></div>
-
+      <TextField onChange={onchange} name='DeviceName' value={profileitems.DeviceName}   sx={{}} id="outlined-basic" label="Device Name" variant="outlined" /></Box></div></div>
+ 
 </div>
 
             </div>
@@ -429,7 +480,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Country" variant="outlined" /></Box></div></div>
+      <TextField onChange={onchange}  name='Country' value={profileitems.Country}  sx={{}} id="outlined-basic" label="Country" variant="outlined" /></Box></div></div>
 
               <div className='flex items-center '>
                <div className='font-bold text-gray-400 w-[35%]'>City</div>
@@ -439,7 +490,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="City" variant="outlined" /></Box></div></div>
+      <TextField onChange={onchange}  sx={{}} id="outlined-basic" label="City" variant="outlined" /></Box></div></div>
 
 
                <div className='flex items-center '> <div className='font-bold text-gray-400 w-[35%]'>State / Province:</div>
@@ -449,18 +500,18 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="State" variant="outlined" /></Box></div> </div> 
+      <TextField onChange={onchange} name='State' value={profileitems.State}   sx={{}} id="outlined-basic" label="State" variant="outlined" /></Box></div> </div> 
                
                
                <div className='flex ' ><div className='font-bold text-gray-400 w-[35%]'>Postal Code:</div>
-                  <div className='font-bold flex gap-2 items-center'>
+                  <div className=''>
  <Box
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '35ch',  } }}
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Postal Code" variant="outlined" /></Box>
+      <TextField onChange={onchange} name='PostalCode' value={profileitems.PostalCode}   sx={{}} id="outlined-basic" label="Postal Code" variant="outlined" /></Box>
                     </div></div>
 
                   <div className='flex'>
@@ -472,7 +523,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
      
       autoComplete="off"
     >
-      <TextField 
+      <TextField onChange={onchange}  
+      name='Street' value={profileitems.Street} 
        multiline
       rows={4} 
       
@@ -485,7 +537,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Land Mark" variant="outlined" /></Box></div></div>
+      <TextField onChange={onchange}  name='Landmark' value={profileitems.Landmark}  sx={{}} id="outlined-basic" label="Land Mark" variant="outlined" /></Box></div></div>
 
 </div></div>
 
@@ -505,7 +557,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Categories" variant="outlined" /></Box></div></div>
+      <TextField onChange={onchange}  name='ProductCategory' value={profileitems.ProductCategory}  sx={{}} id="outlined-basic" label="Categories" variant="outlined" /></Box></div></div>
 
 
                <div className='flex items-center '> <div className='font-bold text-gray-400 w-[35%]'>Dark Mode:</div>
@@ -513,7 +565,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
                
                
                <div className='flex items-center' ><div className='font-bold text-gray-400 w-[35%]'>Language Content</div>
-                  <div className='font-bold flex gap-2 items-center'>
+                  <div className=''>
 
               <Box
       component="form"
@@ -521,7 +573,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Language" variant="outlined" /></Box></div></div>
+      <TextField name='Language' value={profileitems.Language}   sx={{}} id="outlined-basic" label="Language" variant="outlined" /></Box></div></div>
 
                   <div className='flex items-center '>
                   <div className='font-bold text-gray-400 w-[35%]'>Currency</div>
@@ -531,7 +583,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Currency" variant="outlined" /></Box></div>
+      <TextField onChange={onchange} name='Currency' value={profileitems.Currency}    sx={{}} id="outlined-basic" label="Currency" variant="outlined" /></Box></div>
                    </div>
                            <div className='flex items-center '><div className='font-bold text-gray-400 w-[35%]'>Region / Country</div>
                             <div className='font-bold text-[15px]'> <Box
@@ -540,7 +592,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Region" variant="outlined" /></Box></div></div>
+      <TextField onChange={onchange} name='Reigion' value={profileitems.Reigion}    sx={{}} id="outlined-basic" label="Region" variant="outlined" /></Box></div></div>
 
 </div>
      
@@ -563,7 +615,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Facebook" variant="outlined" /></Box></div></div></div>
+      <TextField onChange={onchange}  name='Facebook' value={profileitems.Facebook}  sx={{}} id="outlined-basic" label="Facebook" variant="outlined" /></Box></div></div></div>
 
    <div className='flex flex-col gap-3 pt-4'>
                 <div className='flex items-center '>
@@ -577,7 +629,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Linkedin" variant="outlined" /></Box></div></div></div>
+      <TextField onChange={onchange}  name='Linkedin' value={profileitems.Linkedin} sx={{}} id="outlined-basic" label="Linkedin" variant="outlined" /></Box></div></div></div>
 
    <div className='flex flex-col gap-3 pt-4'>
                 <div className='flex items-center '>
@@ -591,7 +643,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Instagram" variant="outlined" /></Box></div></div></div>
+      <TextField onChange={onchange} name='Instagram' value={profileitems.Instagram}   sx={{}} id="outlined-basic" label="Instagram" variant="outlined" /></Box></div></div></div>
 
    <div className='flex flex-col gap-3 pt-4'>
                 <div className='flex items-center '>
@@ -605,7 +657,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       noValidate
       autoComplete="off"
     >
-      <TextField  sx={{}} id="outlined-basic" label="Youtube" variant="outlined" /></Box></div></div></div>
+      <TextField onChange={onchange} name='Youtube' value={profileitems.Youtube}  sx={{}} id="outlined-basic" label="Youtube" variant="outlined" /></Box></div></div></div>
 
 </div>
 
