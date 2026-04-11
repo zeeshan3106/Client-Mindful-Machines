@@ -624,11 +624,14 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
   <Stack direction="row" spacing={2}>
 
 
-           <Button variant='contained' color='success' sx={{
-            backgroundColor:"black"
+           <Button  
+           onClick={()=>{setedit(edit===true?false:true)}}   
+            variant='contained' color='success'  sx={{
+            backgroundColor:"black" 
             ,width:"150px"
            }} className='font-bold h-[50px]'>Cancel
-
+            
+          
            </Button>
 
       
