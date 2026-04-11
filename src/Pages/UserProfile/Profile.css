@@ -97,7 +97,13 @@
    margin-left: 0px;
    padding: 70px;
 }
-
+.Padding-Profile{
+ 
+   padding-bottom: 0px !important;
+}
+.Gap-Edit{
+  
+}
 
 @media screen and (max-width:500px){
 
