@@ -689,7 +689,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
       <TextField onChange={onchange} name='Youtube' value={profileitems.Youtube}  sx={{}} id="outlined-basic" label="Youtube" variant="outlined" /></Box></div></div></div>
 
 </div>
-<div className='flex gap-2 justify-end'>
+<div className='flex gap-2 justify-end Button-Mobile'>
 <div className='flex justify-end pt-5'>   
   <Stack direction="row" spacing={2}>
 

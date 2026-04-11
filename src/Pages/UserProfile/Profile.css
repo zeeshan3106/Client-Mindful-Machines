@@ -131,6 +131,12 @@
 .Profile-Personal5{
     gap:30px
 }
+.Button-Mobile{
+   max-width: 100%;
+   padding: 0px !important;
+   justify-content: center;
+   margin-left: 0px !important;
+}
 .Mobile-Text-Resposiveness{
   flex-direction: column;
    width: 100%;
