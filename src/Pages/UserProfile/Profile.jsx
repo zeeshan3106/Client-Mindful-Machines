@@ -205,7 +205,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
             <div className='bg-white mt-2 rounded-d shadow-md Profile-Personal-Details flex Gap-Profile justify-center Mobile-PartTwo '>
               <div className='w-[50%]'>
 
-              <div className='font-bold text-[18px]'>Personal Details </div>
+              <div className='font-bold text-[18px] w-[100%]'>Personal Details </div>
               <div className='flex flex-col gap-3 pt-4'>
                 <div className='flex Profile-Personal'>
               <div className='font-bold text-gray-400'>Full name:</div>
@@ -352,7 +352,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
         <div className='bg-white mt-2 rounded-d shadow-md Profile-Personal-Details flex Gap-Profile1 justify-center Mobile-PartTwo '>
               <div className='w-[50%]'>
 
-              <div className='font-bold text-[18px]'>Personal Details </div>
+              <div className='font-bold text-[18px] w-[100%]'>Personal Details </div>
               <div className='flex flex-col gap-3 pt-4'>
                 <div className='flex  items-center Mobile-Text-Resposiveness'>
               <div className='font-bold text-gray-400 w-[35%] Mobile-labelTextboxes '>Full name:</div>
