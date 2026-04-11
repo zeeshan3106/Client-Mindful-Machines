@@ -123,10 +123,10 @@
 }
 .Mobile-PartTwo{
    flex-direction: column;
-   padding-left: 30px;
+   padding-left: 25px;
 }
 .Mobile-PartThree{
-   flex-direction: column;  padding-left: 50px;
+   flex-direction: column;  padding-left: 25px;
 }
 .Profile-Personal5{
     gap:30px
