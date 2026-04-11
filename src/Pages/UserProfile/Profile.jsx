@@ -54,6 +54,7 @@ function Profile() {
 
   })
 
+  const [edit, setedit]=useState(false)
 
   const onchange=(e)=>{
     
@@ -343,8 +344,6 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
             </div>
            </div>
         
-
-
 
 
 
@@ -733,14 +732,15 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
 
 </div>
 
-
-
-
+ 
+   
+          
+          
 
         </div>
 
 
-
+          
 
 
         <Benefits/>
