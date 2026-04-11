@@ -108,7 +108,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
   const ProfileItems = (
     <>
         <div className="bg-white text-[23px] font-bold p-3 mt-2 Padding-Profile flex justify-center ">
-              <div className='flex w-[78%] items-center '>
+              <div className='flex w-[78%] items-center Mobile-Profile-Gap'>
                 <div className="w-[88%]">Profile</div>
 
                   <IconButton><MdModeEdit onClick={()=>{setedit(edit===true?false:true)}} /></IconButton>

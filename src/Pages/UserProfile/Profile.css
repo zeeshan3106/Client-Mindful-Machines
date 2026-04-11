@@ -153,7 +153,15 @@
 .Mobile-labelTextboxes {
    width: 100%;
 }
-
+..Padding-Profile{
+ 
+   padding: 0px !important;
+   margin:0px ;
+   width:100%
+}
+.Mobile-Profile-Gap{
+   width:90%
+}
 }
 
 .mui-textarea {
