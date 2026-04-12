@@ -297,8 +297,8 @@ const token = localStorage.getItem("token")
     </div>
      <div className='cart-offer'> <span className='days'>30days</span> return available</div>
      <div className='flex gap-10'>
-           <div className=' text-gray-500'>Quantity:<span className='text-black'>{product.quantity}</span></div>
-                <div className=' text-gray-500'>Total Price:<span className='text-black'>{product.Totalprice}</span></div>
+           <div className=' text-gray-500'>Old Price:<span className='text-black'>{product.oldPrice}</span></div>
+                <div className=' text-gray-500'>Price:<span className='text-black'>{product.price}</span></div>
 
                 </div>
        
@@ -384,11 +384,13 @@ const token = localStorage.getItem("token")
         
   </p>
 
+{cart.map((product) => (
+
    <p className=" Total-Price flex items-center justify-between Subtotal">
   <span className=' text-blue-600 text-[15px] text-bold pt-20 '>Total</span>
-           <span className=' text-blue-600 text-[14px] text-bold '>$10200</span>      
+           <span className=' text-blue-600 text-[14px] text-bold '>{product.carttotal}</span>      
   </p>
-
+))}
 <div>
   <Button  className='Check-out-btn w-full'
 

@@ -13,8 +13,14 @@ import { SiPaypal } from "react-icons/si";
 import { BsCashCoin } from "react-icons/bs";
 import Stripe from './Stripe'
 import Footer from '../Footer/Footer'
+import Switch from '@mui/material/Switch';
+
+
+ 
+
 function Billing() {
-  
+
+const [isCashOnDelivery, setIsCashOnDelivery] = useState(false);
 
   const [items , settiems ]=useState({
     FullName:"",
@@ -473,7 +479,7 @@ console.log(items)
 
   <div className='text-[20px] PAymentOptions pb-2'>Payment Options</div>
 
- <Link onClick={CashonDelievery}><div className='mt-4 ABC flex justify-center shadow-md p-2 border-rgba(0,0,0,0.1) text-gray-700  '>
+ <Link ><div className='mt-4 ABC flex justify-center shadow-md p-2 border-rgba(0,0,0,0.1) text-gray-700  '>
   <div className='flex items-center gap-2'>
     <div>
 
@@ -482,26 +488,9 @@ console.log(items)
   <div>
     
     Cash On Delievery
-     <Toaster 
-       toastOptions={{
-   
-         style:{
-           background:"white",
-           color:"black",
-           borderRadius:"20px",
-           fontSize:"14px",
-           fontFamily:"Roboto",
-   
-         }
-   
-   
-       }}
-       
-       
-       
-       />
+     
     
-    </div></div>
+    </div>       <Switch defaultChecked /></div>
   </div></Link>  
 
   <Link> <div className='mt-4 ABC  flex justify-center shadow-md p-2 border-rgba(0,0,0,0.1) text-gray-700  pb-2 pb-2 '> 
