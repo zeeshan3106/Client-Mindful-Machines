@@ -15,25 +15,13 @@ function BlogSlider() {
 
                 <Swiper
 
-                 breakpoints={{
-
-
-          0:{slidesPerView:1,
-            spaceBetween:0
-          },
-          800:{slidesPerView:2},
-          1024:{slidesPerView:4}
-
-
-
-
-        }}
+              
 
 
 
 
 
-        slidesPerView={4}
+        slidesPerView={2}
     
         navigation={true}
         pagination={{

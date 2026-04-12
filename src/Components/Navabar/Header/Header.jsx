@@ -275,10 +275,6 @@ console.log(size)
 </div>
 
 
-<div>
-<Blog/>
-</div>
-
 
 <div>
   <Benefits/>
