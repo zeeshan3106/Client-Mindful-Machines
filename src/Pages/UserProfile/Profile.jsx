@@ -110,7 +110,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
   const ProfileItems = (
     <>
         <div className="bg-white text-[23px] font-bold p-3 mt-2 Padding-Profile flex justify-center ">
-              <div className='flex w-[78%] items-center '>
+              <div className='flex w-[78%] items-center pt-2 '>
                 <div className="w-[88%]">Profile</div>
 
                   <IconButton><MdModeEdit onClick={()=>{setedit(edit===true?false:true)}} /></IconButton>
@@ -575,7 +575,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
            </div>
            <div className='bg-white mt-2 rounded-d shadow-md Profile-Personal-Details Gap-Profile1  Mobile-PartTwo'>
 <div  className='font-bold text-[18px] flex flex-wrap '>Social Media</div>
-<div className='font-bold text-[18px] flex flex-wrap pt-5 gap-2]'>
+<div className='font-bold text-[18px] flex flex-wrap pt-5 gap-2] w-[100%]'>
    <div className='flex flex-col gap-3 pt-4'>
                 <div className='flex items-center Mobile-Text-Resposiveness '>
               <div className='font-bold text-gray-400 w-[35%] Mobile-labelTextboxes'>Facebook:</div>
@@ -634,7 +634,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
 
 </div>
 <div className='flex gap-2 justify-end Button-Mobile'>
-<div className='flex justify-end pt-5'>   
+<div className='flex justify-end pt-5 Buttons-Profile-Mobile'>   
   <Stack direction="row" spacing={2}>
 
 
@@ -643,7 +643,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
             variant='contained' color='success'  sx={{
             backgroundColor:"black" 
             ,width:"150px"
-           }} className='font-bold h-[50px]'>Cancel
+           }} className='font-bold h-[50px] Mobile-Button-Width'>Cancel
             
           
            </Button>
@@ -680,25 +680,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
     <section>
 
    
-
-
-      <div className="bg-white shadow-md rounded-md flex justify-center font-bold">
-
-        <div className="flex justify-between gap-3 ProfileNavBarp2 w-[80%] ">
-
-          <div className="text-[10px]"><IconButton><Link>Back</Link></IconButton></div>
-          <div className=""><IconButton><Link>Zeeshan ali Zafar</Link></IconButton></div>
-          <div className="flex gap-2 ">
-          <div ><IconButton><Link>Search</Link></IconButton></div>
-            <div><IconButton><Link>Cart</Link></IconButton></div>
-              <div><IconButton><Link>Wislist</Link></IconButton></div>
-
-</div>
-        </div>
-
-
-      </div>
-
+<Navbar/>
 
 
 
@@ -713,7 +695,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
             }} />
 
 
-        <div className=' justify-center items-center ' >
+        <div className=' justify-center items-center Mobile-Text-Profile ' >
 
             <div className='left-part bg-white w-[100%] rounded-md shadow-md'>
 

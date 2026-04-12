@@ -172,6 +172,21 @@
 .Gap-Profile{
    gap: 50px;
 }
+.Mobile-Text-Profile {
+  width: 100%;
+}
+.Profile-Personal-Details{
+   width: 100%;
+}
+.obile-PartTwo{
+   width: 100%;
+}
+.Mobile-Button-Width{
+   width: 150% !important;
+}
+.Buttons-Profile-Mobile{
+   justify-content: flex-start;
+}
 
 }
 
