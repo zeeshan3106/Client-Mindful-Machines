@@ -679,7 +679,7 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
   return (
     <section>
 
-      <Navbar/>
+   
 
 
       <div className="bg-white shadow-md rounded-md flex justify-center font-bold">
