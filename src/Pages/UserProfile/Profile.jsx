@@ -20,6 +20,7 @@ import axios from 'axios'
 import { Button } from '@mui/material'
 import toast, { Toaster } from 'react-hot-toast'
 import { MdModeEdit } from "react-icons/md"
+
 function Profile() {
 
   const [profileitems, setprofileitems ]=useState({
@@ -105,10 +106,11 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
 
 
 
+ 
   const ProfileItems = (
     <>
         <div className="bg-white text-[23px] font-bold p-3 mt-2 Padding-Profile flex justify-center ">
-              <div className='flex w-[78%] items-center Mobile-Profile-Gap'>
+              <div className='flex w-[78%] items-center '>
                 <div className="w-[88%]">Profile</div>
 
                   <IconButton><MdModeEdit onClick={()=>{setedit(edit===true?false:true)}} /></IconButton>
@@ -118,26 +120,28 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
              
                 
                 </div>
-            <div className='bg-white  rounded-d shadow-md Profile-Personal-Details flex Gap-Profile justify-center Mobile-PartTwo '>
+            <div className='bg-white  rounded-d shadow-md Profile-Personal-Details flex MobilePRofilePadding Gap-Profile justify-center Mobile-PartTwo '>
          
-              <div className='w-[50%]'>
+              <div className='w-[50%] Mobile-Resposiveness-ProfileItems'>
 
               <div className='font-bold text-[18px] w-[100%]'>Personal Details </div>
               <div className='flex flex-col gap-3 pt-4'>
-                <div className='flex Profile-Personal'>
-              <div className='font-bold text-gray-400'>Full name:</div>
+                <div className='flex Mobile-Text-Resposiveness'>
+              <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Full name:</div>
               <div className='font-bold text-[15px]'>Zeeshan Ali Zafar</div></div>
 
-              <div className='flex Profile-Personal1'>
-               <div className='font-bold text-gray-400'>Date of Birth:</div>
+              <div className='flex Mobile-Text-Resposiveness'>
+               <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Date of Birth:</div>
                <div className='font-bold text-[15px]'>14-12-2002</div></div>
 
 
-               <div className='flex Profile-Personal2'> <div className='font-bold text-gray-400'>Nationality:</div>
+               <div className='flex Mobile-Text-Resposiveness '> 
+                <div className='font-bold text-gray-400 Mobile-labelTextboxes w-[35%] '>Nationality:</div>
                <div className='font-bold text-[15px]'>Pakistani</div> </div> 
                
                
-               <div className='flex Profile-Personal3' ><div className='font-bold text-gray-400'>Address:</div>
+               <div className='flex Mobile-Text-Resposiveness' >
+                <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Address:</div>
                   <div className='font-bold flex gap-2 items-center'>
 
                     <img className = "w-[25px] h-[18px] text-[15px]" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9PytjB3DjtSi1EPRy3kPvmiGxCP6S4TW9Hg&s" />
@@ -145,42 +149,46 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
                     
                     1 Melbourne St, Islamabad</div></div>
 
-                  <div className='flex Profile-Personal4'>
-                  <div className='font-bold text-gray-400'>Phone:</div>
+                  <div className='flex Mobile-Text-Resposiveness'>
+                  <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Phone:</div>
                    <div className='font-bold text-[15px]'>+923098789844</div>
                    </div>
-                           <div className='flex Profile-Personal5'><div className='font-bold text-gray-400'>Email:</div>
+                           <div className='flex Mobile-Text-Resposiveness'>
+                            <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Email:</div>
                             <div className='font-bold text-[15px]'>zeeshanalizafar53@gmail.com</div></div>
 
 </div></div>
 
 
-<div className='w-[50%]'>
+<div className='w-[50%] Mobile-Resposiveness-ProfileItems'>
 <div className='font-bold text-[18px]'>Account Details</div>
          <div className='flex flex-col gap-3 pt-4'>
-                <div className='flex Profile-Personal6'>
-              <div className='font-bold text-gray-400'>User name:</div>
+                <div className='flex Mobile-Text-Resposiveness'>
+              <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>User name:</div>
               <div className='font-bold text-[15px]'>zeeshan3106</div></div>
 
-              <div className='flex Profile-Personal7'>
-               <div className='font-bold text-gray-400'>Account Created:</div>
+              <div className='flex Mobile-Text-Resposiveness'>
+               <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Account Created:</div>
                <div className='font-bold text-[15px]'>14-12-2026</div></div>
 
 
-               <div className='flex Profile-Personal8'> <div className='font-bold text-gray-400'>Last Login:</div>
+               <div className='flex Mobile-Text-Resposiveness'>
+                 <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Last Login:</div>
                <div className='font-bold text-[15px]'>14-12-2026</div> </div> 
                
                
-               <div className='flex Profile-Personal9' ><div className='font-bold text-gray-400'>Password</div>
+               <div className='flex Mobile-Text-Resposiveness' >
+                <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Password</div>
                   <div className='font-bold flex gap-2 items-center'>
 
               ********</div></div>
 
-                  <div className='flex Profile-Personal10'>
-                  <div className='font-bold text-gray-400'>Current Device</div>
+                  <div className='flex Mobile-Text-Resposiveness'>
+                  <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Current Device</div>
                    <div className='font-bold text-[15px]'>PC</div>
                    </div>
-                           <div className='flex Profile-Personal11'><div className='font-bold text-gray-400'>Device Name</div>
+                           <div className='flex Mobile-Text-Resposiveness'>
+                            <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Device Name</div>
                             <div className='font-bold text-[15px]'>Apple 17 Pro</div></div>
 
 </div>
@@ -193,67 +201,73 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
            
 
               <div className='bg-white  rounded-d shadow-md Profile-Personal-Details flex Gap-Profile Mobile-PartThree  '>
-              <div className='w-[50%]'>
+              <div className='w-[50%] Mobile-Resposiveness-ProfileItems '>
 
               <div className='font-bold text-[18px]'>Address Details </div>
               <div className='flex flex-col gap-3 pt-4'>
-                <div className='flex Profile-Personal11'>
-              <div className='font-bold text-gray-400'>Country:</div>
+                <div className='flex Mobile-Text-Resposiveness'>
+              <div className='font-bold text-gray-400  Mobile-labelTextboxes w-[35%]'>Country:</div>
               <div className='font-bold text-[15px] flex items-center gap-2'><img className = "w-[25px] h-[18px] text-[15px] " src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9PytjB3DjtSi1EPRy3kPvmiGxCP6S4TW9Hg&s" />
                     
                     
                    Pakistan</div></div>
 
-              <div className='flex Profile-Personal12'>
-               <div className='font-bold text-gray-400'>City:</div>
+              <div className='flex Mobile-Text-Resposiveness'>
+               <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>City:</div>
                <div className='font-bold text-[15px]'>Islamabad</div></div>
 
 
-               <div className='flex Profile-Personal13'> <div className='font-bold text-gray-400'>State / Province:</div>
+               <div className='flex Mobile-Text-Resposiveness'> 
+                <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>State / Province:</div>
                <div className='font-bold text-[15px]'>Capital Territory</div> </div> 
                
                
-               <div className='flex Profile-Personal14' ><div className='font-bold text-gray-400'>Postal Code:</div>
+               <div className='flex Mobile-Text-Resposiveness' >
+                <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Postal Code:</div>
                   <div className='font-bold flex gap-2 items-center'>
 44000
                     </div></div>
 
-                  <div className='flex Profile-Personal15'>
-                  <div className='font-bold text-gray-400'>Street Address:</div>
+                  <div className='flex Mobile-Text-Resposiveness'>
+                  <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Street Address:</div>
                    <div className='font-bold text-[15px]'>1 Melbourne Street, Melbourne</div>
                    </div>
-                           <div className='flex Profile-Personal115'><div className='font-bold text-gray-400'>Landmark:</div>
+                           <div className='flex Mobile-Text-Resposiveness'>
+                            <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Landmark:</div>
                             <div className='font-bold text-[15px]'>Faisal Mosque</div></div>
 
 </div></div>
 
 
-<div className='w-[50%]'>
+<div className='w-[50%] Mobile-Resposiveness-ProfileItems'>
 <div className='font-bold text-[18px]'>Preferences</div>
          <div className='flex flex-col gap-3 pt-4'>
-                <div className='flex Profile-Personal16'>
-              <div className='font-bold text-gray-400'>News Letter:</div>
+                <div className='flex Mobile-Text-Resposiveness'>
+              <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>News Letter:</div>
               <div className='font-bold text-[15px]'>joined</div></div>
 
-              <div className='flex Profile-Personal17'>
-               <div className='font-bold text-gray-400'>Products Categories:</div>
+              <div className='flex Mobile-Text-Resposiveness'>
+               <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Products Categories:</div>
                <div className='font-bold text-[15px]'>IT, PC, Men Shirts</div></div>
 
 
-               <div className='flex Profile-Personal18'> <div className='font-bold text-gray-400'>Dark Mode:</div>
+               <div className='flex Mobile-Text-Resposiveness'> 
+                <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Dark Mode:</div>
                <div className='font-bold text-[15px]'>Not-Activated</div> </div> 
                
                
-               <div className='flex Profile-Personal19' ><div className='font-bold text-gray-400'>Language Content</div>
+               <div className='flex Mobile-Text-Resposiveness' >
+                <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Language Content</div>
                   <div className='font-bold flex gap-2 items-center'>
 
               English</div></div>
 
-                  <div className='flex Profile-Personal20'>
-                  <div className='font-bold text-gray-400'>Currency</div>
+                  <div className='flex Mobile-Text-Resposiveness'>
+                  <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Currency</div>
                    <div className='font-bold text-[15px]'>AUD</div>
                    </div>
-                           <div className='flex Profile-Personal21'><div className='font-bold text-gray-400'>Region / Country</div>
+                           <div className='flex Mobile-Text-Resposiveness'>
+                            <div className='font-bold text-gray-400 Mobile-labelTextboxes   w-[35%]'>Region / Country</div>
                             <div className='font-bold text-[15px]'>Asia/Pacafic</div></div>
 
 </div>
@@ -666,6 +680,29 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
     <section>
 
       <Navbar/>
+
+
+      <div className="bg-white shadow-md rounded-md flex justify-center font-bold">
+
+        <div className="flex justify-between gap-3 ProfileNavBarp2 w-[80%] ">
+
+          <div className="text-[10px]"><IconButton><Link>Back</Link></IconButton></div>
+          <div className=""><IconButton><Link>Zeeshan ali Zafar</Link></IconButton></div>
+          <div className="flex gap-2 ">
+          <div ><IconButton><Link>Search</Link></IconButton></div>
+            <div><IconButton><Link>Cart</Link></IconButton></div>
+              <div><IconButton><Link>Wislist</Link></IconButton></div>
+
+</div>
+        </div>
+
+
+      </div>
+
+
+
+
+
       <Toaster toastOptions={{
             style:{
               borderRadius:"20px",
@@ -724,18 +761,16 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
                         <div className='flex flex-col justify-center items-center  '>
                             <div className='flex justify-center items-center text-gray-600 text-[15px] '>
 
-                              <IconButton><MdStarBorderPurple500 className='text-green-600 text-[20px]'/></IconButton>
+                              <IconButton><Link to="/cart"><MdStarBorderPurple500 className='text-green-600 text-[20px]'/></Link></IconButton>
                                
-                               
-                               
-                               Orders</div>
+      Orders</div>
                              <div className='text-[20px]'>2000</div>
                             </div>
                          <div  className=' flex flex-col justify-center items-center CArt-Flex-Profile'> 
                           <div className='flex items-center text-[15px]'>
                                 <Tooltip title="Click to see loading">
       <IconButton >
-        <ShoppingCartIcon  className='text-blue-700' sx={{fontSize:"19px"}}/>
+<ShoppingCartIcon  className='text-blue-700' sx={{fontSize:"19px"}}/>
       </IconButton>
     </Tooltip>
                             
@@ -746,7 +781,8 @@ axios.get('http://localhost:8000/api/frontend/profile-items').then(res => consol
                              <div className='text-[20px] '>2000</div></div>
                               <div  className='flex flex-col justify-center items-center '> 
                                 <div className='text-gray-600 flex items-center gap-0 text-[15px] text-red'>
-                                  <IconButton><FaHeart className='text-red-600 text-[18px]' /></IconButton>Wishlist</div>
+                                  <IconButton>
+                                    <Link to="/wishlist"><FaHeart className='text-red-600 text-[18px]' /></Link></IconButton>Wishlist</div>
                              <div className=' text-[20px]'>2000</div>
                              
                              </div>

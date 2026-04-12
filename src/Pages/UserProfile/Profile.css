@@ -162,6 +162,17 @@
 .Mobile-Profile-Gap{
    width:90%
 }
+.Mobile-Resposiveness-ProfileItems{
+   width:100%;
+  
+}
+.MobilePRofilePadding{
+   padding-bottom:0px
+}
+.Gap-Profile{
+   gap: 50px;
+}
+
 }
 
 .mui-textarea {
