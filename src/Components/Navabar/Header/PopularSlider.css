@@ -111,4 +111,22 @@
       height: 100%;
       width: 100%;
   }
+  .Pop h3{
+  font-family: 'inter',sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em; 
+  text-transform: capitalize;
+  color: #1a1a1a;
+  padding-top: 30px;
+  font-size: 20px;
+
+}
+}
+.Pop h3{
+    font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em; /* Gives it a tight, professional look */
+  text-transform: capitalize;
+  color: #1a1a1a;
+
 }

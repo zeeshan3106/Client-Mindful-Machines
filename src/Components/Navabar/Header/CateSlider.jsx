@@ -41,10 +41,10 @@ function CateSlider() {
       >
         
         <SwiperSlide>
-          <Link className='Link'>
+          <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Health Devices")}}  to="/Product">  
           <div className='   item1 shadow-md rounded-md'>
             <div className=''>
-            <img      src={Cate1}></img></div>
+            <img      src={Cate}></img></div>
             <div className='font-sizes-Category '>Health</div>
           </div>
              
@@ -54,7 +54,7 @@ function CateSlider() {
 
         </SwiperSlide>
         <SwiperSlide>
-     <Link className='Link'>
+      <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Wellness Devices")}}  to="/Product">  
           <div className='item1 shadow-md rounded-md'>
             <img src={Cate}></img>
             <div>Wellness</div>
@@ -66,7 +66,7 @@ function CateSlider() {
           
         </SwiperSlide>
         <SwiperSlide>
-              <Link className='Link'>
+               <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Home Devices")}}  to="/Product">  
           <div className='item1 shadow-md rounded-md'>
             <img src={Cate}></img>
             <div>Home Devices</div>
@@ -77,29 +77,9 @@ function CateSlider() {
 </Link>
         </SwiperSlide>
         <SwiperSlide>
-             <Link className='Link'>
+              <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Drones")}}  to="/Product">  
           <div className='item1 shadow-md rounded-md'>
             <img src={Cate}></img>
-            <div>AI Gadgets</div>
-          </div>
-             
-
-
-</Link>
-        </SwiperSlide>
-        <SwiperSlide>    <Link className='Link'>
-          <div className='item1 shadow-md rounded-md'>
-            <img src={Cate}></img>
-            <div>Home Devices</div>
-          </div>
-             
-
-
-</Link></SwiperSlide>
-        <SwiperSlide>
-              <Link className='Link'>
-          <div className='item1 shadow-md rounded-md pt-5 pb-'>
-            <img className="" src={Cate8}></img>
             <div>AI Drones</div>
           </div>
              
@@ -107,22 +87,20 @@ function CateSlider() {
 
 </Link>
         </SwiperSlide>
-        <SwiperSlide>
-              <Link className='Link'>
+        <SwiperSlide>     <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Humanoid Robots")}}  to="/Product">  
           <div className='item1 shadow-md rounded-md'>
             <img src={Cate}></img>
-            <div>Robots</div>
+            <div>Humanoid Robots</div>
           </div>
              
 
 
-</Link>
-        </SwiperSlide>
+</Link></SwiperSlide>
         <SwiperSlide>
-             <Link className='Link'>
-          <div className='item1 shadow-md rounded-md'>
-            <img src={Cate}></img>
-            <div>Home Robots</div>
+               <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Industrial Robots")}}  to="/Product">  
+          <div className='item1 shadow-md rounded-md  pb-'>
+            <img className="" src={Cate}></img>
+            <div>Industrial Robots</div>
           </div>
              
 
@@ -130,27 +108,39 @@ function CateSlider() {
 </Link>
         </SwiperSlide>
         <SwiperSlide>
-              <Link className='Link'>
+               <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Health Devices")}}  to="/Product">  
           <div className='item1 shadow-md rounded-md'>
             <img src={Cate}></img>
-            <div>Humniod Robots</div>
+            <div>Popular</div>
           </div>
              
 
 
 </Link>
         </SwiperSlide>
-         <SwiperSlide>
-              <Link className='Link'>
+        <SwiperSlide>
+              <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Health Devices")}}  to="/Product">  
           <div className='item1 shadow-md rounded-md'>
             <img src={Cate}></img>
-            <div>Industrial Robotics</div>
+            <div>Latest</div>
           </div>
              
 
 
 </Link>
         </SwiperSlide>
+        <SwiperSlide>
+               <Link className='Link'  onClick={()=>{localStorage.setItem("item","AI Powered Health Devices")}}  to="/Product">  
+          <div className='item1 shadow-md rounded-md'>
+            <img src={Cate}></img>
+            <div>Featured</div>
+          </div>
+             
+
+
+</Link>
+        </SwiperSlide>
+      
 
 
 

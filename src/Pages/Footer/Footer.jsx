@@ -10,7 +10,9 @@ function Footer() {
     <div className='Footer w-[100%] h-[604px] m-c-2 '>
 
 
-        <div className='text-white p-5 font-bold text-[30px] MArgin-Footer bg-blue-950 First-Footer-Responsive '> Mindful Machines</div>
+        <div className='text-white p-5 font-bold text-[30px] MArgin-Footer bg-blue-950 First-Footer-Responsive '>
+          
+          <Link to="/Home" className='text-white'>Mindful Machines</Link> </div>
   <div className='flex Mobile-Footer-Container '>
 
     <div className='Mobile-Element-Footer'>
