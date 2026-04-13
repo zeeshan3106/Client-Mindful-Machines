@@ -95,7 +95,7 @@ function OrderPlaced() {
      <div className='ml-[-20] w-[60%]'>
      <div>{product.title}</div>
       <div className='text-gray-400 text-[12px]'>{product.quantity}</div></div>
-     <div className='text-black text-[12px]'>{product.price}</div></div>
+     <div className='text-black text-[12px]'>${product.price}</div></div>
 
 
 ))}

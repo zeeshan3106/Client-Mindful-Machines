@@ -149,7 +149,7 @@ function Products() {
   
           res => {
             console.log(res.data)
-            toast.success("Successfully Submitted...")
+            toast.success("Item Successfully Added To Cart...")
           }
   
         ).catch(err => {
@@ -518,6 +518,27 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
     <section>
     
        <div><Product/></div>
+
+
+          <Toaster
+                                      toastOptions={{
+                                  
+                                        style:{
+                                          background:"white",
+                                          color:"black",
+                                          borderRadius:"20px",
+                                          fontSize:"14px",
+                                          fontFamily:"Roboto",
+                                          
+                                  
+                                        }
+                                  
+                                  
+                                      }}
+                                      
+                                      
+                                      
+                                      />
 
         <div className='container-side Product'>
 
@@ -1031,25 +1052,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                             
                             className='AddToCartbtn  text-white ADDCARTMOBILE '>
                 
-                               <Toaster
-                                      toastOptions={{
-                                  
-                                        style:{
-                                          background:"white",
-                                          color:"black",
-                                          borderRadius:"20px",
-                                          fontSize:"14px",
-                                          fontFamily:"Roboto",
-                                          
-                                  
-                                        }
-                                  
-                                  
-                                      }}
-                                      
-                                      
-                                      
-                                      />
+                            
                 
                 
                 
@@ -1096,26 +1099,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                             
                             className='AddToCartbtn  text-white ADDCARTMOBILE '>
                 
-                               <Toaster
-                                      toastOptions={{
-                                  
-                                        style:{
-                                          background:"white",
-                                          color:"black",
-                                          borderRadius:"20px",
-                                          fontSize:"14px",
-                                          fontFamily:"Roboto",
-                                          
-                                  
-                                        }
-                                  
-                                  
-                                      }}
-                                      
-                                      
-                                      
-                                      />
-                
+                           
                 
                 
                 
@@ -1152,24 +1136,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                             
                             className=' text-white '>
                 
-                               <Toaster
-                                      toastOptions={{
-                                  
-                                        style:{
-                                          background:"white",
-                                          color:"black",
-                                          borderRadius:"20px",
-                                          fontSize:"14px",
-                                          fontFamily:"Roboto",
-                                  
-                                        }
-                                  
-                                  
-                                      }}
-                                      
-                                      
-                                      
-                                      />
+                            
                 
                 
                 
@@ -1202,24 +1169,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
                             
                             className=' text-white '>
                 
-                               <Toaster
-                                      toastOptions={{
-                                  
-                                        style:{
-                                          background:"white",
-                                          color:"black",
-                                          borderRadius:"20px",
-                                          fontSize:"14px",
-                                          fontFamily:"Roboto",
-                                  
-                                        }
-                                  
-                                  
-                                      }}
-                                      
-                                      
-                                      
-                                      />
+                            
                 
                 
                 
