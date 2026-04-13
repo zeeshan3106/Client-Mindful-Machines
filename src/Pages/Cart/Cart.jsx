@@ -384,13 +384,12 @@ const token = localStorage.getItem("token")
         
   </p>
 
-{cart.map((product) => (
 
    <p className=" Total-Price flex items-center justify-between Subtotal">
   <span className=' text-blue-600 text-[15px] text-bold pt-20 '>Total</span>
-           <span className=' text-blue-600 text-[14px] text-bold '>{product.carttotal}</span>      
+           <span className=' text-blue-600 text-[14px] text-bold '>4000$</span>      
   </p>
-))}
+
 <div>
   <Button  className='Check-out-btn w-full'
 

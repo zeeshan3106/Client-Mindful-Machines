@@ -98,6 +98,44 @@ toast.success('Order Placed Successfully...!')
 
   })
 
+  const [state, setstate]=useState([])
+
+  const [cart, setcart] = useState([])
+const [total,settotal]=useState(0)
+
+const [carttotal, setcarttotal]=useState(0)
+
+const [click,setclick]=useState([])
+
+   useEffect(() => {
+    const token = localStorage.getItem("token")
+      axios.get(`${import.meta.env.VITE_API_URL}/api/cart/get`,{
+        headers:{
+          Authorization:`Bearer ${token}`
+        }
+      }
+  
+      
+  
+  
+  
+      )
+      .then(res => {
+        setcart(res.data.data)
+        settotal(res.data.totalItems)
+        setcarttotal(res.data.carttotal)
+        console.log(res.data)
+  
+      
+       
+  
+      }
+      )
+      .catch(err => console.log(err))
+   
+    
+   }, [])
+
 
 
 
@@ -353,54 +391,25 @@ console.log(items)
             <div className='order-items font-bold '>Product</div>
             <div className='order-items font-bold '>SubTotal</div>
             </div>
-
+{cart.map((product) => (
               <div className=' Items flex items-center  gap-10 justify-items-center text-center '>
+                
 <div className=' names w-[90%] start justify-start'>
-            <div className='order-items-list  '>AI Powered Drone</div></div>
+            <div className='order-items-list  '>{product.title}</div></div>
             <div className='w-[30%]'>
-            <div className='order-items-list  '>$10000</div></div>
+            <div className='order-items-list  '>${product.price}</div></div>
             </div>
 
+
+
+))}
+            
+              
 
 
 
             
-              <div className=' Items flex items-center  gap-10 justify-items-center text-center '>
-<div className=' names w-[90%] start justify-start'>
-            <div className='order-items-list  '>AI Powered Drone</div></div>
-            <div className='w-[30%]'>
-            <div className='order-items-list  '>$10000</div></div>
-            </div>
-
-
-
-            
-              <div className=' Items flex items-center  gap-10 justify-items-center text-center '>
-<div className=' names w-[90%] start justify-start'>
-            <div className='order-items-list  '>AI Powered Drone</div></div>
-            <div className='w-[30%]'>
-            <div className='order-items-list  '>$10000</div></div>
-            </div>
-
-
-
-
-            
-              <div className=' Items flex items-center  gap-10 justify-items-center text-center '>
-<div className=' names w-[90%] start justify-start'>
-            <div className='order-items-list  '>AI Powered Drone</div></div>
-            <div className='w-[30%]'>
-            <div className='order-items-list  '>$10000</div></div>
-            </div>
-
-
-            
-              <div className=' Items flex items-center  gap-10 justify-items-center text-center '>
-<div className=' names w-[90%] start justify-start'>
-            <div className='order-items-list  '>AI Powered Drone</div></div>
-            <div className='w-[30%]'>
-            <div className='order-items-list  '>$10000</div></div>
-            </div>
+           
 </div>
 
 <div>
