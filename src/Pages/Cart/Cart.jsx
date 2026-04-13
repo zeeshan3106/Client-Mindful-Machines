@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 import './Cart.css'
 import Cartbar from './Cartbar'
 import Header from '../../Components/Navabar/Header/Header'
@@ -20,6 +21,11 @@ import Footer from '../Footer/Footer'
 import DeleteIcon from '@mui/icons-material/Delete';
 
 function Cart() {
+
+
+
+
+const Navigate = useNavigate()
 
 
 
@@ -234,10 +240,35 @@ const token = localStorage.getItem("token")
  console.log()
 
 
+const onNext =()=>{
+  Navigate('/Billing')
+
+
+
+}
+
+
+const onEmpty =()=>{
+toast.error("0 Element on Cart")
+}
+
 
   return (
   <section>
     <Product/>
+    <Toaster
+
+    toastOptions={{
+      style:{
+        borderRadius:'20px'
+        
+      },
+      iconTheme:{
+
+      }
+    }}
+    
+    />
 
     <div className='sec p-5 Mobile-Cart-Resposive'>
       <div className='Cart-container center flex  w-[80%] max-w-[100%] justify-center gap-20 Mobile-Cart'>
@@ -391,7 +422,9 @@ const token = localStorage.getItem("token")
   </p>
 
 <div>
-  <Button  className='Check-out-btn w-full'
+  <Button  className='Check-out-btn w-full' onClick={()=>{
+    cart.length>0?onNext():onEmpty()
+  }}
 
 sx={{
 
@@ -407,7 +440,7 @@ fontFamily:'Times New Roman'
 
 >
 
-  <Link to="/Billing" className='text-white'> <div className='text-white'><Button
+  <Link to="" className='text-white'> <div className='text-white'><Button
 
 
 
