@@ -206,31 +206,23 @@ console.log(wishget)
 
   {wishget.map((product, index) => (
         
-<div className='cart-side   shadow-md rounded-md p-0 bg-white flex gap-6 items-center '>
+<div className='cart-side   shadow-md rounded-md p-1  bg-white'>
 
-  <div>
 
-  <div className='Title-cart  border-[rgba(0,0,0,0.1)] p-20' >
- 
-         
-</div>
-<div>
+<div className='border flex items-center'>
 
-<div className='  flex  Items '>
-
+  <div className='cart-item p-3 flex items-center gap-4 '>
   <div className='img w-[20%] rounded-md overflow-hidden group-hover:scale-105'>
     <Link>
-     <img src= {img1}  className=' w-full h-[200px]   transition-all'/>
+
+    <img src= {img1}  className='image w-full  transition-all'/>
+    
     
     </Link>
   </div>
-  
 <div className='info w-[90%] '>
-
-  
-  <div className=' text-gray-600 '>{product.company}</div>
-
-   <Link> <div className='' >{product.title}</div></Link>
+  <div className=' text-gray-600'>{product.company}</div>
+    <div>{product.title}</div>
     
       <div>   <Stack spacing={1}>
     
@@ -246,7 +238,13 @@ console.log(wishget)
    
 
     </div>
-     <div className='cart-offer '> 
+     <div className='cart-offer'> <span className='days'>30days</span> return available</div>
+     <div className='flex gap-10'>
+           <div className=' text-gray-500'>Old Price:<span className='text-black'>{product.oldPrice}</span></div>
+                <div className=' text-gray-500'>Price:<span className='text-black'>{product.price}</span></div>
+
+                </div>
+          <div className='cart-offer '> 
     
       <div className='Field'>
       <div>
@@ -261,26 +259,19 @@ console.log(wishget)
 
      </div>
      
-  
-     
-     
-    
-     <br/>
-     <br/>
-    
-                 
-
+   
 </div>
 
+</div>
+<div className='ml-[-10]'>
+
+
+ <IconButton aria-label="delete" onClick={()=>{onClickDelete(product._id)}}>
+        <DeleteIcon />
+      </IconButton>
+
 
 </div>
-
-
-
-
-
-
-
 
 
 
@@ -290,16 +281,18 @@ console.log(wishget)
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
 </div>
 
-
-
-     <IconButton aria-label='delete' onClick={()=>onDelete(product._id)}>
-      <DeleteIcon/>
-     </IconButton>
-
-
-</div>
  ))}
 
 
