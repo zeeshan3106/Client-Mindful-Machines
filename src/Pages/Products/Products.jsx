@@ -545,7 +545,7 @@ axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
 useEffect(()=>{
 axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
   params:{
-    'rating':'five'
+    'price':160
   }
 }).then(res =>{ 
   console.log('Ratingsssssssssssss',res.data)
