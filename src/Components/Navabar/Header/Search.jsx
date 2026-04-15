@@ -4,9 +4,14 @@ import './Search.css'
 import { FaSearch } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { Button } from '@mui/material';
+
+import { useContext } from 'react';
+import { SearchContext } from '../../../Pages/Products/Searchcontext';
 import axios from 'axios';
 
 function Search() {
+
+  const {pro,setpro}=useContext(SearchContext)
 
   const [state, setstate] = useState({
     name:""
@@ -20,14 +25,18 @@ function Search() {
       [name]:value
     }))
 
-    axios.get('https://backend-mindful-machines-44vc.vercel.app/api/products/SearchItem',
+    axios.get('http://localhost:8000/api/products/SearchItem',
       {
         params:{
           searchId:value
         }
       }
     ).then
-    (res => console.log(res.data.data)).catch(err => err)
+    (res => {setpro(res.data.data)
+      console.log(pro)
+    }
+  
+  ).catch(err => err)
 
 
 
@@ -39,7 +48,7 @@ function Search() {
 
 
   return (
-    <div className='container-s'>
+    <div className='container-s '>
     <div className='Search'>
       <input  type='text' placeholder='Search for products...' 
 

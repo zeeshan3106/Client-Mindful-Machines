@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Products.css'
 import Product from '../../Components/Navabar/Header/Header1'
 import Sidebar from './Sidebar'
@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 
 import './apple.css'
 import { BsFillMenuButtonWideFill } from "react-icons/bs";
-import { IoGridSharp } from "react-icons/io5";
+import { IoCloseSharp, IoGridSharp } from "react-icons/io5";
 import { GoRows } from "react-icons/go";
 import axios from 'axios'
 import { useEffect } from 'react'
@@ -25,7 +25,7 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import {Collapse} from 'react-collapse';
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown, FaCartArrowDown, FaSearch } from "react-icons/fa";
 import Button from '@mui/material/Button';
 
 
@@ -36,8 +36,10 @@ import { createContext } from 'react'
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { TbFilterCheck } from "react-icons/tb";
+import logo from './Components/logo.png'
 
-import img1 from './Components/1.jpg'
+
+
 
 
 export const appleContext = createContext()
@@ -52,7 +54,21 @@ export const appleProvider = ({childern})=>{
 
 
 
-/* import img1 from './Images/Latest Products/1.jpg'1*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 import { MdOutlineZoomInMap } from "react-icons/md";
@@ -62,14 +78,20 @@ import { FaRegHeart } from "react-icons/fa";
 
 
 
+
 import toast, { Toaster } from 'react-hot-toast';
 import Footer from '../Footer/Footer'
 import CateSlider from '../../Components/Navabar/Header/CateSlider'
 import CateSlider2 from '../../Components/Navabar/Header/Category'
+
+import { SearchContext } from './Searchcontext'
+import Search from '../../Components/Navabar/Header/Search'
+import { CgProfile } from 'react-icons/cg'
+import Navbar from '../../Components/Navabar/Header/Navbar'
 function Products() {
 
 
-
+const [pro, setpro]=useState([])
 
   const localitem = localStorage.getItem("item")
 
@@ -88,7 +110,7 @@ function Products() {
    return localStorage.getItem('item')
    });
   
-    const [pro , setpro] = useState([ ])
+
     
     const [count , setcount] = useState([0])
   
@@ -592,13 +614,131 @@ const onClickCategory = () =>{
 
 }
 
+
+
+  const onchageInput = (e)=>{
+    const {name, value}=e.target
+
+    setstate( prev =>({
+      ...prev,
+      [name]:value
+    }))
+
+    axios.get('http://localhost:8000/api/products/SearchItem',
+      {
+        params:{
+          searchId:value
+        }
+      }
+    ).then
+    (res => {setpro(res.data.data)
+      console.log(pro)
+    }
+  
+  ).catch(err => err)
+
+
+
+
+  }
+
   return (
+
+    
 
 
 
     <section>
-    
-       <div><Product/></div>
+   
+
+
+
+       <div><header>
+
+ 
+
+      <div className='header w-full'>
+       <div className='container-head'>
+      
+        <div className='w-[20%] col1' >
+              <Link to = {"/Home"} className='frontmobileimage' > 
+               <img src= {logo}/>
+               
+               </Link>
+
+        </div>
+         <div className='w-[60%] Col-2'>
+          <div className='container-s '>
+             <div className='Search'>
+               <input  type='text' placeholder='Search for products...' 
+         
+               name='name' value={state.name}
+               onChange={onchageInput}
+               
+               
+               className="Box" />
+               
+               <div className='flex  Search-icons Search-Resposiveness'>
+                 
+               <button className='Search-icon cursor-pointer '><FaSearch /></button>
+                <button className=' cursor-pointer text-[25px] Search-icon'><IoCloseSharp /></button>
+         
+         
+                   </div>
+               
+             </div>
+         </div>
+         
+         </div>
+          <div className=' w-[20%] col3 gap-20 items-center mobilefrontlogo '>
+          <ul className='Options'>
+   
+            <li className='login '>
+
+              <div className='pl-10 flex bg-blue gap-3 items-center justify-center cart mobilefrontlogo '>
+
+              
+<div className=' cart-theme'>
+                  <Link to="/Profile" className='link1 '><CgProfile className='homelogo'/></Link>
+</div>
+              <li className='cart cart-theme'>
+   <Link to="/wishlist" className='link1'><FaRegHeart  className='homelogo'/></Link>
+   
+   
+   
+</li>
+
+ <div className=' cart-theme'>
+   
+   <button className='link1'   
+   onClick={()=>context.setOpenDrawer(true)}  
+
+
+   
+   ><FaCartArrowDown  className='homelogo' /></button>
+
+             </div>
+
+</div>
+              
+            
+            </li>
+            </ul>
+        
+
+         
+            </div>  
+         
+         
+       </div>
+    </div>
+    <div>
+      <Navbar/>
+    </div>
+ 
+
+
+</header></div>
        <div>    <div className='CateSlider2 mt-0 mb-0 pb-0 pl-0 '>
              <div className='container flex gap-1 ml-0 Mobile-Gap-CAte'>
              
@@ -792,11 +932,11 @@ const onClickCategory = () =>{
 
  <aside className='Sidebar'>
      
-      <h4  className='filters'>
+      <h4  className='filters '>
         
         <div><button onClick={() => setisOpenCategoryFilter(!isOpenCAtegoryFilter)}>
 
-        <div>  <div className='flex gap-3 items-center'><div className="flex w-[70%] items-center gap-2"> <div > <TbFilterCheck /></div> <div>Filters</div></div><div><FaAngleDown /></div></div> 
+        <div>  <div className='flex gap-3 items-center pl-4'><div className="flex w-[70%] items-center gap-2 pl-4"> <div > <TbFilterCheck /></div> <div>Filters</div></div><div><FaAngleDown /></div></div> 
       </div> 
         </button>
 
@@ -1373,7 +1513,7 @@ const onClickCategory = () =>{
 
                 <div className='w-[] Product-Apple ProductItem '>
                 
-                    {pro?.map((product) => (
+                    {   pro?.map((product) => (
                 
                 
                 

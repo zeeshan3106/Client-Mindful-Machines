@@ -239,7 +239,7 @@ width: 100px;
   padding: 0px;
  }
 
-.swiper-navigation-icon{
+.CateSlider2 .swiper-navigation-icon{
   font-size: 5px !important;
   color: black;
   max-width: 10px;
@@ -247,7 +247,7 @@ width: 100px;
   font-weight: bold;
 
 }
-   .all .Pop{
+  .CateSlider2 .all .Pop{
     margin-top: 0px;
    }
 .CateSlider2 .mySwiper {
@@ -287,7 +287,7 @@ width: 100px;
     padding: 0px;
     gap: 0px;
    }
-   .Link {
+   .CateSlider2 .Link {
     height: 50px;
    }
    .CateSlider2 {
@@ -325,4 +325,11 @@ width: 100px;
     gap: 15px;
     padding: 10px;
     width: max-content; 
+}
+.item1.active {
+  background-color: blue; /* Very light blue */
+  color: #2563eb; /* Modern Blue */
+  border-color: #3b82f6;
+  transform: scale(0.98); /* Slight "pressed" effect */
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }

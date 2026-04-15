@@ -52,7 +52,10 @@ import { appleProvider } from './Pages/Products/Products'
 import Navbar from './Components/Navabar/Header/Navbar'
 import Profile from './Pages/UserProfile/Profile'
 import CateSlider2 from './Components/Navabar/Header/Category'
+import Searchcontext from './Pages/Products/Searchcontext'
 
+import SearchProvider from './Pages/Products/Searchcontext'
+import Search from './Components/Navabar/Header/Search'
 
 const Scroll = ()=>{
 
@@ -107,6 +110,10 @@ const apiurl = import.meta.env.VITE_API_URL
 
     <>
 
+    <SearchProvider>
+      <Search/>
+    </SearchProvider>
+
 <BrowserRouter>
 <Scroll/>
        
@@ -150,7 +157,8 @@ const apiurl = import.meta.env.VITE_API_URL
               <Route path={'/Profile'} exact={true}   element={<Profile/>}   />
               <Route path={'/Cate2'} element={<CateSlider2/>} exact={true}/>
 
-            
+              <Route path={'/SearchContext'} element={<Searchcontext/>} exact={true}/>
+               <Route path={'/Searchh'} element={<Search/>} exact={true}/>
       </Routes>
 
 
