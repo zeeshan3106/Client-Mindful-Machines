@@ -406,3 +406,12 @@ margin-left: 1px;
 .side{
     background-color: black;
 }
+
+.MobileSideBar{
+
+    transition: all 0.9s ease !important;
+}
+.MobileSideBar1{
+    display: none !important;
+
+}

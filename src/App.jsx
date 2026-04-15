@@ -51,6 +51,7 @@ import OrderPlaced from './Pages/OrderConfirmation/OrderPlaced'
 import { appleProvider } from './Pages/Products/Products'
 import Navbar from './Components/Navabar/Header/Navbar'
 import Profile from './Pages/UserProfile/Profile'
+import CateSlider2 from './Components/Navabar/Header/Category'
 
 
 const Scroll = ()=>{
@@ -147,6 +148,7 @@ const apiurl = import.meta.env.VITE_API_URL
               <Route path={'/OrderPlaced'} exact={true} element={<OrderPlaced/>} />
 
               <Route path={'/Profile'} exact={true}   element={<Profile/>}   />
+              <Route path={'/Cate2'} element={<CateSlider2/>} exact={true}/>
 
             
       </Routes>

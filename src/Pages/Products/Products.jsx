@@ -64,6 +64,8 @@ import { FaRegHeart } from "react-icons/fa";
 
 import toast, { Toaster } from 'react-hot-toast';
 import Footer from '../Footer/Footer'
+import CateSlider from '../../Components/Navabar/Header/CateSlider'
+import CateSlider2 from '../../Components/Navabar/Header/Category'
 function Products() {
 
 
@@ -511,6 +513,48 @@ for (let i = 1; i<=pages; i++){
 
 console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
+
+
+
+useEffect(()=>{
+axios.get(`${import.meta.env.VITE_API_URL}/api/users/status`,{
+  params:{
+    'statusid':''
+  }
+}).then(res =>{ 
+  console.log('Avaliabilityyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy',res.data)
+
+}).catch(err => err)
+
+
+},[])
+
+useEffect(()=>{
+axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
+  params:{
+    'price':'130'
+  }
+}).then(res =>{ 
+  console.log('Priceeeeeeeeeeeeeeeeeeeeeeeeeeee',res.data)
+
+}).catch(err => err)
+
+
+},[])
+
+useEffect(()=>{
+axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
+  params:{
+    'rating':'five'
+  }
+}).then(res =>{ 
+  console.log('Ratingsssssssssssss',res.data)
+
+}).catch(err => err)
+
+
+},[])
+
   return (
 
 
@@ -518,6 +562,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
     <section>
     
        <div><Product/></div>
+       <div><CateSlider2/></div>
 
 
           <Toaster
@@ -724,11 +769,11 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
 
     {
       open===true?
- <aside className='Sidebar1 absolute pt-4 z-40 bg-white overlay'>
+ <aside className='Sidebar1 absolute pt-4 z-40 bg-white overlay MobileSideBar'>
      
       <h4  className='filters '>
         
-        <div><button onClick={() => setisOpenCategoryFilter(!isOpenCAtegoryFilter)}>
+        <div>
 
         
         <div>  <div className='flex gap-10  !items-center'><div className="flex w-[70%] items-center gap-2"> <div > <TbFilterCheck /></div> <div>Filters</div></div><div><FaAngleDown />
@@ -740,7 +785,7 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
         </div>
 </div> 
       </div> 
-        </button>
+      
 
         
 </div>
@@ -900,7 +945,185 @@ console.log('Page numberrrrrrrrrrrrrrrrs',pagenumbers)
       
     </Collapse>
 
-    </aside> :''
+    </aside> :
+
+    <aside className='Sidebar1 absolute pt-4 z-40 bg-white overlay MobileSideBar1'>
+     
+      <h4  className='filters '>
+        
+        <div>
+
+        
+        <div>  <div className='flex gap-10  !items-center'><div className="flex w-[70%] items-center gap-2"> <div > <TbFilterCheck /></div> <div>Filters</div></div><div><FaAngleDown />
+        </div>
+          <div className='text-blue-600 '>
+        <button  onClick={(()=>{setopen(open?false:true)})}>
+          <IoGridSharp />
+        </button>
+        </div>
+</div> 
+      </div> 
+      
+
+        
+</div>
+      </h4>
+
+      <Collapse isOpened={isOpenCAtegoryFilter} Style={{ overflow: 'hidden' }}>
+
+
+
+      <h5 className='cate'>CATEGORIES</h5>
+
+      
+    <div className="category">
+
+
+      
+        <div className="scrol">
+
+
+
+
+          
+
+
+          <FormGroup className='text-f'>
+
+            
+{
+      
+      categoryitems?.map((product,index)=>(
+
+            <FormControlLabel control={<Checkbox />}
+            checked={selected === product.category}
+            name={product.category} onChange={handleChange}  
+               label={product.category}    />
+   
+            
+))}
+           
+          </FormGroup>
+
+
+
+
+     
+
+
+
+
+
+
+
+        </div>
+      
+
+
+
+  <div>
+             <h5>Availability</h5>
+                <FormGroup className='text-f'>
+            <FormControlLabel control={<Checkbox />} label="Available"  name="Available" onChange={handleChange} />
+            <FormControlLabel control={<Checkbox />} label="Out of Stock"name="Out of Stock" onChange={handleChange} 
+            
+            />
+ 
+          
+           
+          </FormGroup>
+</div>
+
+
+        <h5>Filter By Price</h5>
+        
+
+
+            <div> <Box sx={{ width: 300 }}>
+      <Slider
+
+
+
+
+
+
+
+        getAriaLabel={() => 'Temperature range'}
+        value={price}
+        
+        onChange={setprice}
+        min={100}
+        max={100000}
+        step={5}
+
+        valueLabelDisplay="auto"
+
+
+       
+      />
+    </Box></div>
+
+<div className='price-f'>
+
+
+
+
+        <div>From:-{price[0]}</div>
+        <div>To:-{price[1]}</div>
+        </div>
+     
+     
+      </div>
+
+      <h5 className='price-f'>
+        Ratings
+      </h5>
+
+      <div className="">
+        <Link to= "" >
+         <Stack spacing={1}>
+
+      <Rating name="half-rating-read" defaultValue={5} precision={0.5} readOnly
+    
+      
+      />
+    </Stack></Link>
+
+      </div>
+      
+      
+      <div className="">
+        <Link>
+         <Stack spacing={1}>
+      <Rating name="half-rating-read" defaultValue={4} precision={0.5} readOnly />
+    </Stack></Link>
+      </div>
+      
+      <div className="">
+       <Link> <Stack spacing={1}>
+      <Rating name="half-rating-read" defaultValue={3} precision={0.5} readOnly />
+    </Stack></Link> 
+      </div>
+      
+      <div className="">
+       <Link>  <Stack spacing={1}>
+      <Rating name="half-rating-read" defaultValue={2} precision={0.5} readOnly />
+    </Stack></Link>
+      </div>
+      
+      <div className="">
+         <Link><Stack spacing={1}>
+      <Rating name="half-rating-read" defaultValue={1} precision={0.5} readOnly />
+    </Stack></Link>
+      </div>
+      
+
+
+
+      
+    </Collapse>
+
+    </aside>
 }
 
             </div>

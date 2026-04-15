@@ -266,7 +266,7 @@ console.log(wishget)
 <div className='ml-[-10]'>
 
 
- <IconButton aria-label="delete" onClick={()=>{onClickDelete(product._id)}}>
+ <IconButton aria-label="delete" onClick={()=>{onDelete(product._id)}}>
         <DeleteIcon />
       </IconButton>
 
