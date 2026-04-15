@@ -265,7 +265,7 @@ function Products() {
   },[])
   
   
-  
+  const abc = localStorage.getItem("item")
   useEffect(()=>{
     if (selected.length === 0) return; // optional: prevent empty request
 
@@ -284,7 +284,7 @@ function Products() {
   
   
   
-  },[]
+  },[abc]
   
   
   )
@@ -301,7 +301,7 @@ function Products() {
 
        setselected(v)
        sethispage(1)
-        localStorage.setItem("item",v)
+      const abc =   localStorage.setItem("item",v)
 
 
           const token = localStorage.getItem("token")
@@ -555,6 +555,43 @@ axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
 
 },[])
 
+
+const onClickCategory = () =>{
+
+   const token = localStorage.getItem("token")
+   const item = localStorage.getItem('item')
+       
+          axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`,
+  
+        {    /*  
+              headers:{
+                Authorization:`Bearer ${token}`
+              }   */
+  
+              params:{
+                categoryid: item
+              }
+            }
+  
+  
+  
+            
+  
+  
+  
+          )
+          .then( res => {
+             setpro(res.data.data)  
+              setpages(res.data.totalPages)
+          }
+                  
+          )
+          .catch(err => err)   
+
+
+
+}
+
   return (
 
 
@@ -562,7 +599,165 @@ axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
     <section>
     
        <div><Product/></div>
-       <div><CateSlider2/></div>
+       <div>    <div className='CateSlider2 mt-0 mb-0 pb-0 pl-0 '>
+             <div className='container flex gap-1 ml-0 Mobile-Gap-CAte'>
+             
+       
+               
+        
+                 <Link className='Link w-[10%] MobileCAtegoryWidth'  onClick={()=>{
+                   localStorage.setItem("item","AI Powered Health Devices"),
+                  onClickCategory()
+                 
+                 }}  to="/Product">  
+                 <div className='   item1 shadow-md rounded-md flex items-center justify-center'>
+                   <div className=''>
+              </div>
+                   <div className='font-sizes-Category '>Health</div>
+                 </div>
+                    
+       
+       
+       </Link>
+       
+        
+        
+             <Link className='Link w-[10%] MobileCAtegoryWidth'  onClick={()=>{
+                   localStorage.setItem("item","AI Powered Wellness Devices"),
+                  onClickCategory()
+                 
+                 }}  to="/Product">  
+                 <div className='item1 shadow-md rounded-md flex items-center justify-center'>
+              
+                   <div className=''>Wellness</div>
+                 </div>
+                    
+       
+       
+       </Link>
+                 
+        
+        
+                      <Link className='Link'
+                        onClick={()=>{
+                   localStorage.setItem("item","AI Powered Home Devices"),
+                  onClickCategory()
+                 
+                 }}   to="/Product">  
+                 <div className='item1 shadow-md rounded-md flex items-center justify-center'>
+            
+                   <div>Home Devices</div>
+                 </div>
+                    
+       
+       
+       </Link>
+        
+        
+                     <Link className='Link w-[11%] MobileCAtegoryWidth'
+                      onClick={()=>{
+                   localStorage.setItem("item","AI Powered Drones"),
+                  onClickCategory()
+                 
+                 }}   to="/Product">  
+                 <div className='item1 shadow-md rounded-md flex items-center justify-center'>
+                
+                   <div>AI Drones</div>
+                 </div>
+                    
+       
+       
+       </Link>
+        
+             <Link className='Link' 
+              onClick={()=>{
+                   localStorage.setItem("item","AI Powered Humanoid Robots"),
+                  onClickCategory()
+                 
+                 }}   to="/Product">  
+                 <div className='item1 shadow-md rounded-md flex items-center justify-center'>
+           
+                   <div>Humanoid Robots</div>
+                 </div>
+                    
+       
+       
+       </Link>
+        
+                      <Link className='Link'
+                        onClick={()=>{
+                   localStorage.setItem("item","AI Powered Industrial Robots"),
+                  onClickCategory()
+                 
+                 }}  to="/Product">  
+                 <div className='item1 shadow-md rounded-md  flex items-center justify-center'>
+              
+                   <div>Industrial Robots</div>
+                 </div>
+                    
+       
+       
+       </Link>
+        
+        
+                      <Link className='Link w-[10%] MobileCAtegoryWidth'
+                        onClick={()=>{
+                   localStorage.setItem("item","Popular"),
+                  onClickCategory()
+                 
+                 }}   to="/Product">  
+                 <div className='item1 shadow-md rounded-md flex items-center justify-center'>
+            
+                   <div>Popular</div>
+                 </div>
+                    
+       
+       
+       </Link>
+        
+        
+                     <Link className='Link MobileCAtegoryWidth  w-[10%]' 
+                    onClick={()=>{
+                   localStorage.setItem("item","Latest"),
+                  onClickCategory()
+                 
+                 }}   to="/Product">  
+                 <div className='item1 shadow-md rounded-md flex items-center justify-center'>
+           
+                   <div>Latest</div>
+                 </div>
+                    
+       
+       
+       </Link>
+        
+        
+                      <Link className='Link  w-[10%] MobileCAtegoryWidth'  
+                      onClick={()=>{
+                   localStorage.setItem("item","Featured"),
+                  onClickCategory()
+                 
+                 }}   to="/Product">  
+                 <div className='item1 shadow-md rounded-md flex items-center justify-center'>
+               
+                   <div>Featured</div>
+                 </div>
+                    
+       
+       
+       </Link>
+        
+             
+       
+       
+       
+       
+       
+       
+       
+       
+       </div>
+           </div></div>
 
 
           <Toaster
