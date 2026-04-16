@@ -91,7 +91,7 @@ import Navbar from '../../Components/Navabar/Header/Navbar'
 function Products() {
 
 
-const [pro, setpro]=useState([])
+const [pro, setpro]=useState([ ])
 
   const localitem = localStorage.getItem("item")
 
@@ -200,7 +200,8 @@ const [pro, setpro]=useState([])
         useEffect(() => {
           
           const token = localStorage.getItem("token")
-          const fileritem = localStorage.getItem("item")
+          
+          const selectedd = localStorage.getItem("item")
           axios.get(`${import.meta.env.VITE_API_URL}/api/products/getbycategory`,
   
         {    /*  
@@ -364,7 +365,79 @@ const [pro, setpro]=useState([])
 
 
   };
+     const handleChangeavailable = (e) => {
+      const v = e.target.name
+
+       setselected(v)
+       sethispage(1)
+      const abc =   localStorage.setItem("item",v)
+
+
+          const token = localStorage.getItem("token")
+          const fileritem = localStorage.getItem("item")
+          axios.get(`${import.meta.env.VITE_API_URL}/api/users/status`,
   
+       
+  
+  
+  
+            
+  
+  
+  
+          )
+          .then( res =>{
+             setpro(res.data.data)  ,
+             console.log("Thissssssssssssssssssssssssssssssss is the data ", pro),
+              setpages(res.data.totalPages)
+         
+          }
+                  
+          )
+          .catch(err => err)   
+    
+  
+
+
+
+  };
+  
+      const handleChangeunavailable = (e) => {
+      const v = e.target.name
+
+       setselected(v)
+       sethispage(1)
+      const abc =   localStorage.setItem("item",v)
+
+
+          const token = localStorage.getItem("token")
+          const fileritem = localStorage.getItem("item")
+          axios.get(`${import.meta.env.VITE_API_URL}/api/users/status-unavailable`,
+  
+       
+  
+  
+  
+            
+  
+  
+  
+          )
+          .then( res =>{
+             setpro(res.data.data)  ,
+             console.log("Thissssssssssssssssssssssssssssssss is the data ", pro),
+              setpages(res.data.totalPages)
+         
+          }
+                  
+          )
+          .catch(err => err)   
+    
+  
+
+
+
+  };
   
   
   
@@ -565,9 +638,9 @@ axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
 },[])
 
 useEffect(()=>{
-axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
+axios.get(`${import.meta.env.VITE_API_URL}/api/users/ratings`,{
   params:{
-    'price':160
+    'rating': 5
   }
 }).then(res =>{ 
   console.log('Ratingsssssssssssss',res.data)
@@ -577,6 +650,50 @@ axios.get(`${import.meta.env.VITE_API_URL}/api/users/custom-price`,{
 
 },[])
 
+
+
+
+const onClickRatings = () =>{
+
+
+  const rating  = localStorage.getItem("Rating")
+
+
+  alert(rating)
+
+          
+       
+          axios.get(`${import.meta.env.VITE_API_URL}/api/users/ratings`,
+  
+        {    /*  
+              headers:{
+                Authorization:`Bearer ${token}`
+              }   */
+  
+              params:{
+    'rating': rating
+  }
+            }
+  
+  
+  
+            
+  
+  
+  
+          )
+          .then( res => {
+         
+             setpro(res.data.data)  
+              setpages(res.data.totalPages)
+          }
+                  
+          )
+          .catch(err => err)   
+
+
+
+}
 
 const onClickCategory = () =>{
 
@@ -1000,8 +1117,8 @@ const onClickCategory = () =>{
              <h5 className='avaiable'>Availability</h5>
              <div className='scrol pl-10'>
                 <FormGroup className='text-f'>
-            <FormControlLabel control={<Checkbox />} label="Available" className='avaiable ml-4' name="Available" onChange={handleChange} />
-            <FormControlLabel control={<Checkbox />} label="Out of Stock" className='avaiable' name="Out of Stock" onChange={handleChange} 
+            <FormControlLabel control={<Checkbox />} label="Available" className='avaiable ml-4' name="Available" onChange={handleChangeavailable} />
+            <FormControlLabel control={<Checkbox />} label="Out of Stock" className='avaiable' name="Out of Stock" onChange={handleChangeunavailable} 
             
             />
  
@@ -1012,7 +1129,7 @@ const onClickCategory = () =>{
 </div>
 
 
-        <h5>Filter By Price</h5>
+        <h5>Filter By Price </h5>
         
 
 
@@ -1057,41 +1174,66 @@ const onClickCategory = () =>{
       </h5>
 
       <div className="">
-        <Link to= "" >
+
+        <button  onClick={()=>{ localStorage.setItem("Rating",5); onClickRatings()}}>
          <Stack spacing={1}>
 
       <Rating name="half-rating-read" defaultValue={5} precision={0.5} readOnly
     
       
       />
-    </Stack></Link>
-
+    </Stack>
+</button>
+     
       </div>
       
       
       <div className="">
-        <Link>
+        <button  onClick={()=>{ localStorage.setItem("Rating",4); onClickRatings()}}>
          <Stack spacing={1}>
-      <Rating name="half-rating-read" defaultValue={4} precision={0.5} readOnly />
-    </Stack></Link>
+
+      <Rating name="half-rating-read" defaultValue={4} precision={0.5} readOnly
+    
+      
+      />
+    </Stack>
+</button>
       </div>
       
       <div className="">
-       <Link> <Stack spacing={1}>
-      <Rating name="half-rating-read" defaultValue={3} precision={0.5} readOnly />
-    </Stack></Link> 
+         <button  onClick={()=>{ localStorage.setItem("Rating",3); onClickRatings()}}>
+         <Stack spacing={1}>
+
+      <Rating name="half-rating-read" defaultValue={3} precision={0.5} readOnly
+    
+      
+      />
+    </Stack>
+</button>
       </div>
       
       <div className="">
-       <Link>  <Stack spacing={1}>
-      <Rating name="half-rating-read" defaultValue={2} precision={0.5} readOnly />
-    </Stack></Link>
+         <button  onClick={()=>{ localStorage.setItem("Rating",2); onClickRatings()}}>
+         <Stack spacing={1}>
+
+      <Rating name="half-rating-read" defaultValue={2} precision={0.5} readOnly
+    
+      
+      />
+    </Stack>
+</button>
       </div>
       
       <div className="">
-         <Link><Stack spacing={1}>
-      <Rating name="half-rating-read" defaultValue={1} precision={0.5} readOnly />
-    </Stack></Link>
+      <button  onClick={()=>{ localStorage.setItem("Rating",1); onClickRatings()}}>
+         <Stack spacing={1}>
+
+      <Rating name="half-rating-read" defaultValue={1} precision={0.5} readOnly
+    
+      
+      />
+    </Stack>
+</button>
       </div>
       
 
@@ -1386,7 +1528,7 @@ const onClickCategory = () =>{
         getAriaLabel={() => 'Temperature range'}
         value={price}
         
-        onChange={setprice}
+      
         min={100}
         max={100000}
         step={5}
@@ -1414,42 +1556,62 @@ const onClickCategory = () =>{
         Ratings
       </h5>
 
-      <div className="">
-        <Link to= "" >
+         <button  onClick={()=>{ localStorage.setItem("Rating",5); onClickRatings()}}>
          <Stack spacing={1}>
 
       <Rating name="half-rating-read" defaultValue={5} precision={0.5} readOnly
     
       
       />
-    </Stack></Link>
-
-      </div>
-      
+    </Stack>
+</button>
       
       <div className="">
-        <Link>
+      <button  onClick={()=>{ localStorage.setItem("Rating",4); onClickRatings()}}>
          <Stack spacing={1}>
-      <Rating name="half-rating-read" defaultValue={4} precision={0.5} readOnly />
-    </Stack></Link>
+
+      <Rating name="half-rating-read" defaultValue={4} precision={0.5} readOnly
+    
+      
+      />
+    </Stack>
+</button>
       </div>
       
       <div className="">
-       <Link> <Stack spacing={1}>
-      <Rating name="half-rating-read" defaultValue={3} precision={0.5} readOnly />
-    </Stack></Link> 
+     <button  onClick={()=>{ localStorage.setItem("Rating",3); onClickRatings()}}>
+         <Stack spacing={1}>
+
+      <Rating name="half-rating-read" defaultValue={3} precision={0.5} readOnly
+    
+      
+      />
+    </Stack>
+</button>
       </div>
       
       <div className="">
-       <Link>  <Stack spacing={1}>
-      <Rating name="half-rating-read" defaultValue={2} precision={0.5} readOnly />
-    </Stack></Link>
+      <button  onClick={()=>{ localStorage.setItem("Rating",2); onClickRatings()}}>
+         <Stack spacing={1}>
+
+      <Rating name="half-rating-read" defaultValue={2} precision={0.5} readOnly
+    
+      
+      />
+    </Stack>
+</button>
       </div>
       
       <div className="">
-         <Link><Stack spacing={1}>
-      <Rating name="half-rating-read" defaultValue={1} precision={0.5} readOnly />
-    </Stack></Link>
+     <button  onClick={()=>{ localStorage.setItem("Rating",1); onClickRatings()}}>
+         <Stack spacing={1}>
+
+      <Rating name="half-rating-read" defaultValue={1} precision={0.5} readOnly
+    
+      
+      />
+    </Stack>
+</button>
       </div>
       
 
