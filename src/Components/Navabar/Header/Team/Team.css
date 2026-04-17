@@ -1,0 +1,55 @@
+.Team-Container{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.Team-Container{
+    justify-content: center;
+    gap: 30px;
+}
+.Team-Image{
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.Image-Card{
+    padding: 30px;
+    border-radius: 20px;
+
+    
+}
+.Image-Card:hover{
+background-color: blue !important;
+    color: white;
+    cursor: pointer;
+    transform: translateY(-8px);
+}
+.Team-Top-Line{
+    border-radius: 30px;
+}
+
+@media  screen and (max-width:500px) {
+
+   .Mobile-Flex-Cards{
+    display: flex;
+    flex-direction: column !important;
+   width: 100%;
+   } 
+   .Mobile-Top-Bar{
+    width: 100% ;
+    justify-content: start;
+   }
+   .Mobile-White-Card{
+    width: 100%;
+   }
+    
+   .Image-Card{
+    height: 500px;
+   }
+}
+.Mobile-Top-Bar{
+    margin-top: 20px;
+}

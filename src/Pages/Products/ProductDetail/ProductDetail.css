@@ -13,15 +13,15 @@
 .swiperwrapper{
     max-width: 200px;
     background-color: black;
-    border-radius: 1px;
+
    
 }
 .swiper {
-    border-radius: 1px;
+   
 
 }
 .swiper-wrapper{
-      border-radius: 1px;
+  
    
        }
          .swiper{
@@ -29,7 +29,7 @@
          }
 .Swipe{
     max-width:400px;
-      border-radius: 1px;
+  
    
 }
 .swiper-slide {
@@ -354,3 +354,58 @@ color: #2563EB;
         background-color: white;
     }
     
+
+
+
+
+    @media screen and (max-width:500px) {
+        .container-d{
+            flex-direction: column;
+            width: 100% !important;
+            height: 700px !important;
+            padding: 0px;
+        }
+     .container-d   .Slide{
+        width: 100px;
+        display: flex;
+     }
+     .Link{}
+     .size{
+        padding-top: 0px;
+        margin-top: 10px;
+     }
+     .description{
+        padding: 10px;
+     }
+     .p-description{
+        padding: 10px;
+        padding-bottom: 60px;
+     }
+    }
+
+    .Padding-Review-Box{
+        padding: 20px;
+    }
+    .Top-Review-Padding{
+  
+        background-color: white;
+        padding: 30px;
+    }
+    .Review-Background{
+        background-color: #f8f8f8;
+    }
+    .MArging-REview{
+        margin-top: 20px;
+    }
+    .Image-Review{
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+
+    }
+    .padding-comment{
+        padding-left: 50px;
+        padding-top: 10px;
+    }

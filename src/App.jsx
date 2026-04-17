@@ -56,6 +56,9 @@ import Searchcontext from './Pages/Products/Searchcontext'
 
 import SearchProvider from './Pages/Products/Searchcontext'
 import Search from './Components/Navabar/Header/Search'
+import ReasonsToChoose from './Components/Navabar/Header/Reasons/ReasonsToChoose'
+import Team from './Components/Navabar/Header/Team/Team'
+import REview from './Components/Navabar/Header/Review/REview'
 
 const Scroll = ()=>{
 
@@ -64,7 +67,7 @@ const Scroll = ()=>{
   useEffect(()=>{
 
 
-  window.scroll(0,0)
+  /*window.scroll(0,0)*/
 
 
 
@@ -159,6 +162,9 @@ const apiurl = import.meta.env.VITE_API_URL
 
               <Route path={'/SearchContext'} element={<Searchcontext/>} exact={true}/>
                <Route path={'/Searchh'} element={<Search/>} exact={true}/>
+                  <Route path={'/Reasons'} element={<ReasonsToChoose/>} exact={true}/>
+                  <Route path={'/Team'} exact={true} element={<Team/>}/>
+                    <Route path={'/Review'} exact={true} element={<REview/>}/>
       </Routes>
 
 

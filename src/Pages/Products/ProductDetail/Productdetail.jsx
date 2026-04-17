@@ -23,10 +23,18 @@ import { Button } from '@mui/material'
 
 import { FaCartArrowDown } from "react-icons/fa";
 import axios from 'axios'
+import img from '../Components/1.jpg'
 
 
 function Productdetail() {
+  
+  const [desc ,setdesc]=useState(true)
 
+
+
+
+
+  
   const [state,setstate]=useState([])
 
     const [productsize, setproductsize]=useState(0)
@@ -61,7 +69,7 @@ function Productdetail() {
 
 
 
-<div className='container-d'>
+<div className='container-d shadow-md'>
 
 
     <div className='Slide'>
@@ -221,17 +229,16 @@ function Productdetail() {
 <div className='tab'>
     <div className='p-description'>
 
-   <h5 className='descriptions'> <Link>Description</Link>
+   <h5 className='descriptions cursor-pointer'> <button className='cursor-pointer' onClick={()=>{setdesc(desc===true?true:true)}}>Description</button>
 </h5>
 
-   <h5 className='review' > <Link>Reviews</Link>
+   <h5 className='review cursor-pointer' > <button  className='cursor-pointer'  onClick={()=>{setdesc(desc===false?false:false)}}>  Reviews</button>
 
 
 
    </h5>
    </div>
-
-
+{desc===true?
 <section class="description">
 
   <h4>AI Powered Advanced Drone – Technical Overview</h4>
@@ -330,7 +337,181 @@ function Productdetail() {
   </p>
 
 </section>
+:""
+}
 
+{desc===false?
+<div className='flex ml-4 Padding-Review-Box'>
+
+  <div className='  w-[80%]  border Review-Background p-4 Padding-Review-Box'>
+   <div className='font-bold text-[20px]'> Comments </div>
+
+   <div>
+<div className='flex  MArging-REview gap-2'>
+
+  <div className='w-[5%] Image-Review '>
+    <img src={img} />
+  </div>
+   <div className=' w-[90%] Top-Review-Padding shadow-md rounded-md'>
+ <div className='flex gap-3'>
+
+   
+   <div className='font-bold'>
+    Zeeshan Ali Zafar </div>
+     <div className='text-blue-600'>
+Follow
+   </div>
+
+  
+    </div>This is Extremely Prestigious Product i recently But it its extremely great device</div>
+    
+    </div></div>
+    <div className='flex gap-0 padding-comment gap-4'>
+    <div className='text-gray-400 text-[15px] '>17m </div>
+     <div className='text-gray-400 text-[15px] font-bold'>Like</div>
+      <div className='text-gray-400 text-[15px] font-bold '>Reply</div>
+      </div>
+
+       <div>
+<div className='flex  MArging-REview gap-2'>
+
+  <div className='w-[5%] Image-Review '>
+    <img src={img} />
+  </div>
+   <div className=' w-[90%] Top-Review-Padding shadow-md rounded-md'>
+ <div className='flex gap-3'>
+
+   
+   <div className='font-bold'>
+    Zeeshan Ali Zafar </div>
+     <div className='text-blue-600'>
+Follow
+   </div>
+
+  
+    </div>This is Extremely Prestigious Product i recently But it its extremely great device</div>
+    
+    </div></div>
+    <div className='flex gap-0 padding-comment gap-4'>
+    <div className='text-gray-400 text-[15px] '>17m </div>
+     <div className='text-gray-400 text-[15px] font-bold'>Like</div>
+      <div className='text-gray-400 text-[15px] font-bold '>Reply</div>
+      </div>
+
+       <div>
+<div className='flex  MArging-REview gap-2'>
+
+  <div className='w-[5%] Image-Review '>
+    <img src={img} />
+  </div>
+   <div className=' w-[90%] Top-Review-Padding shadow-md rounded-md'>
+ <div className='flex gap-3'>
+
+   
+   <div className='font-bold'>
+    Zeeshan Ali Zafar </div>
+     <div className='text-blue-600'>
+Follow
+   </div>
+
+  
+    </div>This is Extremely Prestigious Product i recently But it its extremely great device</div>
+    
+    </div></div>
+    <div className='flex gap-0 padding-comment gap-4'>
+    <div className='text-gray-400 text-[15px] '>17m </div>
+     <div className='text-gray-400 text-[15px] font-bold'>Like</div>
+      <div className='text-gray-400 text-[15px] font-bold '>Reply</div>
+      </div>
+ <div>
+<div className='flex  MArging-REview gap-2'>
+
+  <div className='w-[5%] Image-Review '>
+    <img src={img} />
+  </div>
+   <div className=' w-[90%] Top-Review-Padding shadow-md rounded-md'>
+ <div className='flex gap-3'>
+
+   
+   <div className='font-bold'>
+    Zeeshan Ali Zafar </div>
+     <div className='text-blue-600'>
+Follow
+   </div>
+
+  
+    </div>This is Extremely Prestigious Product i recently But it its extremely great device</div>
+    
+    </div></div>
+    <div className='flex gap-0 padding-comment gap-4'>
+    <div className='text-gray-400 text-[15px] '>17m </div>
+     <div className='text-gray-400 text-[15px] font-bold'>Like</div>
+      <div className='text-gray-400 text-[15px] font-bold '>Reply</div>
+      </div>
+
+
+       <div>
+<div className='flex  MArging-REview gap-2'>
+
+  <div className='w-[5%] Image-Review '>
+    <img src={img} />
+  </div>
+   <div className=' w-[90%] Top-Review-Padding shadow-md rounded-md'>
+ <div className='flex gap-3'>
+
+   
+   <div className='font-bold'>
+    Zeeshan Ali Zafar </div>
+     <div className='text-blue-600'>
+Follow
+   </div>
+
+  
+    </div>This is Extremely Prestigious Product i recently But it its extremely great device</div>
+    
+    </div></div>
+    <div className='flex gap-0 padding-comment gap-4'>
+    <div className='text-gray-400 text-[15px] '>17m </div>
+     <div className='text-gray-400 text-[15px] font-bold'>Like</div>
+      <div className='text-gray-400 text-[15px] font-bold '>Reply</div>
+      </div>
+
+
+
+       <div>
+<div className='flex  MArging-REview gap-2'>
+
+  <div className='w-[5%] Image-Review '>
+    <img src={img} />
+  </div>
+   <div className=' w-[90%] Top-Review-Padding shadow-md rounded-md'>
+ <div className='flex gap-3'>
+
+   
+   <div className='font-bold'>
+    Zeeshan Ali Zafar </div>
+     <div className='text-blue-600'>
+Follow
+   </div>
+
+  
+    </div>This is Extremely Prestigious Product i recently But it its extremely great device</div>
+    
+    </div></div>
+    <div className='flex gap-0 padding-comment gap-4'>
+    <div className='text-gray-400 text-[15px] '>17m </div>
+     <div className='text-gray-400 text-[15px] font-bold'>Like</div>
+      <div className='text-gray-400 text-[15px] font-bold '>Reply</div>
+      </div>
+
+</div>
+
+
+
+
+</div>
+:""
+}
 
 
    </div>
