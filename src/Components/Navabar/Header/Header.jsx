@@ -40,7 +40,7 @@ import axios from 'axios';
 import Footer from '../../../Pages/Footer/Footer';
 import Team from './Team/Team';
 import ReasonsToChoose from './Reasons/ReasonsToChoose';
-import REview from './Review/REview';
+
 
 
 
