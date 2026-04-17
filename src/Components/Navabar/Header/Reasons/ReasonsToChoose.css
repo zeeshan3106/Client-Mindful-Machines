@@ -5,3 +5,19 @@
 .Main-Heading {
    
 }
+
+
+@media screen and (max-width:500px){
+  .Mobile-Reason{
+    flex-direction: column;
+    width: 100%;
+  }
+  .Image-Why-Home{
+   width: 80%;
+  }
+  .Mobile-text-Reason{
+    width: 100%;
+  }
+  .Main-Heading{font-size: 20px;
+  margin-top: 50px;}
+}
