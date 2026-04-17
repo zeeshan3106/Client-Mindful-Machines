@@ -322,7 +322,7 @@ Privacy First. Intelligence Always.
   </div>
       </SwiperSlide>
        <SwiperSlide className=' cursor-pointer'>
-        <img src='https://images.pexels.com/photos/2050718/pexels-photo-2050718.jpeg' />
+        <img src='https://images.pexels.com/photos/11198232/pexels-photo-11198232.jpeg' />
 <div className='flex gap-2 right-2 bottom-5 px-4 py-2 z-10 absolute items-center'>
   
   <div className=" text-[18px]    text-white shadow-md rounded-[30px]">
