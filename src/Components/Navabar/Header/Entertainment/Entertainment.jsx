@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 function Entertainment() {
   return (
-    <div>
+    <div className='Entertainment-Section'>
 
         <div className='flex justify-center font-bold mt-5 text-[30px]'>Entertainment.</div>
 
@@ -35,7 +35,7 @@ function Entertainment() {
     
   
     >
-      <SwiperSlide className=' cursor-pointer'>
+      <SwiperSlide className='  cursor-pointer'>
         <img src='https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg' />
 <div className='flex gap-2 left-5 bottom-10 px-4 py-2 z-10 absolute items-center'>
   <div className=" font-bold bottom-10 left-4 z-10 bg-blue-600 text-white px-4 py-2 shadow-md rounded-[30px]">
@@ -206,7 +206,7 @@ Privacy First. Intelligence Always.
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
       effect={'creative'}
-      grabCursor={true}
+    
   
     >
            <SwiperSlide className=' cursor-pointer'>

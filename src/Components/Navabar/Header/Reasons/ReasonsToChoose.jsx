@@ -21,7 +21,7 @@ function ReasonsToChoose() {
 </div>
 
          <div className='flex  pt-5 justify-center items-center '>
-            <div className='flex items-center justify-center w-[80%] Mobile-Reason'>
+            <div className='flex items-center justify-center w-[90%] Mobile-Reason'>
                  <div className=' w-[50%] Mobile-text-Reason font-bold p-4 text-[25px] flex flex-col gap-3 justify-center '>
 
          <div>Seamless Integration.</div>

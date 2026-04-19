@@ -378,3 +378,7 @@ width: 5px;
   transform: translateY(-4px);
   cursor: pointer;
 }
+
+.Margin-Slider{
+    margin-top: -22px;
+}

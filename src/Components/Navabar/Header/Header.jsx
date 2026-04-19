@@ -277,9 +277,9 @@ console.log(size)
   <Team/>
 </div>
 
-<div className='flex justify-center font-bold text-[25px] mt-4 ]'>Our Reviews. </div>
-<diV className="flex justify-center Cards-Container-Reviews gap-4 Mobile-Review-Card " >
-<div className='flex w-[25%] Card-Review-Hover ' >  <Card sx={{ borderRadius: 4, boxShadow: 3 }}>
+<div className=' flex justify-center font-bold text-[25px] mt-4   ]'>Our Reviews. </div>
+<diV className="HomeEntertainment flex justify-center Cards-Container-Reviews gap-4 Mobile-Review-Card " >
+<div className=' HomeEntertainment flex w-[25%] Card-Review-Hover ' >  <Card sx={{ borderRadius: 4, boxShadow: 3 }}>
       <CardContent>
       
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>

@@ -1,16 +1,16 @@
-.swiper-slide img {
+.Entertainment-Section  .swiper-slide img {
   width: 100%;
   height: 100%;
   border-radius: 0px !important;
   object-fit: cover;
 }
 
-.swiper-slide{
+.Entertainment-Section .swiper-slide{
     border-radius: 0px !important; 
     object-fit: cover;
     overflow: hidden;
-    height: 400px;
-    object-fit: cover !important;
+    height: 400px ;
+    object-fit: cover ;
 }
 .Margin-Slider{
     margin-top: -22px;
