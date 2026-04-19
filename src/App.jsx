@@ -58,6 +58,7 @@ import SearchProvider from './Pages/Products/Searchcontext'
 import Search from './Components/Navabar/Header/Search'
 import ReasonsToChoose from './Components/Navabar/Header/Reasons/ReasonsToChoose'
 import Team from './Components/Navabar/Header/Team/Team'
+import ProductDetail from './Components/Navabar/Header/ProductDetail/ProductDetail'
 
 
 const Scroll = ()=>{
@@ -164,6 +165,7 @@ const apiurl = import.meta.env.VITE_API_URL
                <Route path={'/Searchh'} element={<Search/>} exact={true}/>
                   <Route path={'/Reasons'} element={<ReasonsToChoose/>} exact={true}/>
                   <Route path={'/Team'} exact={true} element={<Team/>}/>
+                    <Route path={'/Details'} exact={true} element={<ProductDetail/>}/>
                 
       </Routes>
 
