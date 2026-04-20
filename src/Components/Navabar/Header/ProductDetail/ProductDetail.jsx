@@ -7,12 +7,20 @@ import Benefits from '../Benefits';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { FaBriefcaseMedical } from "react-icons/fa";
+import { GiMaterialsScience } from "react-icons/gi";
+import { FaKitchenSet } from "react-icons/fa6";
+import { MdFamilyRestroom } from "react-icons/md";
+import { GrAlert } from "react-icons/gr";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import img from './kyraxys-humanoid-8722273-removebg-preview.png'
 import img1 from './turzo_plays-ai-generated-8109260_1920 (1).jpg'
 import img2 from './ralph_germany-ai-generated-8359035-removebg-preview.png'
+import { MdEmergencyShare } from "react-icons/md";
+import { MdOutlineEmergency } from "react-icons/md";
+import { FaPersonFalling } from "react-icons/fa6";
 function ProductDetail() {
   return (
     <div>
@@ -284,27 +292,40 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
 </div>
 <div>
- <div className='flex justify-center text-[35px] mt-4 ModernAIFocused font-bold   '>
+ <div className='flex justify-center text-[35px] mt-4 ModernAIFocused  font-bold   '>
           <div className='flex justify-center w-[80%]  '>Saftey.</div></div>
 <div className='flex justify-center font-bold text-[50px] flex-col items-center'>A real lifeline.
 <div className='text-[20px] w-[50%] text-center text-gray-700'>Packed with innovative safety firsts, Apple Watch Series 11 has your back. It’s designed to summon help when you need it most — even if you can’t reach your iPhone.
 </div>
 </div>
+<div className='flex justify-center '>
+ {/* https://cdn.pixabay.com/photo/2022/02/15/10/39/point-7014645_1280.jpg */}
+  <img className='w-[90%] mt-5' src=
+  "https://media.istockphoto.com/id/1350320510/photo/cyber-law-or-internet-law-concept-with-ai-robot.jpg?s=1024x1024&w=is&k=20&c=Qk8QNSTeQbNGrQ_gqZhmzeZBKZpmyplQh4rHOMfIA6o="
+/></div>
 
-<div className='flex justify-center mt-5'>
+<div className='flex justify-center items-center'>
 <div className='bg-white p-3 w-[90%] shadow-md rounded-md flex gap-2 flex-wrap  justify-center items-center'>
 
 
   <div className='w-[30%]'>
-  <div className=' p-4 pb-0 font-bold text-[18px] '>Emergency SOS. ASAP. </div>
-   <div className='b p-4 pt-0'> Need urgent help? Just press and hold the side button on your Apple Watch Series 11 to try to call emergency services and share your location.21</div>
+   
+    <div className=' p-4 pb-2 pt-2 text-[40px] text-blue-800'><MdOutlineEmergency /></div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Emergency SOS. ASAP. </div>
+   <div className='b p-4 pt-0 '>
+    Need urgent help? Just speak to Friendly or tap its chest screen to call emergency services, share your location, and provide a live video feed. </div>
 
    </div>
 
    
    <div className='w-[30%]'>
-  <div className=' p-4 pb-0 font-bold text-[18px]'>Emergency SOS. ASAP. </div>
-   <div className='b p-4 pt-0'> Need urgent help? Just press and hold the side button on your Apple Watch Series 11 to try to call emergency services and share your location.21</div>
+    <div></div>
+   <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'><FaPersonFalling /></div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Fall Detection at the ready. </div>
+   <div className='b p-4 pt-0 '>
+    
+    
+Friendly uses vision and LiDAR to detect falls, then approaches to check status, calls for help, and shares live video.21 In critical moments, it stays by their side until help arrives.  </div>
 
    </div>
 
@@ -312,28 +333,43 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
 
     <div className='w-[30%]'>
-  <div className=' p-4 pb-0 font-bold text-[18px]'>Emergency SOS. ASAP. </div>
-   <div className='b p-4 pt-0'> Need urgent help? Just press and hold the side button on your Apple Watch Series 11 to try to call emergency services and share your location.21</div>
+   
+ <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>   <FaBriefcaseMedical /></div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Medical Aid & First Response. </div>
+   <div className='b p-4 pt-0 '>
+Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR and retrieves life-saving medications or EpiPens from cabinets, providing immediate, critical family support  </div>
 
    </div>
 
    <div className='w-[30%]'>
-  <div className=' p-4 pb-0 font-bold text-[18px]'>Emergency SOS. ASAP. </div>
-   <div className='b p-4 pt-0'> Need urgent help? Just press and hold the side button on your Apple Watch Series 11 to try to call emergency services and share your location.21</div>
+  
+  <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>   <GrAlert /></div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Intruder & Environmental Alerts. </div>
+   <div className='b p-4 pt-0 '>
+  Friendly patrols indoors to detect smoke, gas leaks, or intruders, automatically triggering an Emergency SOS to your phone if it finds anomalies
+     </div>
 
    </div>
 
 
 
   <div className='w-[30%]'>
-  <div className=' p-4 pb-0 font-bold text-[18px]'>Emergency SOS. ASAP. </div>
-   <div className='b p-4 pt-0'> Need urgent help? Just press and hold the side button on your Apple Watch Series 11 to try to call emergency services and share your location.21</div>
+    
+    <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>  <MdFamilyRestroom /> </div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>School Pick-up & Walking. </div>
+   <div className='b p-4 pt-0 '>
+   Friendly handles school pickups with real-time GPS "Check-ins," while walking alongside family members to ensure they navigate traffic and safe paths securely
+    </div>
 
    </div>
 
      <div className='w-[30%]'>
-  <div className=' p-4 pb-0 font-bold text-[18px]'>Emergency SOS. ASAP. </div>
-   <div className='b p-4 pt-0'> Need urgent help? Just press and hold the side button on your Apple Watch Series 11 to try to call emergency services and share your location.21</div>
+
+    
+ <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>    <FaKitchenSet /></div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Effortless Assistance. </div>
+   <div className='b p-4 pt-0 '>
+   Friendly evolves from fetching ingredients to following complex recipes, while its grippers seamlessly transport water, medicine, or bags between rooms for you. </div>
 
    </div>
 
@@ -547,6 +583,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
                 Buy</div>
 
 <div>
+  <div><GiMaterialsScience /></div>
              <div className='flex justify-center mt-5 font-bold'>Material Finish</div>
              <div className='flex justify-center  text-[15px] text-gray-800'>
               Brushed Carbon, Onyx Titanium</div>
