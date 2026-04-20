@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import img from './kyraxys-humanoid-8722273-removebg-preview.png'
 import img1 from './turzo_plays-ai-generated-8109260_1920 (1).jpg'
+import img2 from './ralph_germany-ai-generated-8359035-removebg-preview.png'
 function ProductDetail() {
   return (
     <div>
@@ -264,10 +265,10 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
 
 <div className='flex justify-center items-center'>
-<div className='flex justify-center items-center w-[85%] Gap-Image-Product'>
+<div className='flex justify-center items-center w-[85%] Gap-Image-Product1'>
   <div className='flex justify-center'>
   <div className='flex justify-center items-center  '>
-  <img src={img1} className='w-[200px]'/>
+  <img src={img2} className='w-[600px]'/>
   </div>
   </div>
  <div className='w-[40%]'>
@@ -306,6 +307,8 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
    <div className='b p-4 pt-0'> Need urgent help? Just press and hold the side button on your Apple Watch Series 11 to try to call emergency services and share your location.21</div>
 
    </div>
+
+   
 
 
     <div className='w-[30%]'>
@@ -357,11 +360,14 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
           <div className='flex justify-center w-[80%]  '>Detailed Features(Image with Slider).</div></div>
     <div>
 
-      <div className='bg-black p-5 text-white font-bold text-[35px]'>
-<div >A 5G leap in connectivity.</div>
+      <div className='bg-black pb-5 text-white font-bold text-[35px] '>
+   <div >
 
-        <div className='text-[20px] w-[40%]'>With a cellular plan you can call, text, pay, stream music, and more — even when your iPhone isn’t nearby.</div>
-    <div>Image</div>
+      <img className='w-[100%] pb-5' src='https://media.istockphoto.com/id/2149530993/photo/digital-human-head-concept-for-ai-metaverse-and-facial-recognition-technology.jpg?s=1024x1024&w=is&k=20&c=Ob0ACggwWuFDFRgIc-SM5bLWjNbIyoREeulmLN8dhLs=' />
+
+
+
+    </div>
 
 
     <div>
@@ -382,7 +388,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
         <div className=''>
 <div className=''>
-          <img src='https://www.apple.com/v/apple-watch-series-11/c/images/overview/highlights/highlights_glass_endframe__f39nueq3bfiy_large.jpg' />
+<img src='https://cdn.pixabay.com/photo/2024/04/26/17/15/humanoid-8722281_1280.png' />
 </div>
 
 <div className='flex'>
@@ -407,7 +413,39 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
         <div className=''>
 <div className=''>
-          <img src='https://www.apple.com/v/apple-watch-series-11/c/images/overview/highlights/highlights_glass_endframe__f39nueq3bfiy_large.jpg' />
+          <img src='https://cdn.pixabay.com/photo/2024/03/11/12/01/ai-generated-8626467_1280.jpg' />
+</div>
+
+<div className='flex'>
+<div className='text-[18px] mt-4'>All in on 5G
+  <div className='text-[15px] font-bold-0'> With 5G, you can download apps, music, and podcasts faster than ever.5 And thanks to a 5G modem and updated antenna architecture, Series 11 provides better coverage in areas with weak reception. Dropped calls? Not on our watch.</div>
+    </div>
+</div>
+
+    </div>
+
+
+
+  
+      </SwiperSlide>
+   
+
+
+   
+      </div>
+
+
+
+  
+      </SwiperSlide>
+   
+      </div>
+       <div>
+      <SwiperSlide>
+
+        <div className=''>
+<div className=''>
+          <img src='https://cdn.pixabay.com/photo/2024/06/21/07/32/ai-generated-8843794_1280.jpg' />
 </div>
 
 <div className='flex'>
@@ -426,17 +464,12 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
       </div>
 
 
-
-  
-      </SwiperSlide>
-   
-      </div>
-       <div>
+         <div>
       <SwiperSlide>
 
         <div className=''>
 <div className=''>
-          <img src='https://www.apple.com/v/apple-watch-series-11/c/images/overview/highlights/highlights_glass_endframe__f39nueq3bfiy_large.jpg' />
+          <img src='https://cdn.pixabay.com/photo/2022/06/16/12/19/ai-7265839_1280.jpg' />
 </div>
 
 <div className='flex'>
@@ -458,7 +491,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
         <div className=''>
 <div className=''>
-          <img src='https://www.apple.com/v/apple-watch-series-11/c/images/overview/highlights/highlights_glass_endframe__f39nueq3bfiy_large.jpg' />
+          <img src='https://cdn.pixabay.com/photo/2024/06/12/06/06/robot-8824475_1280.jpg' />
 </div>
 
 <div className='flex'>
