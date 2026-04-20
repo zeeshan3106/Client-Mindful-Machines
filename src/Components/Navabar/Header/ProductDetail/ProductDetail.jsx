@@ -5,6 +5,11 @@ import Button from '@mui/material/Button';
 import './ProductDetail.css'
 import Benefits from '../Benefits';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { MdOutlineViewHeadline } from "react-icons/md";
+import { IoEyeSharp } from "react-icons/io5";
+import { SiGoogletasks } from "react-icons/si";
+import { GiProcessor } from "react-icons/gi";
+import { BiSolidDollarCircle } from "react-icons/bi";
 import 'swiper/css';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { FaBriefcaseMedical } from "react-icons/fa";
@@ -583,8 +588,10 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
                 Buy</div>
 
 <div>
-  <div><GiMaterialsScience /></div>
-             <div className='flex justify-center mt-5 font-bold'>Material Finish</div>
+ 
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+               <div className='text-[30px]'><GiMaterialsScience /></div>
+               Material Finish</div>
              <div className='flex justify-center  text-[15px] text-gray-800'>
               Brushed Carbon, Onyx Titanium</div>
                 
@@ -592,30 +599,47 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 
 
                 <div>
-             <div className='flex justify-center mt-5 font-bold'>Headline</div>
+                 
+
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+              <div className="text-[30px]"><MdOutlineViewHeadline /></div> 
+               Headline</div>
              <div className='flex justify-center  text-[15px] text-gray-800'>
             The ultimate evolution of embodied AI.</div>
                 </div>
                  <div>
-             <div className='flex justify-center mt-5 font-bold'>Pricing</div>
+
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+              
+                <div className="text-[30px]"><BiSolidDollarCircle /></div> 
+              Pricing</div>
              <div className='flex justify-center  text-[15px] text-gray-800'>4
               Starting at $45,000</div>
                 </div>
 
  <div>
-             <div className='flex justify-center mt-5 font-bold'>Processing</div>
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+               <div className="text-[30px]"><GiProcessor /></div> 
+              
+              Processing</div>
              <div className='flex justify-center  text-[15px] text-gray-800'>
              S10-Pro Quantum Chip</div>
                 </div>
 
  <div>
-             <div className='flex justify-center mt-5 font-bold'>Vision System</div>
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+              <div className="text-[30px]"><IoEyeSharp /></div> 
+              
+              Vision System</div>
              <div className='flex justify-center  text-[15px] text-gray-800'>
               360° LiDAR + 4K Stereoscopic Vision</div>
                 </div>
 
  <div>
-             <div className='flex justify-center mt-5 font-bold'>Dexterity</div>
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+             
+ <div className="text-[30px]"> <SiGoogletasks /></div> 
+Dexterity</div>
              <div className='flex justify-center  text-[15px] text-gray-800'>
              28-Axis Precision Hands (0.01mm tolerance)</div>
                 </div>
