@@ -26,10 +26,21 @@ import img2 from './ralph_germany-ai-generated-8359035-removebg-preview.png'
 import { MdEmergencyShare } from "react-icons/md";
 import { MdOutlineEmergency } from "react-icons/md";
 import { FaPersonFalling } from "react-icons/fa6";
+import Footer from './Footer/Footer';
+import { useNavigate } from 'react-router-dom';
+
 function ProductDetail() {
+
+  const navigate = () => {
+
+    const navigate = useNavigate()
+    navigate('/Billing')
+
+  }
   return (
     <div>
         <Navbar/>
+      
         <div>
 
             <div className='h-[600px] overflow-hidden object-cover'>
@@ -55,7 +66,10 @@ function ProductDetail() {
                              color:'black',
                              borderRadius:'20ch'
                         
-                     }} >Add To Cart</Button>
+                     }} 
+                     onClick={navigate}
+                     
+                     >Add To Cart</Button>
 
             </div>
             <div className='text-[40px] font-bold text-white absolute top-45 w-[100%] items-center  flex flex-col justify-center'>
@@ -130,12 +144,20 @@ function ProductDetail() {
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={5}
-      slidesPerView={3}
+      slidesPerView={3.5}
+  
     
       pagination={{ clickable: true }}
 
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
+        
+  breakpoints={{
+        1024:{
+          slidesPerView:"3.5"
+        }
+      }}
+
     >
       <SwiperSlide>
         <img src='https://images.pexels.com/photos/8294666/pexels-photo-8294666.jpeg' />
@@ -249,22 +271,23 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
           <div className='flex justify-center w-[80%] justify-center  '>
             <div className='flex flex-col justify-center items-center'>
               <div className='text-[18px] text-blue-800 '>Physical AI</div>
-              <div>Beyond Automation.</div>
-          <div>Driven by Agentic Intelligence!</div>
-          <div className='text-[20px] pt-4 text-gray-600  text-center w-[70%]'>The Sentient-Core isn't just programmed; it’s trained. Powered by a neural architecture that mimics human decision-making, our humanoid perceives, reasons, and adapts to complex environments in real-time. From the fine motor skills required for medical precision to the spatial awareness needed for industrial logistics, it’s not just a machine—it’s a partner.</div>
+              <div className='MobilePysicaltitle'>Beyond Automation.</div>
+          <div className='MobilePysicaltitle1'>Driven by Agentic Intelligence!</div>
+          <div className='text-[20px] pt-4 text-gray-600  text-center w-[70%] MobilePysicaltitle2'>The Sentient-Core isn't just programmed; it’s trained. Powered by a neural architecture that mimics human decision-making, our humanoid perceives, reasons, and adapts to complex environments in real-time. From the fine motor skills required for medical precision to the spatial awareness needed for industrial logistics, it’s not just a machine—it’s a partner.</div>
           
           </div>
 </div></div>
 </div>
 <div className='flex justify-center items-center'>
-<div className='flex justify-center items-center w-[85%]'>
- <div className='w-[40%]'>
-  <div className='font-bold text-[20px]'>Streamlined Intelligence..</div>
-  Our improved control architecture highlights four core operational modes, making it faster than ever to deploy your robot. Whether you need to initiate Spatial Mapping, Collaborative Sync, Dynamic Pathing, or Diagnostic Analysis, the power of the Core is at your fingertips.
+<div className='flex justify-center items-center w-[85%] Mobile-Transparent-Robots'>
+ <div className='w-[40%] MobileTransparenttext '>
+  <div className='font-bold text-[20px] MobileTransparentSubtitle text-center '>Streamlined Intelligence..</div>
+  <div className=' MobileTransparentSubtitle Mobile-Subtitle-PAdding MobileTransparenttext2'> Our improved control architecture highlights four core operational modes, making it faster than ever to deploy your robot. Whether you need to initiate Spatial Mapping, Collaborative Sync, Dynamic Pathing, or Diagnostic Analysis, the power of the Core is at your fingertips.
+ </div>
   </div> 
 <div className='flex justify-center'>
   <div className='flex justify-center items-center  '>
-  <img src={img} className='w-[800px]'/>
+  <img src={img} className='w-[800px] Mobile-Image-Transparent1'/>
   </div>
   </div>
 
@@ -278,16 +301,16 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
 
 <div className='flex justify-center items-center'>
-<div className='flex justify-center items-center w-[85%] Gap-Image-Product1'>
+<div className='flex justify-center items-center Mobile-Transparent-Robots w-[85%] Gap-Image-Product1'>
   <div className='flex justify-center'>
   <div className='flex justify-center items-center  '>
-  <img src={img2} className='w-[600px]'/>
+  <img src={img2} className='w-[600px] Mobile-Image-Transparent1 '/>
   </div>
   </div>
- <div className='w-[40%]'>
-  <div className='font-bold text-[20px]'>A Refreshed Neural Interface..</div>
- The upgraded Sentient-OS layout features an intuitive four-zone dashboard, providing instant access to mission-critical protocols. Seamlessly toggle between Autonomous Navigation, Precision Manipulation, Real-time Telemetry, and Safety Override with a single touch. </div> 
-
+ <div className='w-[40%] Mobile-Transparent-Robots1 '>
+  <div className='font-bold text-[20px] .Mobile-Transparent-Robots '>A Refreshed Neural Interface..</div>
+ <div className='MobileTransparenttext2'>The upgraded Sentient-OS layout features an intuitive four-zone dashboard, providing instant access to mission-critical protocols. Seamlessly toggle between Autonomous Navigation, Precision Manipulation, Real-time Telemetry, and Safety Override with a single touch. </div> 
+</div>
 
 
   
@@ -299,8 +322,8 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 <div>
  <div className='flex justify-center text-[35px] mt-4 ModernAIFocused  font-bold   '>
           <div className='flex justify-center w-[80%]  '>Saftey.</div></div>
-<div className='flex justify-center font-bold text-[50px] flex-col items-center'>A real lifeline.
-<div className='text-[20px] w-[50%] text-center text-gray-700'>Packed with innovative safety firsts, Apple Watch Series 11 has your back. It’s designed to summon help when you need it most — even if you can’t reach your iPhone.
+<div className='flex justify-center font-bold text-[50px] flex-col items-center MobilePysicaltitle '>A real lifeline.
+<div className='text-[20px] w-[50%] text-center text-gray-700 MobileTransparenttext2'>Packed with innovative safety firsts, Apple Watch Series 11 has your back. It’s designed to summon help when you need it most — even if you can’t reach your iPhone.
 </div>
 </div>
 <div className='flex justify-center '>
@@ -310,10 +333,10 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 /></div>
 
 <div className='flex justify-center items-center'>
-<div className='bg-white p-3 w-[90%] shadow-md rounded-md flex gap-2 flex-wrap  justify-center items-center'>
+<div className='bg-white p-3 w-[90%] shadow-md rounded-md flex gap-2 flex-wrap  justify-center items-center Mobile-Saftey-Elements'>
 
 
-  <div className='w-[30%]'>
+  <div className='w-[30%] Mobile-SafteyElement1 '>
    
     <div className=' p-4 pb-2 pt-2 text-[40px] text-blue-800'><MdOutlineEmergency /></div>
   <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Emergency SOS. ASAP. </div>
@@ -323,7 +346,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
    </div>
 
    
-   <div className='w-[30%]'>
+   <div className='w-[30%] Mobile-SafteyElement1'>
     <div></div>
    <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'><FaPersonFalling /></div>
   <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Fall Detection at the ready. </div>
@@ -337,7 +360,7 @@ Friendly uses vision and LiDAR to detect falls, then approaches to check status,
    
 
 
-    <div className='w-[30%]'>
+    <div className='w-[30%] Mobile-SafteyElement1'>
    
  <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>   <FaBriefcaseMedical /></div>
   <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Medical Aid & First Response. </div>
@@ -346,7 +369,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 
    </div>
 
-   <div className='w-[30%]'>
+   <div className='w-[30%] Mobile-SafteyElement1'>
   
   <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>   <GrAlert /></div>
   <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Intruder & Environmental Alerts. </div>
@@ -358,7 +381,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 
 
 
-  <div className='w-[30%]'>
+  <div className='w-[30%] Mobile-SafteyElement1'>
     
     <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>  <MdFamilyRestroom /> </div>
   <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>School Pick-up & Walking. </div>
@@ -368,7 +391,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 
    </div>
 
-     <div className='w-[30%]'>
+     <div className='w-[30%] Mobile-SafteyElement1'>
 
     
  <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>    <FaKitchenSet /></div>
@@ -396,9 +419,9 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 
 
 <div>
- <div className='flex justify-center text-[35px] mt-4 ModernAIFocused font-bold   '>
+ <div className='flex justify-center items-center text-[35px] mt-4 ModernAIFocused font-bold   '>
 
-          <div className='flex justify-center w-[80%]  '>Detailed Features(Image with Slider).</div></div>
+          <div className='flex justify-center items-center  w-[80%]  Mobile-Detailed-Feature-Title'>Detailed Features(Image with Slider).</div></div>
     <div>
 
       <div className='bg-black pb-5 text-white font-bold text-[35px] '>
@@ -418,11 +441,16 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y ]}
       spaceBetween={50}
-      slidesPerView={3.5}
+      slidesPerView={1}
      
     
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
+      breakpoints={{
+        1024:{
+          slidesPerView:"3.5"
+        }
+      }}
     >
       <div>
       <SwiperSlide>
@@ -571,13 +599,13 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
           <div className='flex justify-center w-[80%]  '>Choose Your Best.</div></div>
 
 
-          <div className='flex justify-center w-[100%]'>
+          <div className='flex justify-center w-[100%]  '>
 
-             <div className='bg-white w-[40%] p-5 shadow-md rounded-md Compare-Detail'>
+             <div className='bg-white w-[40%] Mobile-BestChoose p-5 shadow-md rounded-md Compare-Detail'>
               <div className='flex flex-col justify-center gap-2 items-center '>
-              <div className='font-bold text-[25px]'>HCI Humanoid Robot</div>
-              <div>The ultimate way to watch your health.</div>
-              <div>From $399 or $33.25/mo. for 12 mo.*</div>
+              <div className='font-bold text-[25px] Mobile-Best-Title'>HCI Humanoid Robot</div>
+              <div className='Mobile-Best-element2'>The ultimate way to watch your health.</div>
+              <div className='Mobile-Best-element3'>From $399 or $33.25/mo. for 12 mo.*</div>
               </div>
 
               <div className='mt-5 flex justify-center'>
@@ -587,12 +615,14 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
                 
                 Buy</div>
 
+
+
 <div>
  
              <div className='flex flex-col items-center justify-center mt-5 font-bold'>
                <div className='text-[30px]'><GiMaterialsScience /></div>
                Material Finish</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center  Mobile-Best-Elements text-[15px] Mobile-Best-Elements text-gray-800'>
               Brushed Carbon, Onyx Titanium</div>
                 
 </div>
@@ -604,7 +634,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
              <div className='flex flex-col items-center justify-center mt-5 font-bold'>
               <div className="text-[30px]"><MdOutlineViewHeadline /></div> 
                Headline</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
             The ultimate evolution of embodied AI.</div>
                 </div>
                  <div>
@@ -613,7 +643,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
               
                 <div className="text-[30px]"><BiSolidDollarCircle /></div> 
               Pricing</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>4
+             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>4
               Starting at $45,000</div>
                 </div>
 
@@ -622,7 +652,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
                <div className="text-[30px]"><GiProcessor /></div> 
               
               Processing</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center Mobile-Best-Elements text-[15px] Mobile-Best-Elements text-gray-800'>
              S10-Pro Quantum Chip</div>
                 </div>
 
@@ -631,7 +661,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
               <div className="text-[30px]"><IoEyeSharp /></div> 
               
               Vision System</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center Mobile-Best-Elements text-[15px] Mobile-Best-Elements text-gray-800'>
               360° LiDAR + 4K Stereoscopic Vision</div>
                 </div>
 
@@ -640,31 +670,31 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
              
  <div className="text-[30px]"> <SiGoogletasks /></div> 
 Dexterity</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
              28-Axis Precision Hands (0.01mm tolerance)</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Interaction</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
              Full Haptic Feedback & Voice Synthesis</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Sensors</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
               Biometric Health Monitoring & Stress Analysis</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Battery Life</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
               24 Hours Active / 48 Hours Standby</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Charging</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
               Rapid Wireless Induction Docking</div>
                 </div>
 
@@ -675,80 +705,101 @@ Dexterity</div>
               
             </div>
 
-
-           <div className='bg-white w-[40%] p-5 shadow-md rounded-md Compare-Detail'>
+ <div className='bg-white w-[40%] p-5 shadow-md rounded-md Compare-Detail Mobile-BestChoose'>
               <div className='flex flex-col justify-center gap-2 items-center '>
-              <div className='font-bold text-[25px]'>HCI Humanoid Robot</div>
-              <div>The ultimate way to watch your health.</div>
-              <div>From $399 or $33.25/mo. for 12 mo.*</div>
+              <div className='font-bold text-[25px] Mobile-Best-Title'>HCI Humanoid Robot</div>
+              <div className='Mobile-Best-element2'>The ultimate way to watch your health.</div>
+              <div className='Mobile-Best-element3'>From $399 or $33.25/mo. for 12 mo.*</div>
               </div>
 
-              <div className='mt-5 flex justify-center'>
+                 <div className='mt-5 flex justify-center'>
               <Button variant='contained' sx={{ borderRadius:'30ch'}}>Learn more </Button>  
                 </div>
                 <div className='mt-2 flex border-b pb-5  border-b-gray-300 text-blue-600 font-bold justify-center'>
                 
                 Buy</div>
 
+
+
 <div>
-             <div className='flex justify-center mt-5 font-bold'>Material Finish</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
-              Reinforced Polycarbonate or Matte Aluminum</div>
+ 
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+               <div className='text-[30px]'><GiMaterialsScience /></div>
+               Material Finish</div>
+             <div className='flex justify-center  text-[15px] text-gray-800 Mobile-Best-Elements'>
+              Reinforced Polycarbonate</div>
                 
 </div>
 
 
                 <div>
-             <div className='flex justify-center mt-5 font-bold'>Headline</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
-            Intelligent automation for every workspace.</div>
+                 
+
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+              <div className="text-[30px]"><MdOutlineViewHeadline /></div> 
+               Headline</div>
+             <div className='flex justify-center  Mobile-Best-Elements text-[15px] text-gray-800'>
+           Intelligent automation for every workspace.</div>
                 </div>
                  <div>
-             <div className='flex justify-center mt-5 font-bold'>Pricing</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>4
-              Starting at $18,500</div>
+
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+              
+                <div className="text-[30px]"><BiSolidDollarCircle /></div> 
+              Pricing</div>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>4
+              4 Starting at $18,500</div>
                 </div>
 
  <div>
-             <div className='flex justify-center mt-5 font-bold'>Processing</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+               <div className="text-[30px]"><GiProcessor /></div> 
+              
+              Processing</div>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
              S10 standard AI Chip</div>
                 </div>
 
  <div>
-             <div className='flex justify-center mt-5 font-bold'>Vision System</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+              <div className="text-[30px]"><IoEyeSharp /></div> 
+              
+              Vision System</div>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
               180° Ultra-Wide HD Vision</div>
                 </div>
 
  <div>
-             <div className='flex justify-center mt-5 font-bold'>Dexterity</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex flex-col items-center justify-center mt-5 font-bold'>
+             
+ <div className="text-[30px]"> <SiGoogletasks /></div> 
+Dexterity</div>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
              12-Axis Industrial Grippers</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Interaction</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
-            Standard Visual Indicators & Voice</div>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
+             Standard Visual Indicators & Voice</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Sensors</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
               Proximity & Obstacle Detection</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Battery Life</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
-             12 Hours Active / 24 Hours Standby</div>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
+              12 Hours Active / 24 Hours Standby</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Charging</div>
-             <div className='flex justify-center  text-[15px] text-gray-800'>
-              Standard Direct-Link Charging</div>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
+             Standard Direct-Link Charging</div>
                 </div>
 
 
@@ -757,6 +808,7 @@ Dexterity</div>
 
               
             </div>
+          
           </div>
 
          
@@ -770,22 +822,22 @@ Dexterity</div>
           <div className='flex justify-center w-[80%]  '>Environmental Constraints.</div></div>
 
 
-          <div className='flex justify-center'>
+          <div className='flex justify-center '>
 
-         <div className=' flex justify-center w-[90%] gap-3 '>
+         <div className=' flex justify-center w-[90%] gap-3 Mobile-Environment '>
           <div className='w-[30%] bg-white p-4 rounded-md shadow-md Enviro-Detail Card-Enviro'>
-            <div className='text-[25px] font-bold'>Ships in <span>Compact Packaging</span>for 40% more units per trip</div>
+            <div className='text-[25px] font-bold'>Ships in <span className='text-blue-800'>Compact Packaging</span> for <span className='text-blue-800'>40%</span> more units per trip</div>
 
 </div>
 
     <div className='w-[30%] bg-white p-4 rounded-md shadow-md Enviro-Detail Card-Enviro'>
-            <div className='text-[25px] font-bold'>Made with 40% <span>Recycle material</span> by weight</div>
+            <div className='text-[25px] font-bold'>Made with  <span className='text-orange-700'>40% Recycle material</span> by weight</div>
 
 </div>
 
 
     <div className='w-[30%] bg-white p-4 rounded-md shadow-md Enviro-Detail Card-Enviro'>
-            <div className='text-[25px] font-bold'>Developed with 100% <span>100% Renewablel</span> Energy</div>
+            <div className='text-[25px] font-bold'>Developed with  <span className='text-purple-600'>100% Renewable</span> Energy</div>
 
 </div>
 
@@ -800,8 +852,12 @@ Dexterity</div>
 
     </div>
 <Benefits/>
+
+
+<Footer/>
         
     </div>
+   
   )
 }
 

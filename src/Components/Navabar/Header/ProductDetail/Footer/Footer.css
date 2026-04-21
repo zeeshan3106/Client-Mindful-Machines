@@ -1,0 +1,91 @@
+.Footer{
+    background-color: #000f46;
+}
+
+.upper-Footer{
+
+}
+.Numbers-Footer{
+    text-decoration: underline;
+}
+
+.FooterLink:hover{
+    color: #ABBED5;
+    text-decoration: underline;
+  
+}
+.MArgin-Footer{
+
+}
+
+@media screen and (max-width:500px){
+    .Mobile-Footer-Container{
+       display: flex;
+        flex-direction: column;
+       height: 1200px;
+       margin-top: 20px;
+    }
+    .m-c-1{
+        max-height: 20px !important;
+        font-size: 20px;
+    }
+    .m-c-2{
+        height: 1300px;
+    }
+    .m-c-3{
+    gap:0px;
+    padding: 0px;
+    font-size: 18px;
+     
+    }
+    .Mobile-Footer-Element{
+        padding-bottom: 0px !important;
+    }
+    .Mobile-Element-Footer{
+        padding: 0px ;
+        margin: 0px;
+        gap: 0px;
+    }
+    .Footer{
+  
+    }
+    .Mobile-Footer-icons{
+        display: flex;
+      gap: 0px !important;
+    }
+    .Mobile-No{
+        max-width: 0px;
+        display: none;
+    }
+    .m-c-4{
+       
+       padding: 0px !important;
+       padding-left: 50px !important;
+       margin-top: 20px;
+    }
+    .Mobile-Footer-Part2{
+        padding-bottom: 0px !important;
+        font-size: 15px;
+    }
+    .Mobile-County-Footer{
+        flex-direction: column;
+    }
+    .Mobile-International-Footer{
+        flex-direction: column;
+    }
+    .Mobile-Last-Footer{
+        margin-top: 20px;
+        height: 200px;
+    }
+    .Mobile-Last-Options {
+        flex-direction: column;
+    }
+    .First-Footer-Responsive{
+        max-height: 20px;
+       font-size: 22px;
+       padding-top: 10px !important;
+       display: flex; 
+       justify-content: center;
+       padding-left: 8px !important;
+    }
+}

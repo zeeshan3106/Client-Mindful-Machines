@@ -69,3 +69,90 @@ Logo-Saftey {
 display: flex;
 
 }
+
+.Card-Enviro{
+    padding: 20px;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ 
+}
+
+@media screen and (max-width:500px){
+
+.MobilePysicaltitle{
+    font-size: 20px;
+}
+.MobilePysicaltitle1{
+    font-size: 20px;
+}
+.MobilePysicaltitle2{
+   width: 100%;
+   font-size: 12px;
+}
+.Mobile-Transparent-Robots{
+    flex-direction: column;
+    width: 100%;
+}
+.MobileTransparenttext{
+    width: 80%;
+    justify-content: center;
+}
+.MobileTransparentSubtitle{
+    display: flex;
+    justify-content: center;
+
+}
+.Mobile-Subtitle-PAdding{
+    padding-bottom: 40px;
+}
+.Mobile-Transparent-Robots1{
+    width: 80%;
+}
+.MobileTransparenttext2{
+    width: 80%;
+    font-size: 12px;
+}
+.Mobile-Image-Transparent1{
+    width: 300px !important;
+}
+.Mobile-Saftey-Elements{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.Mobile-SafteyElement1 {
+    width: 100%;
+}
+.Mobile-Detailed-Feature-Title{
+    font-size: 20px;
+}
+.Mobile-BestChoose{
+    width: 50% !important;
+}
+.Mobile-Environment{
+    display: flex;
+    flex-direction: column;
+}
+.DetailPage .swiper{
+    height: 250px;
+}
+.Mobile-Best-Title{
+    font-size: 18px;
+}
+.Mobile-Best-element2{
+    font-size: 12px;
+}
+.Mobile-Best-element3{
+    font-size: 11px;
+}
+.Mobile-Best-Elements{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+}

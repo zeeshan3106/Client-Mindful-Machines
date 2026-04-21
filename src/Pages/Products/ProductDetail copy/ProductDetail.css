@@ -1,0 +1,83 @@
+.Underline-text{
+    text-decoration-color: blue !important;
+  
+}
+
+.DetailPage .swiper{
+    width: 90% !important;
+  height: 90vh;
+}
+.DetailPage .swiper-slide{
+    border-radius: 0px !important; 
+    object-fit: cover;
+    overflow: hidden;
+    background-color: white;
+    
+   
+    object-fit: cover ;
+}
+.DetailPage .swiper-slide img{
+   width: 85%;
+
+    object-fit: cover ;
+    display: flex;
+    justify-content: center;
+   
+}
+.ModernAIFocused{
+  
+    margin-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+/*.Cards-Section-Detail .swiper-slide{
+    height: 590px;
+    object-fit: cover;
+    overflow: hidden;
+  
+
+}*/
+.Cards-Section-Detail .swiper-slide img{
+  
+
+}
+
+.Gap-Image-Product{
+    gap: 300px;
+}
+.Gap-Image-Product1{
+    gap: 40px;
+}
+.Compare-Detail{
+    border-radius: 20px;
+}
+.Enviro-Detail{
+    border-radius: 25px;
+}
+.Card-Enviro:hover{
+    transform: translatey(-4px);
+    cursor:pointer;
+   
+}
+
+Logo-Saftey {
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+   text-align: start;
+display: flex;
+
+}
+
+.Card-Enviro{
+    padding: 20px;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ 
+}
