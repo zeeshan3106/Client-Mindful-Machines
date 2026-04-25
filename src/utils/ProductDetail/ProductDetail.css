@@ -1,0 +1,158 @@
+.Underline-text{
+    text-decoration-color: blue !important;
+  
+}
+
+.DetailPage .swiper{
+    width: 90% !important;
+  height: 90vh;
+}
+.DetailPage .swiper-slide{
+    border-radius: 0px !important; 
+    object-fit: cover;
+    overflow: hidden;
+    background-color: white;
+    
+   
+    object-fit: cover ;
+}
+.DetailPage .swiper-slide img{
+   width: 85%;
+
+    object-fit: cover ;
+    display: flex;
+    justify-content: center;
+   
+}
+.ModernAIFocused{
+  
+    margin-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+/*.Cards-Section-Detail .swiper-slide{
+    height: 590px;
+    object-fit: cover;
+    overflow: hidden;
+  
+
+}*/
+.Cards-Section-Detail .swiper-slide img{
+  
+
+}
+
+.Gap-Image-Product{
+    gap: 300px;
+}
+.Gap-Image-Product1{
+    gap: 40px;
+}
+.Compare-Detail{
+    border-radius: 20px;
+}
+.Enviro-Detail{
+    border-radius: 25px;
+}
+.Card-Enviro:hover{
+    transform: translatey(-4px);
+    cursor:pointer;
+   
+}
+
+Logo-Saftey {
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+   text-align: start;
+display: flex;
+
+}
+
+.Card-Enviro{
+    padding: 20px;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ 
+}
+
+@media screen and (max-width:500px){
+
+.MobilePysicaltitle{
+    font-size: 20px;
+}
+.MobilePysicaltitle1{
+    font-size: 20px;
+}
+.MobilePysicaltitle2{
+   width: 100%;
+   font-size: 12px;
+}
+.Mobile-Transparent-Robots{
+    flex-direction: column;
+    width: 100%;
+}
+.MobileTransparenttext{
+    width: 80%;
+    justify-content: center;
+}
+.MobileTransparentSubtitle{
+    display: flex;
+    justify-content: center;
+
+}
+.Mobile-Subtitle-PAdding{
+    padding-bottom: 40px;
+}
+.Mobile-Transparent-Robots1{
+    width: 80%;
+}
+.MobileTransparenttext2{
+    width: 80%;
+    font-size: 12px;
+}
+.Mobile-Image-Transparent1{
+    width: 300px !important;
+}
+.Mobile-Saftey-Elements{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.Mobile-SafteyElement1 {
+    width: 100%;
+}
+.Mobile-Detailed-Feature-Title{
+    font-size: 20px;
+}
+.Mobile-BestChoose{
+    width: 50% !important;
+}
+.Mobile-Environment{
+    display: flex;
+    flex-direction: column;
+}
+.DetailPage .swiper{
+    height: 250px;
+}
+.Mobile-Best-Title{
+    font-size: 18px;
+}
+.Mobile-Best-element2{
+    font-size: 12px;
+}
+.Mobile-Best-element3{
+    font-size: 11px;
+}
+.Mobile-Best-Elements{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+}

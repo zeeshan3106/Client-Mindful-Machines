@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -28,9 +28,32 @@ import { MdOutlineEmergency } from "react-icons/md";
 import { FaPersonFalling } from "react-icons/fa6";
 import Footer from './Footer/Footer';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios'
 function ProductDetail() {
 
+
+
+  const [productinfo , setproductinfo] = useState({})
+
+
+  useEffect(()=>{
+
+    axios.get('http://localhost:8000/api/users/product-info')
+    .then(res => {console.log('Info', res)
+
+      setproductinfo(res.data.data[0])
+
+    
+    }
+  )
+    .catch(err => console.log(err))
+    
+
+
+
+
+  },[])
+  console.log('setstatedata',productinfo)
   const navigate = () => {
 
     const navigate = useNavigate()
@@ -38,7 +61,12 @@ function ProductDetail() {
 
   }
   return (
+
+   
     <div>
+
+
+      
         <Navbar/>
       
         <div>
@@ -72,13 +100,14 @@ function ProductDetail() {
                      >Add To Cart</Button>
 
             </div>
+            {productinfo && (
             <div className='text-[40px] font-bold text-white absolute top-45 w-[100%] items-center  flex flex-col justify-center'>
                 
-                <div>Model H-01</div>
+                <div>{productinfo.title}</div>
 
-                    <div className='underline text-[18px] Underline-text'>Buy Now For 12k USD</div>
+                    <div className='underline text-[18px] Underline-text'>Buy Now For {productinfo.price} USD</div>
         </div>
-
+)}
 
         <div className='flex justify-center text-[35px] mt-4 ModernAIFocused font-bold   '>
           <div className='flex justify-center w-[90%]  '>Modern & AI-Focused.</div></div>
@@ -133,7 +162,6 @@ function ProductDetail() {
 
     </div>
 
-    
             </div>
          
  <div className='flex justify-center text-[35px] mt-4 ModernAIFocused font-bold   '>
@@ -161,26 +189,26 @@ function ProductDetail() {
     >
       <SwiperSlide>
         <img src='https://images.pexels.com/photos/8294666/pexels-photo-8294666.jpeg' />
-        <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>Adaptive Learning</div>
+        <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontextone}</div>
       </SwiperSlide>
       <SwiperSlide>
         <img src='https://images.pexels.com/photos/7688545/pexels-photo-7688545.jpeg'/>
-           <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>Intelligence</div>
+           <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontexttwo}</div>
      
       </SwiperSlide>
       <SwiperSlide>
         <img src='https://images.pexels.com/photos/35280155/pexels-photo-35280155.jpeg'/>
-           <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>Protection</div>
+           <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontextthree}</div>
      
       </SwiperSlide>
        <SwiperSlide>
         <img src='https://images.pexels.com/photos/8438879/pexels-photo-8438879.jpeg'/>
-           <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>Precision</div>
+           <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontextfour}</div>
      
       </SwiperSlide>
        <SwiperSlide>
         <img src='https://cdn.pixabay.com/photo/2025/04/28/19/29/ai-generated-9565579_1280.png'/>
-           <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>Organization</div>
+           <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontextfive}</div>
      
       </SwiperSlide>
     </Swiper>
@@ -202,8 +230,8 @@ function ProductDetail() {
             </div>
         <div className=' w-[50%] Mobile-text-Reason font-bold p-4 text-[25px] flex flex-col gap-3 justify-center '>
 
-         <div>Intelligence That Learns!</div>
-         <div className='text-[18px]'>"Our machines don't just follow instructions, they understand context. Powered by advanced neural networks, our AI adapts in real-time to provide personalized health insights and precision industrial movements."</div>
+         <div>{productinfo.wytexttitleone}</div>
+         <div className='text-[18px]'>{productinfo.whytextdescriptionone}</div>
         </div>
 </div>
 </div>
@@ -212,9 +240,8 @@ function ProductDetail() {
             <div className='flex items-center justify-center w-[80%] Mobile-Reason'>
                  <div className=' w-[50%] Mobile-text-Reason font-bold p-4 text-[25px] flex flex-col gap-3 justify-center '>
 
-         <div>Seamless Integration.</div>
-         <div className='text-[18px]'>"Technology that feels like second nature. From wearable health trackers to wellness companions, our devices are designed to enhance your physical well-being while remaining invisible in your daily routine."</div>
-        </div>
+         <div>{productinfo.wytexttitletwo}</div>
+         <div className='text-[18px]'>{productinfo.whytextdescriptiontwo} </div></div>
             <div className='w-[50%] flex justify-center font-bold items-center Image-Why-Home overflow-hidden '>
                 <img className='w-[80%] Image-Why-Home'
                 
@@ -231,18 +258,16 @@ src ="https://media.istockphoto.com/id/1159288175/photo/young-woman-checking-the
             </div>
         <div className=' w-[50%] Mobile-text-Reason font-bold p-4 text-[25px] flex flex-col gap-3 justify-center '>
 
-         <div>Precision at Scale!</div>
-         <div className='text-[18px]'>"Engineered for the demands of tomorrow. Our industrial robots and autonomous drones offer unmatched precision and durability, reducing downtime and optimizing workflows in the most challenging environments"</div>
-        </div>
+         <div>{productinfo.wytexttitlethree}</div>
+         <div className='text-[18px]'>{productinfo.whytextdescriptithree} </div>  </div>
 </div>
 </div>
       <div className='flex  pt-5 justify-center items-center'>
             <div className='flex items-center justify-center w-[80%] Mobile-Reason'>
                   <div className='w-[50%] Mobile-text-Reason  font-bold p-4 text-[25px] flex flex-col gap-3 justify-center '>
 
-         <div>The Ethical Future.</div>
-         <div className='text-[18px]'>"We build machines with a conscience. Our mission is to bridge the gap between human potential and mechanical efficiency, ensuring a future where AI serves to protect, assist, and empower humanity."</div>
-        </div>
+         <div>{productinfo.wytexttitlefour}</div>
+         <div className='text-[18px]'>{productinfo.whytextdescriptionfour} </div>  </div>
             <div className='w-[50%] flex justify-center font-bold items-center Image-Why-Home overflow-hidden '>
                 <img className='w-[80%] Image-Why-Home' 
 src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
