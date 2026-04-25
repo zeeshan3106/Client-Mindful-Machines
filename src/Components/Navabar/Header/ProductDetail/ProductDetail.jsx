@@ -298,7 +298,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
               <div className='text-[18px] text-blue-800 '>Physical AI</div>
               <div className='MobilePysicaltitle'>Beyond Automation.</div>
           <div className='MobilePysicaltitle1'>Driven by Agentic Intelligence!</div>
-          <div className='text-[20px] pt-4 text-gray-600  text-center w-[70%] MobilePysicaltitle2'>The Sentient-Core isn't just programmed; it’s trained. Powered by a neural architecture that mimics human decision-making, our humanoid perceives, reasons, and adapts to complex environments in real-time. From the fine motor skills required for medical precision to the spatial awareness needed for industrial logistics, it’s not just a machine—it’s a partner.</div>
+          <div className='text-[20px] pt-4 text-gray-600  text-center w-[70%] MobilePysicaltitle2'>{productinfo.pysicalaidescition}</div>
           
           </div>
 </div></div>
@@ -306,9 +306,8 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 <div className='flex justify-center items-center'>
 <div className='flex justify-center items-center w-[85%] Mobile-Transparent-Robots'>
  <div className='w-[40%] MobileTransparenttext '>
-  <div className='font-bold text-[20px] MobileTransparentSubtitle text-center '>Streamlined Intelligence..</div>
-  <div className=' MobileTransparentSubtitle Mobile-Subtitle-PAdding MobileTransparenttext2'> Our improved control architecture highlights four core operational modes, making it faster than ever to deploy your robot. Whether you need to initiate Spatial Mapping, Collaborative Sync, Dynamic Pathing, or Diagnostic Analysis, the power of the Core is at your fingertips.
- </div>
+  <div className='font-bold text-[20px] MobileTransparentSubtitle text-center '>{productinfo.physicalaisubtitleone}</div>
+  <div className=' MobileTransparentSubtitle Mobile-Subtitle-PAdding MobileTransparenttext2'>{productinfo.pysicalaisubdescitionone}</div>
   </div> 
 <div className='flex justify-center'>
   <div className='flex justify-center items-center  '>
@@ -333,8 +332,8 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
   </div>
   </div>
  <div className='w-[40%] Mobile-Transparent-Robots1 '>
-  <div className='font-bold text-[20px] .Mobile-Transparent-Robots '>A Refreshed Neural Interface..</div>
- <div className='MobileTransparenttext2'>The upgraded Sentient-OS layout features an intuitive four-zone dashboard, providing instant access to mission-critical protocols. Seamlessly toggle between Autonomous Navigation, Precision Manipulation, Real-time Telemetry, and Safety Override with a single touch. </div> 
+  <div className='font-bold text-[20px] .Mobile-Transparent-Robots '>{productinfo.physicalaisubtitletwo}</div>
+ <div className='MobileTransparenttext2'>{productinfo.pysicalaisubdescitiontwo}</div> 
 </div>
 
 
@@ -347,8 +346,8 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 <div>
  <div className='flex justify-center text-[35px] mt-4 ModernAIFocused  font-bold   '>
           <div className='flex justify-center w-[80%]  '>Saftey.</div></div>
-<div className='flex justify-center font-bold text-[50px] flex-col items-center MobilePysicaltitle '>A real lifeline.
-<div className='text-[20px] w-[50%] text-center text-gray-700 MobileTransparenttext2'>Packed with innovative safety firsts, Apple Watch Series 11 has your back. It’s designed to summon help when you need it most — even if you can’t reach your iPhone.
+<div className='flex justify-center font-bold text-[50px] flex-col items-center MobilePysicaltitle '>{productinfo.safteytitle}
+<div className='text-[20px] w-[50%] text-center text-gray-700 MobileTransparenttext2'>{productinfo.safteydescription}
 </div>
 </div>
 <div className='flex justify-center '>
@@ -364,22 +363,20 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
   <div className='w-[30%] Mobile-SafteyElement1 '>
    
     <div className=' p-4 pb-2 pt-2 text-[40px] text-blue-800'><MdOutlineEmergency /></div>
-  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Emergency SOS. ASAP. </div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>{productinfo.safteycardtitleone} </div>
    <div className='b p-4 pt-0 '>
-    Need urgent help? Just speak to Friendly or tap its chest screen to call emergency services, share your location, and provide a live video feed. </div>
-
+   {productinfo.safteycarddescriptionone}</div>
    </div>
 
    
    <div className='w-[30%] Mobile-SafteyElement1'>
     <div></div>
    <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'><FaPersonFalling /></div>
-  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Fall Detection at the ready. </div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>   {productinfo.safteycardtitletwo} </div>
    <div className='b p-4 pt-0 '>
     
     
-Friendly uses vision and LiDAR to detect falls, then approaches to check status, calls for help, and shares live video.21 In critical moments, it stays by their side until help arrives.  </div>
-
+   {productinfo.safteycarddescriptiontwo}</div>
    </div>
 
    
@@ -388,19 +385,17 @@ Friendly uses vision and LiDAR to detect falls, then approaches to check status,
     <div className='w-[30%] Mobile-SafteyElement1'>
    
  <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>   <FaBriefcaseMedical /></div>
-  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Medical Aid & First Response. </div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>   {productinfo.safteycardtitlethree} </div>
    <div className='b p-4 pt-0 '>
-Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR and retrieves life-saving medications or EpiPens from cabinets, providing immediate, critical family support  </div>
-
+   {productinfo.safteycarddescriptionthree}</div>
    </div>
 
    <div className='w-[30%] Mobile-SafteyElement1'>
   
   <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>   <GrAlert /></div>
-  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Intruder & Environmental Alerts. </div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>   {productinfo.safteycardtitlefour} </div>
    <div className='b p-4 pt-0 '>
-  Friendly patrols indoors to detect smoke, gas leaks, or intruders, automatically triggering an Emergency SOS to your phone if it finds anomalies
-     </div>
+    {productinfo.safteycarddescriptionfour}    </div>
 
    </div>
 
@@ -409,10 +404,9 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
   <div className='w-[30%] Mobile-SafteyElement1'>
     
     <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>  <MdFamilyRestroom /> </div>
-  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>School Pick-up & Walking. </div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>   {productinfo.safteycardtitlefive} </div>
    <div className='b p-4 pt-0 '>
-   Friendly handles school pickups with real-time GPS "Check-ins," while walking alongside family members to ensure they navigate traffic and safe paths securely
-    </div>
+     {productinfo.safteycarddescriptionfive} </div>
 
    </div>
 
@@ -420,10 +414,9 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 
     
  <div className=' p-4 pb-2 pt-2 text-[30px] Logo-Saftey text-blue-800'>    <FaKitchenSet /></div>
-  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>Effortless Assistance. </div>
+  <div className='  p-4  pt-0 pb-0 font-bold text-[18px] '>   {productinfo.safteycardtitlesix} </div>
    <div className='b p-4 pt-0 '>
-   Friendly evolves from fetching ingredients to following complex recipes, while its grippers seamlessly transport water, medicine, or bags between rooms for you. </div>
-
+     {productinfo.safteycarddescriptionsix}</div>
    </div>
 
 
@@ -486,8 +479,8 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 </div>
 
 <div className='flex'>
-<div className='text-[18px] mt-4'>All in on 5G
-  <div className='text-[15px] font-bold-0'> With 5G, you can download apps, music, and podcasts faster than ever.5 And thanks to a 5G modem and updated antenna architecture, Series 11 provides better coverage in areas with weak reception. Dropped calls? Not on our watch.</div>
+<div className='text-[18px] mt-4'>{productinfo.digitalcardssubtitleone}
+  <div className='text-[15px] font-bold-0'> {productinfo.digitalcardssubdescriptionone}</div>
     </div>
 </div>
 
@@ -511,8 +504,8 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 </div>
 
 <div className='flex'>
-<div className='text-[18px] mt-4'>All in on 5G
-  <div className='text-[15px] font-bold-0'> With 5G, you can download apps, music, and podcasts faster than ever.5 And thanks to a 5G modem and updated antenna architecture, Series 11 provides better coverage in areas with weak reception. Dropped calls? Not on our watch.</div>
+<div className='text-[18px] mt-4'>{productinfo.digitalcardssubtitletwo}
+  <div className='text-[15px] font-bold-0'> {productinfo.digitalcardssubdescriptiontwo}</div>
     </div>
 </div>
 
@@ -543,8 +536,8 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 </div>
 
 <div className='flex'>
-<div className='text-[18px] mt-4'>All in on 5G
-  <div className='text-[15px] font-bold-0'> With 5G, you can download apps, music, and podcasts faster than ever.5 And thanks to a 5G modem and updated antenna architecture, Series 11 provides better coverage in areas with weak reception. Dropped calls? Not on our watch.</div>
+<div className='text-[18px] mt-4'>{productinfo.digitalcardssubtitlethree}
+  <div className='text-[15px] font-bold-0'> {productinfo.digitalcardssubdescriptionthree}</div>
     </div>
 </div>
 
@@ -567,8 +560,8 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 </div>
 
 <div className='flex'>
-<div className='text-[18px] mt-4'>All in on 5G
-  <div className='text-[15px] font-bold-0'> With 5G, you can download apps, music, and podcasts faster than ever.5 And thanks to a 5G modem and updated antenna architecture, Series 11 provides better coverage in areas with weak reception. Dropped calls? Not on our watch.</div>
+<div className='text-[18px] mt-4'>{productinfo.digitalcardssubtitlefour}
+  <div className='text-[15px] font-bold-0'> {productinfo.digitalcardssubdescriptionfour}</div>
     </div>
 </div>
 
@@ -589,8 +582,8 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 </div>
 
 <div className='flex'>
-<div className='text-[18px] mt-4'>All in on 5G
-  <div className='text-[15px] font-bold-0'> With 5G, you can download apps, music, and podcasts faster than ever.5 And thanks to a 5G modem and updated antenna architecture, Series 11 provides better coverage in areas with weak reception. Dropped calls? Not on our watch.</div>
+<div className='text-[18px] mt-4'>{productinfo.digitalcardssubtitlefive}
+  <div className='text-[15px] font-bold-0'>{productinfo.digitalcardssubdescriptionfive}</div>
     </div>
 </div>
 
@@ -628,9 +621,9 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
 
              <div className='bg-white w-[40%] Mobile-BestChoose p-5 shadow-md rounded-md Compare-Detail'>
               <div className='flex flex-col justify-center gap-2 items-center '>
-              <div className='font-bold text-[25px] Mobile-Best-Title'>HCI Humanoid Robot</div>
+              <div className='font-bold text-[25px] Mobile-Best-Title'>{productinfo.title}</div>
               <div className='Mobile-Best-element2'>The ultimate way to watch your health.</div>
-              <div className='Mobile-Best-element3'>From $399 or $33.25/mo. for 12 mo.*</div>
+              <div className='Mobile-Best-element3'>From {productinfo.price}</div>
               </div>
 
               <div className='mt-5 flex justify-center'>
@@ -648,7 +641,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
                <div className='text-[30px]'><GiMaterialsScience /></div>
                Material Finish</div>
              <div className='flex justify-center  Mobile-Best-Elements text-[15px] Mobile-Best-Elements text-gray-800'>
-              Brushed Carbon, Onyx Titanium</div>
+             {productinfo.MaterialFinish}</div>
                 
 </div>
 
@@ -660,7 +653,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
               <div className="text-[30px]"><MdOutlineViewHeadline /></div> 
                Headline</div>
              <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
-            The ultimate evolution of embodied AI.</div>
+          {productinfo.Headline}</div>
                 </div>
                  <div>
 
@@ -668,8 +661,8 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
               
                 <div className="text-[30px]"><BiSolidDollarCircle /></div> 
               Pricing</div>
-             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>4
-              Starting at $45,000</div>
+             <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
+              Starting at {productinfo.Pricing}</div>
                 </div>
 
  <div>
@@ -678,7 +671,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
               
               Processing</div>
              <div className='flex justify-center Mobile-Best-Elements text-[15px] Mobile-Best-Elements text-gray-800'>
-             S10-Pro Quantum Chip</div>
+             {productinfo.Processing}</div>
                 </div>
 
  <div>
@@ -687,7 +680,7 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
               
               Vision System</div>
              <div className='flex justify-center Mobile-Best-Elements text-[15px] Mobile-Best-Elements text-gray-800'>
-              360° LiDAR + 4K Stereoscopic Vision</div>
+             {productinfo.VisionSystem}</div>
                 </div>
 
  <div>
@@ -696,31 +689,31 @@ Friendly displays Medical IDs on its chest screen. In emergencies, it guides CPR
  <div className="text-[30px]"> <SiGoogletasks /></div> 
 Dexterity</div>
              <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
-             28-Axis Precision Hands (0.01mm tolerance)</div>
+             {productinfo.Dexterity}</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Interaction</div>
              <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
-             Full Haptic Feedback & Voice Synthesis</div>
+           {productinfo.Interaction}</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Sensors</div>
              <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
-              Biometric Health Monitoring & Stress Analysis</div>
+             {productinfo.Sensors}</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Battery Life</div>
              <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
-              24 Hours Active / 48 Hours Standby</div>
+              {productinfo.BatteryLife}</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Charging</div>
              <div className='flex justify-center Mobile-Best-Elements  text-[15px] Mobile-Best-Elements text-gray-800'>
-              Rapid Wireless Induction Docking</div>
+              {productinfo.Charging}</div>
                 </div>
 
 
@@ -732,9 +725,9 @@ Dexterity</div>
 
  <div className='bg-white w-[40%] p-5 shadow-md rounded-md Compare-Detail Mobile-BestChoose'>
               <div className='flex flex-col justify-center gap-2 items-center '>
-              <div className='font-bold text-[25px] Mobile-Best-Title'>HCI Humanoid Robot</div>
-              <div className='Mobile-Best-element2'>The ultimate way to watch your health.</div>
-              <div className='Mobile-Best-element3'>From $399 or $33.25/mo. for 12 mo.*</div>
+              <div className='font-bold text-[25px] Mobile-Best-Title'>{productinfo.title}</div>
+              <div className='Mobile-Best-element2'>{productinfo.Headline}</div>
+              <div className='Mobile-Best-element3'>From {productinfo.price}</div>
               </div>
 
                  <div className='mt-5 flex justify-center'>
@@ -752,7 +745,7 @@ Dexterity</div>
                <div className='text-[30px]'><GiMaterialsScience /></div>
                Material Finish</div>
              <div className='flex justify-center  text-[15px] text-gray-800 Mobile-Best-Elements'>
-              Reinforced Polycarbonate</div>
+              {productinfo.MaterialFinish}</div>
                 
 </div>
 
@@ -764,7 +757,7 @@ Dexterity</div>
               <div className="text-[30px]"><MdOutlineViewHeadline /></div> 
                Headline</div>
              <div className='flex justify-center  Mobile-Best-Elements text-[15px] text-gray-800'>
-           Intelligent automation for every workspace.</div>
+           {productinfo.Headline}</div>
                 </div>
                  <div>
 
@@ -772,8 +765,8 @@ Dexterity</div>
               
                 <div className="text-[30px]"><BiSolidDollarCircle /></div> 
               Pricing</div>
-             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>4
-              4 Starting at $18,500</div>
+             <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
+               Starting at {productinfo.Pricing}</div>
                 </div>
 
  <div>
@@ -782,7 +775,7 @@ Dexterity</div>
               
               Processing</div>
              <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
-             S10 standard AI Chip</div>
+           {productinfo.Processing}</div>
                 </div>
 
  <div>
@@ -791,7 +784,7 @@ Dexterity</div>
               
               Vision System</div>
              <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
-              180° Ultra-Wide HD Vision</div>
+              {productinfo.VisionSystem}</div>
                 </div>
 
  <div>
@@ -800,31 +793,31 @@ Dexterity</div>
  <div className="text-[30px]"> <SiGoogletasks /></div> 
 Dexterity</div>
              <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
-             12-Axis Industrial Grippers</div>
+            {productinfo.Dexterity}</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Interaction</div>
              <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
-             Standard Visual Indicators & Voice</div>
+             {productinfo.Interaction}</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Sensors</div>
              <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
-              Proximity & Obstacle Detection</div>
+             {productinfo.Sensors}</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Battery Life</div>
              <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
-              12 Hours Active / 24 Hours Standby</div>
+              {productinfo.BatteryLife}</div>
                 </div>
 
  <div>
              <div className='flex justify-center mt-5 font-bold'>Charging</div>
              <div className='flex justify-center  text-[15px] Mobile-Best-Elements text-gray-800'>
-             Standard Direct-Link Charging</div>
+             {productinfo.Charging}</div>
                 </div>
 
 
