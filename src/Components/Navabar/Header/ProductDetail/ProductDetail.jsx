@@ -73,7 +73,7 @@ function ProductDetail() {
 
             <div className='h-[600px] overflow-hidden object-cover'>
                    <img className='w-[100%]   '
-             src='https://media.istockphoto.com/id/2154101440/photo/metal-hand-of-humanoid-robot-is-holding-at-its-fingertips-innovative-and-advanced-ai.jpg?s=1024x1024&w=is&k=20&c=b1ONJup9FoEu8vRnJ83IfVJMUA4e-lNR6mgRpuxccD8=' />
+             src={productinfo.heroImage} />
           
            </div>
 
@@ -127,7 +127,7 @@ function ProductDetail() {
       <SwiperSlide>
         <div className='p-5 bg-white shadow-md rounded-md'>
 <div className='flex justify-center'>
-          <img src='https://www.apple.com/v/apple-watch-series-11/c/images/overview/highlights/highlights_glass_endframe__f39nueq3bfiy_large.jpg' />
+          <img src={productinfo.Slider1} />
 </div>
     
     </div>
@@ -135,7 +135,7 @@ function ProductDetail() {
    <SwiperSlide>
         <div className='p-5 bg-white shadow-md rounded-md'>
 <div className='flex justify-center'>
-          <img src='https://www.apple.com/v/apple-watch-series-11/c/images/overview/highlights/highlights_glass_endframe__f39nueq3bfiy_large.jpg' />
+          <img src={productinfo.Slider2} />
 </div>
     
     </div>
@@ -143,7 +143,7 @@ function ProductDetail() {
    <SwiperSlide>
         <div className='p-5 bg-white shadow-md rounded-md'>
 <div className='flex justify-center '>
-          <img src='https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' />
+          <img src={productinfo.Slider3} />
 </div>
     
     </div>
@@ -151,7 +151,7 @@ function ProductDetail() {
      <SwiperSlide>
         <div className='p-5 bg-white shadow-md rounded-md'>
 <div className='flex justify-center'>
-          <img src='https://images.pexels.com/photos/6019019/pexels-photo-6019019.jpeg' />
+          <img src={productinfo.Slider4} />
 </div>
     
     </div>
@@ -188,26 +188,26 @@ function ProductDetail() {
 
     >
       <SwiperSlide>
-        <img src='https://images.pexels.com/photos/8294666/pexels-photo-8294666.jpeg' />
+        <img src={productinfo.function1} />
         <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontextone}</div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src='https://images.pexels.com/photos/7688545/pexels-photo-7688545.jpeg'/>
+        <img src={productinfo.function2}/>
            <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontexttwo}</div>
      
       </SwiperSlide>
       <SwiperSlide>
-        <img src='https://images.pexels.com/photos/35280155/pexels-photo-35280155.jpeg'/>
+        <img src={productinfo.function3}/>
            <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontextthree}</div>
      
       </SwiperSlide>
        <SwiperSlide>
-        <img src='https://images.pexels.com/photos/8438879/pexels-photo-8438879.jpeg'/>
+        <img src={productinfo.function4}/>
            <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontextfour}</div>
      
       </SwiperSlide>
        <SwiperSlide>
-        <img src='https://cdn.pixabay.com/photo/2025/04/28/19/29/ai-generated-9565579_1280.png'/>
+        <img src={productinfo.function5}/>
            <div className='absolute text-[28px] font-bold text-white bottom-20 left-8'>{productinfo.functiontextfive}</div>
      
       </SwiperSlide>
@@ -226,7 +226,7 @@ function ProductDetail() {
         <div className='flex  pt-5 justify-center items-center'>
             <div className='flex items-center justify-center w-[80%] Mobile-Reason'>
             <div className='w-[50%] flex justify-center font-bold items-center Image-Why-Home overflow-hidden '>
-                <img className='w-[80%] Image-Why-Home' src ="https://media.istockphoto.com/id/1495819409/photo/digital-mind-brain-artificial-intelligence-concept.jpg?s=1024x1024&w=is&k=20&c=AOs5JEz8sdE2wwrZmRSSd0dL8qj00ebD8tNY_AWb1yk=" />
+                <img className='w-[80%] Image-Why-Home' src ={productinfo.whyImage1} />
             </div>
         <div className=' w-[50%] Mobile-text-Reason font-bold p-4 text-[25px] flex flex-col gap-3 justify-center '>
 
@@ -245,7 +245,7 @@ function ProductDetail() {
             <div className='w-[50%] flex justify-center font-bold items-center Image-Why-Home overflow-hidden '>
                 <img className='w-[80%] Image-Why-Home'
                 
-src ="https://media.istockphoto.com/id/1159288175/photo/young-woman-checking-the-sports-watch-with-screen-healthcare-icon-measuring-heart-rate-and.jpg?s=1024x1024&w=is&k=20&c=HTB39-o0MmWL0z3pPiD2SGr5WOSz7dzuCWdC0rL7HVQ=" />
+src ={productinfo.whyImage2} />
             </div>
        
 </div>
@@ -254,7 +254,7 @@ src ="https://media.istockphoto.com/id/1159288175/photo/young-woman-checking-the
             <div className='flex items-center justify-center w-[80%] Mobile-Reason'>
             <div className='w-[50%] flex justify-center font-bold items-center Image-Why-Home overflow-hidden '>
                 <img className='w-[80%] Image-Why-Home'
- src ="https://images.pexels.com/photos/11951215/pexels-photo-11951215.jpeg" />
+ src ={productinfo.whyImage3} />
             </div>
         <div className=' w-[50%] Mobile-text-Reason font-bold p-4 text-[25px] flex flex-col gap-3 justify-center '>
 
@@ -270,7 +270,7 @@ src ="https://media.istockphoto.com/id/1159288175/photo/young-woman-checking-the
          <div className='text-[18px]'>{productinfo.whytextdescriptionfour} </div>  </div>
             <div className='w-[50%] flex justify-center font-bold items-center Image-Why-Home overflow-hidden '>
                 <img className='w-[80%] Image-Why-Home' 
-src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
+src ={productinfo.whyImage4} />
             </div>
     { /* https://images.pexels.com/photos/8294621/pexels-photo-8294621.jpeg} */}
     {/*https://images.pexels.com/photos/6019019/pexels-photo-6019019.jpeg*/}
@@ -311,7 +311,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
   </div> 
 <div className='flex justify-center'>
   <div className='flex justify-center items-center  '>
-  <img src={img} className='w-[800px] Mobile-Image-Transparent1'/>
+  <img src={productinfo.physicalImage1} className='w-[800px] Mobile-Image-Transparent1'/>
   </div>
   </div>
 
@@ -328,7 +328,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 <div className='flex justify-center items-center Mobile-Transparent-Robots w-[85%] Gap-Image-Product1'>
   <div className='flex justify-center'>
   <div className='flex justify-center items-center  '>
-  <img src={img2} className='w-[600px] Mobile-Image-Transparent1 '/>
+  <img src={productinfo.physicalImage2} className='w-[600px] Mobile-Image-Transparent1 '/>
   </div>
   </div>
  <div className='w-[40%] Mobile-Transparent-Robots1 '>
@@ -353,7 +353,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 <div className='flex justify-center '>
  {/* https://cdn.pixabay.com/photo/2022/02/15/10/39/point-7014645_1280.jpg */}
   <img className='w-[90%] mt-5' src=
-  "https://media.istockphoto.com/id/1350320510/photo/cyber-law-or-internet-law-concept-with-ai-robot.jpg?s=1024x1024&w=is&k=20&c=Qk8QNSTeQbNGrQ_gqZhmzeZBKZpmyplQh4rHOMfIA6o="
+ {productinfo.safteyImage1}
 /></div>
 
 <div className='flex justify-center items-center'>
@@ -445,7 +445,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
       <div className='bg-black pb-5 text-white font-bold text-[35px] '>
    <div >
 
-      <img className='w-[100%] pb-5' src='https://media.istockphoto.com/id/2149530993/photo/digital-human-head-concept-for-ai-metaverse-and-facial-recognition-technology.jpg?s=1024x1024&w=is&k=20&c=Ob0ACggwWuFDFRgIc-SM5bLWjNbIyoREeulmLN8dhLs=' />
+      <img className='w-[100%] pb-5' src={productinfo.digitalCardImage1}/>
 
 
 
@@ -475,7 +475,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
         <div className=''>
 <div className=''>
-<img src='https://cdn.pixabay.com/photo/2024/04/26/17/15/humanoid-8722281_1280.png' />
+<img src={productinfo.digitalCardImage2} />
 </div>
 
 <div className='flex'>
@@ -500,7 +500,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
         <div className=''>
 <div className=''>
-          <img src='https://cdn.pixabay.com/photo/2024/03/11/12/01/ai-generated-8626467_1280.jpg' />
+          <img src={productinfo.digitalCardImage2} />
 </div>
 
 <div className='flex'>
@@ -532,7 +532,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
         <div className=''>
 <div className=''>
-          <img src='https://cdn.pixabay.com/photo/2024/06/21/07/32/ai-generated-8843794_1280.jpg' />
+          <img src={productinfo.digitalCardImage3} />
 </div>
 
 <div className='flex'>
@@ -556,7 +556,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
         <div className=''>
 <div className=''>
-          <img src='https://cdn.pixabay.com/photo/2022/06/16/12/19/ai-7265839_1280.jpg' />
+          <img src={productinfo.digitalCardImage4} />
 </div>
 
 <div className='flex'>
@@ -578,7 +578,7 @@ src ="https://images.pexels.com/photos/18799047/pexels-photo-18799047.jpeg" />
 
         <div className=''>
 <div className=''>
-          <img src='https://cdn.pixabay.com/photo/2024/06/12/06/06/robot-8824475_1280.jpg' />
+          <img src={productinfo.digitalCardImage5} />
 </div>
 
 <div className='flex'>
